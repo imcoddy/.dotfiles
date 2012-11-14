@@ -1,0 +1,204 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Global
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Platform checking
+function! MySys()
+	if has("win32")
+    return "windows"
+  else
+    return "linux"
+  endif
+endfunction
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible    " be iMproved
+filetype off        " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle required!
+Bundle 'gmarik/vundle'
+" vim-scripts repos
+Bundle 'AutoComplPop'
+Bundle 'jsbeautify'
+Bundle 'jshint.vim'
+Bundle 'jslint.vim'
+Bundle 'snipMate'
+Bundle 'scrooloose/syntastic'
+"Bundle 'taglist.vim'
+Bundle 'The-NERD-Commenter'
+Bundle 'vim-coffee-script'
+Bundle "pangloss/vim-javascript"
+
+"HTML indent
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
+
+" Sets how many lines of history VIM has to remember
+set history=700
+
+" Enable filetype plugin
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+autocmd! bufwritepost .vimrc source %
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = "\\"
+let g:mapleader = "\\"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set 7 lines to the curors - when moving vertical..
+set so=7
+set number "show line number
+set ignorecase smartcase "Ignore case when searching
+set hlsearch "Highlight search things
+set incsearch "Make search act like search in modern browsers
+set magic "Set magic on, for regular expressions
+set showmatch "Show matching bracets when text indicator is over them
+set ruler "Always show current position
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable "Enable syntax highlight
+
+
+"syntax on 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+set smartindent
+set wrap "Wrap lines
+set lbr
+set tw=500
+
+:nmap <F8> :tabnext<CR>
+
+:nmap <F8> :tabnext<CR>
+
+" Show tab and space
+set list
+set listchars=tab:>-,trail:-
+
+" Set tab complete
+set wildmenu
+set wildmode=longest:full
+
+" Generate coffeescript into js
+" autocmd BufWritePost,FileWritePost *.coffee :silent !coffee -c <afile>
+
+"Auto complete
+let g:AutoComplPop_Behavior = { 
+\ 'c': [ {'command' : "\<C-x>\<C-o>",
+\ 'pattern' : ".",
+\ 'repeat' : 0}
+\ ] 
+\}
+
+"Vimwiki
+if MySys() == 'linux'
+  let g:vimwiki_list = [{'path': '/home/imcoddy/Dropbox/Wiki/',
+  \ 'path_html': '/home/imcoddy/Dropbox/Wiki/html/',
+  \ 'html_header': '/home/imcoddy/Dropbox/Wiki/template/header.tpl',}]
+elseif MySys() == 'windows'
+  let g:vimwiki_list = [{'path': 'D:/My Documents/My Dropbox/Wiki/',
+  \ 'path_html': 'D:/My Documents/My Dropbox/Wiki/html/',
+  \ 'html_header': 'D:/My Documents/My Dropbox/Wiki/template/header.tpl',}]
+endif
+let g:vimwiki_use_mouse = 1
+map <F4> :VimwikiAll2HTML<cr>
+
+
+"Auto complete the matching pair
+"Source: https://gist.github.com/449512
+inoremap ( <c-r>=OpenPair('(')<CR>
+inoremap ) <c-r>=ClosePair(')')<CR>
+inoremap { <c-r>=OpenPair('{')<CR>
+inoremap } <c-r>=ClosePair('}')<CR>
+inoremap [ <c-r>=OpenPair('[')<CR>
+inoremap ] <c-r>=ClosePair(']')<CR>
+" just for xml document, but need not for now.
+"inoremap < <c-r>=OpenPair('<')<CR>
+"inoremap > <c-r>=ClosePair('>')<CR>
+function! OpenPair(char)
+    let PAIRs = {
+                \ '{' : '}',
+                \ '[' : ']',
+                \ '(' : ')',
+                \ '<' : '>'
+                \}
+    if line('$')>2000
+        let line = getline('.')
+
+        let txt = strpart(line, col('.')-1)
+    else
+        let lines = getline(1,line('$'))
+        let line=""
+        for str in lines
+            let line = line . str . "\n"
+        endfor
+
+        let blines = getline(line('.')-1, line("$"))
+        let txt = strpart(getline("."), col('.')-1)
+        for str in blines
+            let txt = txt . str . "\n"
+        endfor
+    endif
+    let oL = len(split(line, a:char, 1))-1
+    let cL = len(split(line, PAIRs[a:char], 1))-1
+
+    let ol = len(split(txt, a:char, 1))-1
+    let cl = len(split(txt, PAIRs[a:char], 1))-1
+
+    if oL>=cL || (oL<cL && ol>=cl)
+        return a:char . PAIRs[a:char] . "\<Left>"
+    else
+        return a:char
+    endif
+endfunction
+function! ClosePair(char)
+    if getline('.')[col('.')-1] == a:char
+        return "\<Right>"
+    else
+        return a:char
+    endif
+endf
+
+inoremap ' <c-r>=CompleteQuote("'")<CR>
+inoremap " <c-r>=CompleteQuote('"')<CR>
+function! CompleteQuote(quote)
+    let ql = len(split(getline('.'), a:quote, 1))-1
+    let slen = len(split(strpart(getline("."), 0, col(".")-1), a:quote, 1))-1
+    let elen = len(split(strpart(getline("."), col(".")-1), a:quote, 1))-1
+    let isBefreQuote = getline('.')[col('.') - 1] == a:quote
+
+    if '"'==a:quote && "vim"==&ft && 0==match(strpart(getline('.'), 0, col('.')-1), "^[\t ]*$")
+        " for vim comment.
+        return a:quote
+    elseif "'"==a:quote && 0==match(getline('.')[col('.')-2], "[a-zA-Z0-9]")
+        " for Name's Blog.
+        return a:quote
+    elseif (ql%2)==1
+        " a:quote length is odd.
+        return a:quote
+    elseif ((slen%2)==1 && (elen%2)==1 && !isBefreQuote) || ((slen%2)==0 && (elen%2)==0)
+        return a:quote . a:quote . "\<Left>"
+    elseif isBefreQuote
+        return "\<Right>"
+    else
+        return a:quote . a:quote . "\<Left>"
+    endif
+endfunction
