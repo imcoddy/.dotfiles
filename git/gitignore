@@ -1,0 +1,9 @@
+#ignore .metadata
+.metadata
+.gitignore
+node_modules
+
+*.[oa]
+*.swp
+*.bak
+*.*~

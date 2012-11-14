@@ -1,0 +1,27 @@
+[user]
+	name = Coddy
+	email = imcoddy@gmail.com
+[core]
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab
+	editor = vim
+	excludesfile = ~/.gitignore
+[color]
+	ui = true
+	diff = auto
+	status = auto
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	pl = pull
+	ps = push
+	pu = push
+	cm = commit -a -m
+	dt = difftool
+	df = diff
+	di = diff
+	unstage = reset HEAD --
+	us = reset HEAD --
+	last = log -1 HEAD
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
