@@ -30,6 +30,7 @@ Bundle 'scrooloose/syntastic'
 "Bundle 'taglist.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'vim-coffee-script'
+Bundle 'digitaltoad/vim-jade'
 Bundle "pangloss/vim-javascript"
 
 "HTML indent
