@@ -21,6 +21,9 @@
 	dt = difftool
 	df = diff
 	di = diff
+	com = checkout master
+	cod = checkout dev
+	md = merge dev
 	unstage = reset HEAD --
 	us = reset HEAD --
 	last = log -1 HEAD
