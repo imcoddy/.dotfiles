@@ -23,7 +23,11 @@
 	di = diff
 	com = checkout master
 	cod = checkout dev
-	md = merge dev
+	cof = checkout feature
+	cob = checkout bugfix
+	cor = checkout release
+	md = merge --no-ff dev
+	mf = merge feature
 	unstage = reset HEAD --
 	us = reset HEAD --
 	last = log -1 HEAD
