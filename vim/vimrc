@@ -5,6 +5,8 @@
 function! MySys()
 	if has("win32")
     return "windows"
+  elseif has("mac")
+    return "mac"
   else
     return "linux"
   endif
@@ -30,6 +32,8 @@ Bundle 'scrooloose/syntastic'
 "Bundle 'taglist.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'vim-coffee-script'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'wavded/vim-stylus'
 Bundle "pangloss/vim-javascript"
 
 "HTML indent
@@ -107,6 +111,12 @@ let g:AutoComplPop_Behavior = {
 \ 'repeat' : 0}
 \ ] 
 \}
+
+"Set JS_CMD to node in Mac
+if(MySys() =="mac")
+  let $JS_CMD="node"
+endif
+let $JS_CMD="node"
 
 "Vimwiki
 if MySys() == 'linux'
