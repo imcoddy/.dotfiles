@@ -27,7 +27,7 @@
 	cob = checkout bugfix
 	cor = checkout release
 	md = merge --no-ff dev
-	mf = merge feature
+	mnf = merge --no-ff
 	unstage = reset HEAD --
 	us = reset HEAD --
 	last = log -1 HEAD
