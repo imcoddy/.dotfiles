@@ -21,6 +21,10 @@
 	dt = difftool
 	df = diff
 	di = diff
+  init = flow init
+  fi = flow init
+  fs = flow feature start
+  ff = flow feature finish
 	com = checkout master
 	cod = checkout develop
 	cof = checkout feature
