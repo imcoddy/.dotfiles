@@ -22,7 +22,7 @@
 	df = diff
 	di = diff
 	com = checkout master
-	cod = checkout dev
+	cod = checkout develop
 	cof = checkout feature
 	cob = checkout bugfix
 	cor = checkout release
