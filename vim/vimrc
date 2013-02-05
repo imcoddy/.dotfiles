@@ -17,6 +17,9 @@ endfunction
 set nocompatible    " be iMproved
 filetype off        " required!
 
+"encoding
+set encoding=utf-8
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -37,6 +40,7 @@ Bundle 'vim-coffee-script'
 Bundle "Chiel92/vim-autoformat"
 Bundle 'digitaltoad/vim-jade'
 Bundle "pangloss/vim-javascript"
+Bundle 'h2rd/vim-phpdoc'
 Bundle 'wavded/vim-stylus'
 Bundle 'vimwiki'
 Bundle 'mattn/zencoding-vim'
