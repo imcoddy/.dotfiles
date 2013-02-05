@@ -1,118 +1,118 @@
-###########################################################        
-# Options for Zsh
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
 
-export HISTFILE=~/.zsh_history
-export HISTSIZE=50000
-export SAVEHIST=50000
-#eval `dircolors -b`
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="random"
+#arrow.zsh-theme
+#clean.zsh-theme
+#cloud.zsh-theme
+#darkblood.zsh-theme
+#fino.zsh-theme
+#fletcherm.zsh-theme
+#fox.zsh-theme
+#frisk.zsh-theme
+#gnzh.zsh-theme
+#jonathan.zsh-theme
+#juanghurtado.zsh-theme
 
-autoload -U compinit compinit
-setopt autopushd pushdminus pushdsilent pushdtohome
-setopt autocd
-setopt cdablevars
-setopt ignoreeof
-setopt interactivecomments
-setopt nobanghist
-setopt noclobber
-setopt HIST_REDUCE_BLANKS
-setopt HIST_IGNORE_SPACE
-setopt SH_WORD_SPLIT
-setopt nohup
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# PS1 and PS2
-export PS1="$(print '%{\e[1;34m%}%n%{\e[0m%}'):$(print '%{\e[0;34m%}%~%{\e[0m%}')$ "
-export PS2="$(print '%{\e[0;34m%}>%{\e[0m%}')"
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-# Vars used later on by Zsh
-export EDITOR="nano"
-export BROWSER=links
-export XTERM="aterm +sb -geometry 80x29 -fg black -bg lightgoldenrodyellow -fn -xos4-terminus-medium-*-normal-*-14-*-*-*-*-*-iso8859-15"
+# Comment this out to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-##################################################################
-# Stuff to make my life easier
+# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+#ETHNA_LIB=/home/gree/common/pub/lib/Ethna/lib
+ETHNA_LIB=/home/gree/common/pub/lib/Ethna/bin
+
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
+export PATH=$PATH:$ETHNA_LIB
+alias  ethna="ethna.sh"
+
+alias mysql="mysql -u gree gree_bootcamp_greedevacha -p"
+alias gt="git status"
+
+#autoload -U compinit compinit
+
+autoload bashcompinit
+bashcompinit
+source ~/.git-completion.bash
 
 # allow approximate
-zstyle ':completion:*' completer _complete _match _approximate
-zstyle ':completion:*:match:*' original only
-zstyle ':completion:*:approximate:*' max-errors 1 numeric
+#zstyle ':completion:*' completer _complete _match _approximate
+#zstyle ':completion:*:match:*' original only
+#zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
 # tab completion for PID :D
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*' force-list always
+#zstyle ':completion:*:*:kill:*' menu yes select
+#zstyle ':completion:*:kill:*' force-list always
 
 # cd not select parent dir
-zstyle ':completion:*:cd:*' ignore-parents parent pwd
+#zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 # useful for path editing — backward-delete-word, but with / as additional delimiter
-backward-delete-to-slash () {
-  local WORDCHARS=${WORDCHARS//\//}
-  zle .backward-delete-word
-}
-zle -N backward-delete-to-slash
-
-##################################################################
-# Key bindings
-# http://mundy.yazzy.org/unix/zsh.php
-# http://www.zsh.org/mla/users/2000/msg00727.html
-
-typeset -g -A key
-bindkey '^?' backward-delete-char
-bindkey '^[[1~' beginning-of-line
-bindkey '^[[5~' up-line-or-history
-bindkey '^[[3~' delete-char
-bindkey '^[[4~' end-of-line
-bindkey '^[[6~' down-line-or-history
-bindkey '^[[A' up-line-or-search
-bindkey '^[[D' backward-char
-bindkey '^[[B' down-line-or-search
-bindkey '^[[C' forward-char 
-bindkey '^[w' backward-delete-to-slash
-# completion in the middle of a line
-bindkey '^i' expand-or-complete-prefix
-
-##################################################################
-# My aliases
-
-# Set up auto extension stuff
-alias -s html=$BROWSER
-alias -s org=$BROWSER
-alias -s php=$BROWSER
-alias -s com=$BROWSER
-alias -s net=$BROWSER
-alias -s png=feh
-alias -s jpg=feh
-alias -s gif=feg
-alias -s sxw=soffice
-alias -s doc=soffice
-alias -s gz='tar -xzvf'
-alias -s bz2='tar -xjvf'
-alias -s java=$EDITOR
-alias -s txt=$EDITOR
-alias -s PKGBUILD=$EDITOR
+#backward-delete-to-slash () {
+  #local WORDCHARS=${WORDCHARS//\//}
+  #zle .backward-delete-word
+#}
+#zle -N backward-delete-to-slash
 
 # Normal aliases
-alias ls='ls -G'
+alias ls='ls --color=auto -F'
 alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
 alias f='find |grep'
-alias dir='ls -1'
 alias c="clear"
+alias ex="exit"
+alias z="exit"
+alias dir='ls -1'
 alias gvim='gvim -geom 82x35'
 alias ..='cd ..'
-alias nicotine='/home/paul/downloads/nicotine-1.0.8rc1/nicotine'
-alias ppp-on='sudo /usr/sbin/ppp-on'
-alias ppp-off='sudo /usr/sbin/ppp-off'
-alias firestarter='sudo su -c firestarter'
-alias mpg123='mpg123 -o oss'
-alias mpg321='mpg123 -o oss'
-alias vba='/home/paul/downloads/VisualBoyAdvance -f 4'
-alias hist="grep '$1' /home/paul/.zsh_history"
-alias irssi="irssi -c irc.freenode.net -n yyz"
-alias mem="free -m"
-alias msn="tmsnc -l hutchy@subdimension.com"
+alias w='cd /home/gree/xgree/bootcamp/services/greedevacha'
+alias wa='cd /home/gree/xgree/bootcamp/services/greedevacha/frontend/greedevacha/'
+alias wat='cd /home/gree/xgree/bootcamp/services/greedevacha/frontend/greedevacha/template/ja_JP/'
+alias ws='cd /home/gree/xgree/bootcamp/services/greedevacha'
+alias wdf='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha/Cascade/DataFormat/'
+alias wmo='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha/Module/'
+alias wpr='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha/Processor/'
+alias wt='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha/'
+alias wd='cd /home/gree/xgree/bootcamp/docroot/greedevacha'
+alias bootcamp='cd /home/gree/xgree/bootcamp'
+alias vz='vim ~/.zshrc'
+alias fixme='grep "FIXME" -r .'
 
+alias s='screen -S '
+alias sls='screen -ls '
+alias sr='screen -R '
 # command L equivalent to command |less
 alias -g L='|less' 
 
 # command S equivalent to command &> /dev/null &
 alias -g S='&> /dev/null &'
+
