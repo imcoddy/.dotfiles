@@ -24,17 +24,21 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'AutoComplPop'
+Bundle 'html5.vim'
 Bundle 'jsbeautify'
 Bundle 'jshint.vim'
 Bundle 'jslint.vim'
-Bundle 'snipMate'
+Bundle 'imcoddy/snipmate.vim'
 Bundle 'scrooloose/syntastic'
 "Bundle 'taglist.vim'
 Bundle 'The-NERD-Commenter'
+"Bundle 'smarty.vim'
 Bundle 'vim-coffee-script'
+Bundle "Chiel92/vim-autoformat"
 Bundle 'digitaltoad/vim-jade'
-Bundle 'wavded/vim-stylus'
 Bundle "pangloss/vim-javascript"
+Bundle 'wavded/vim-stylus'
+Bundle 'mattn/zencoding-vim'
 
 "HTML indent
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -80,8 +84,9 @@ syntax enable "Enable syntax highlight
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set autoindent
 set smartindent
@@ -117,17 +122,20 @@ if(MySys() =="mac")
   let $JS_CMD="node"
 endif
 let $JS_CMD="node"
+let g:vimwiki_list = [{'path': '/home/imcoddy/Dropbox/Wiki/',
+\ 'path_html': '/home/imcoddy/Dropbox/Wiki/html/',
+\ 'html_header': '/home/imcoddy/Dropbox/Wiki/template/header.tpl',}]
 
 "Vimwiki
-if MySys() == 'linux'
-  let g:vimwiki_list = [{'path': '/home/imcoddy/Dropbox/Wiki/',
-  \ 'path_html': '/home/imcoddy/Dropbox/Wiki/html/',
-  \ 'html_header': '/home/imcoddy/Dropbox/Wiki/template/header.tpl',}]
-elseif MySys() == 'windows'
-  let g:vimwiki_list = [{'path': 'D:/My Documents/My Dropbox/Wiki/',
-  \ 'path_html': 'D:/My Documents/My Dropbox/Wiki/html/',
-  \ 'html_header': 'D:/My Documents/My Dropbox/Wiki/template/header.tpl',}]
-endif
+"if MySys() == 'linux'
+  "let g:vimwiki_list = [{'path': '/home/imcoddy/Dropbox/Wiki/',
+  "\ 'path_html': '/home/imcoddy/Dropbox/Wiki/html/',
+  "\ 'html_header': '/home/imcoddy/Dropbox/Wiki/template/header.tpl',}]
+"elseif MySys() == 'windows'
+  "let g:vimwiki_list = [{'path': 'D:/My Documents/My Dropbox/Wiki/',
+  "\ 'path_html': 'D:/My Documents/My Dropbox/Wiki/html/',
+  "\ 'html_header': 'D:/My Documents/My Dropbox/Wiki/template/header.tpl',}]
+"endif
 let g:vimwiki_use_mouse = 1
 map <F4> :VimwikiAll2HTML<cr>
 
@@ -212,3 +220,5 @@ function! CompleteQuote(quote)
         return a:quote . a:quote . "\<Left>"
     endif
 endfunction
+
+let g:acp_noVersionWarning=1

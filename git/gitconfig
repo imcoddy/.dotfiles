@@ -24,9 +24,11 @@
   init = flow init
   fi = flow init
   fs = flow feature start
+  frs = flow release start
+  frf = flow release finish
   ff = flow feature finish
 	com = checkout master
-	cod = checkout develop
+	cod = checkout dev
 	cof = checkout feature
 	cob = checkout bugfix
 	cor = checkout release
