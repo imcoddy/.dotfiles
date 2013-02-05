@@ -38,6 +38,7 @@ Bundle "Chiel92/vim-autoformat"
 Bundle 'digitaltoad/vim-jade'
 Bundle "pangloss/vim-javascript"
 Bundle 'wavded/vim-stylus'
+Bundle 'vimwiki'
 Bundle 'mattn/zencoding-vim'
 
 "HTML indent
@@ -122,9 +123,9 @@ if(MySys() =="mac")
   let $JS_CMD="node"
 endif
 let $JS_CMD="node"
-let g:vimwiki_list = [{'path': '/home/imcoddy/Dropbox/Wiki/',
-\ 'path_html': '/home/imcoddy/Dropbox/Wiki/html/',
-\ 'html_header': '/home/imcoddy/Dropbox/Wiki/template/header.tpl',}]
+let g:vimwiki_list = [{'path': '~/.vimwiki',
+\ 'path_html': '~/.vimwiki/html/',
+\ 'html_header': '~/.Vimwiki/template/header.tpl',}]
 
 "Vimwiki
 "if MySys() == 'linux'
