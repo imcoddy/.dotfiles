@@ -57,6 +57,7 @@ alias  ethna="ethna.sh"
 
 alias mysql="mysql -u gree gree_bootcamp_greedevacha -p"
 alias gt="git status"
+alias gd="git diff"
 
 #autoload -U compinit compinit
 
@@ -94,7 +95,7 @@ alias z="exit"
 alias dir='ls -1'
 alias gvim='gvim -geom 82x35'
 alias ..='cd ..'
-alias w='cd /home/gree/xgree/bootcamp/services/greedevacha'
+alias w='cd /home/gree/xgree/tracker/'
 alias wa='cd /home/gree/xgree/bootcamp/services/greedevacha/frontend/greedevacha/'
 alias wat='cd /home/gree/xgree/bootcamp/services/greedevacha/frontend/greedevacha/template/ja_JP/'
 alias ws='cd /home/gree/xgree/bootcamp/services/greedevacha'
@@ -104,12 +105,16 @@ alias wpr='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha
 alias wt='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha/'
 alias wd='cd /home/gree/xgree/bootcamp/docroot/greedevacha'
 alias bootcamp='cd /home/gree/xgree/bootcamp'
+
 alias vz='vim ~/.zshrc'
 alias fixme='grep "FIXME" -r .'
+alias todo="grep 'TODO' -r ."
 
-alias s='screen -S '
+alias gree_update='cd /home/gree && /home/gree/bin/update_dev.php -b -f'
+
+alias s='screen -S'
 alias sls='screen -ls '
-alias sr='screen -R '
+alias sr='screen -R'
 # command L equivalent to command |less
 alias -g L='|less' 
 
