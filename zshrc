@@ -55,7 +55,10 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
 export PATH=$PATH:$ETHNA_LIB
 alias  ethna="ethna.sh"
 
-alias mysql="mysql -u gree gree_bootcamp_greedevacha -p"
+#add database user
+#grant select,insert,delete,update,create,drop,file,alter,index on *.* to 'gree' identified by 'password_you_want_to_set';
+#flush privileges;
+alias mysql="mysql -u gree -p"
 alias gt="git status"
 alias gd="git diff"
 
