@@ -17,18 +17,19 @@
 	pl = pull
 	ps = push
 	pu = push
+	ft = fetch
 	cm = commit -a -m
 	dt = difftool
 	df = diff
 	di = diff
-  init = flow init
-  fi = flow init
-  fs = flow feature start
-  frs = flow release start
-  frf = flow release finish
-  ff = flow feature finish
+    init = flow init
+    fi = flow init
+    fs = flow feature start
+    frs = flow release start
+    frf = flow release finish
+    ff = flow feature finish
 	com = checkout master
-	cod = checkout dev
+	cod = checkout develop
 	cof = checkout feature
 	cob = checkout bugfix
 	cor = checkout release
@@ -37,4 +38,5 @@
 	unstage = reset HEAD --
 	us = reset HEAD --
 	last = log -1 HEAD
+	info = git remote -v
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --

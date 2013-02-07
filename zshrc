@@ -5,10 +5,11 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="random"
+ZSH_THEME="frisk"
 #arrow.zsh-theme
 #clean.zsh-theme
 #cloud.zsh-theme
+#candy-kingdom
 #darkblood.zsh-theme
 #fino.zsh-theme
 #fletcherm.zsh-theme
@@ -55,10 +56,15 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
 export PATH=$PATH:$ETHNA_LIB
 alias  ethna="ethna.sh"
 
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 #add database user
 #grant select,insert,delete,update,create,drop,file,alter,index on *.* to 'gree' identified by 'password_you_want_to_set';
 #flush privileges;
-alias mysql="mysql -u gree -p"
+alias mysql="mysql -u gree-ro -p"
 alias gt="git status"
 alias gd="git diff"
 
@@ -99,15 +105,12 @@ alias dir='ls -1'
 alias gvim='gvim -geom 82x35'
 alias ..='cd ..'
 alias w='cd /home/gree/xgree/tracker/'
-alias wa='cd /home/gree/xgree/bootcamp/services/greedevacha/frontend/greedevacha/'
-alias wat='cd /home/gree/xgree/bootcamp/services/greedevacha/frontend/greedevacha/template/ja_JP/'
-alias ws='cd /home/gree/xgree/bootcamp/services/greedevacha'
-alias wdf='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha/Cascade/DataFormat/'
-alias wmo='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha/Module/'
-alias wpr='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha/Processor/'
-alias wt='cd /home/gree/xgree/bootcamp/services/greedevacha/Service/Greedevacha/'
-alias wd='cd /home/gree/xgree/bootcamp/docroot/greedevacha'
-alias bootcamp='cd /home/gree/xgree/bootcamp'
+alias wa='cd /home/gree/xgree/tracker/frontend/stdashboard/act/'
+alias wat='cd /home/gree/xgree/tracker/frontend/stdashboard/tpl/'
+alias ws='cd /home/gree/xgree/tracker/Service/stadmaster/class/'
+alias wdf='cd /home/gree/xgree/tracker/Service/stadmaster/class/Cascade/DataFormat/'
+alias wmo='cd /home/gree/xgree/tracker/Service/stadmaster/class/Model/'
+alias wt='cd /home/gree/xgree/tracker/Service/stadmaster/'
 
 alias vz='vim ~/.zshrc'
 alias fixme='grep "FIXME" -r .'
