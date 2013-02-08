@@ -1,0 +1,42 @@
+#启动时不显示欢迎屏幕
+startup_message off
+
+#显示窗口标题栏和状态栏: #注意,状态栏刷新屏幕会自动滚动到最下面,最好不要使用刷新较快的变量(比如时间)
+caption always "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%H %Y/%m/%d "
+#caption always "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y/%m/%d "
+#hardstatus on
+#hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %Y/%m/%d% %s"
+
+#编码转换
+#encoding GBK UTF-8 #UTF-8编码会被转换成GBK
+#encoding UTF-8 GBK #GBK编码会被转换成UTF-8
+defutf8 on
+defencoding utf8
+encoding utf-8 utf-8 #eucjp sjis
+bind u encoding utf8
+bind ^U encoding utf8
+bind e encoding euc
+bind ^E encoding euc
+
+#默认屏显缓冲区行数
+defscrollback 5000
+
+#关闭可视bell(打开之后就听不到bell了,系统在状态栏以可视化的方式显示vbell_msg)
+vbell off
+
+#断线的时候自动detach
+autodetach on
+
+#分屏
+#split
+#resize max
+#resize -9
+
+#启动两个窗口
+screen
+#focus #focus: 切换split; focus down: 向下切换; focus up: 向上切换
+screen
+#focus #focus: 切换split; focus down: 向下切换; focus up: 向上切换
+
+#选择screen0作为选中的窗口
+select 0
