@@ -11,18 +11,24 @@
 	status = auto
 [alias]
 	br = branch
+
 	ci = commit
 	cm = commit -a -m
+
 	co = checkout
 	com = checkout master
 	cod = checkout develop
 	cof = checkout feature
 	cob = checkout bugfix
 	cor = checkout release
+
 	df = diff
+	dft = difftool
 	di = diff
 	did = diff develop upstream/develop
 	dt = difftool
+
+    fl = flow
     fi = flow init
     fli = flow init
     flfs = flow feature start
@@ -33,17 +39,25 @@
     frs = flow release start
     frf = flow release finish
     ff = flow feature finish
+
 	ft = fetch
 	fto = fetch origin
 	ftu = fetch upstream
+
+	info = remote -v
+
+	last = log -1 HEAD
+
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+	md = merge --no-ff dev
+	mnf = merge --no-ff
+
 	pl = pull
 	ps = push
 	pu = push
-	md = merge --no-ff dev
-	mnf = merge --no-ff
+
+	reset = reset HEAD --
 	st = status
 	unstage = reset HEAD --
 	us = reset HEAD --
-	last = log -1 HEAD
-	info = remote -v
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
