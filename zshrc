@@ -113,6 +113,7 @@ alias wmo='cd /home/gree/xgree/tracker/Service/stadmaster/class/Model/'
 alias wt='cd /home/gree/xgree/tracker/Service/stadmaster/'
 
 alias vz='vim ~/.zshrc'
+alias vv='vim ~/.vimrc'
 alias fixme='grep "FIXME" -r .'
 alias todo="grep 'TODO' -r ."
 
