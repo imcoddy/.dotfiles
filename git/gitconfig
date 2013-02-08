@@ -22,6 +22,8 @@
 	dt = difftool
 	df = diff
 	di = diff
+	did = diff develop upstream/develop
+	ftu = fetch upstream
     init = flow init
     fi = flow init
     fs = flow feature start
@@ -38,5 +40,5 @@
 	unstage = reset HEAD --
 	us = reset HEAD --
 	last = log -1 HEAD
-	info = git remote -v
+	info = remote -v
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
