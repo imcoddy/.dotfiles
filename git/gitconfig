@@ -50,7 +50,9 @@
 
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
-	md = merge --no-ff dev
+	mg = merge
+	mgnf = merge --no-ff
+	md = merge --no-ff develop
 	mnf = merge --no-ff
 
 	pl = pull
@@ -58,6 +60,9 @@
 	pu = push
 
 	reset = reset HEAD --
+    
+    recent = log -5 HEAD
+
 	st = status
 	unstage = reset HEAD --
 	us = reset HEAD --
