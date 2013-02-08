@@ -101,8 +101,7 @@ set lbr
 set tw=500
 
 :nmap <F8> :tabnext<CR>
-
-:nmap <F8> :tabnext<CR>
+:nmap <F7> :tabprev<CR>
 
 " Show tab and space
 set list
