@@ -65,6 +65,7 @@ export LC_ALL=en_US.UTF-8
 #grant select,insert,delete,update,create,drop,file,alter,index on *.* to 'gree' identified by 'password_you_want_to_set';
 #flush privileges;
 alias mysql="mysql -u gree-ro -p"
+alias mysqltestdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias gt="git status"
 alias gd="git diff"
 
@@ -101,6 +102,7 @@ alias f='find |grep'
 alias c="clear"
 alias ex="exit"
 alias z="exit"
+alias q="exit"
 alias dir='ls -1'
 alias gvim='gvim -geom 82x35'
 alias ..='cd ..'
