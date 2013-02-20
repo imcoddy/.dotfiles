@@ -3,7 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Platform checking
 function! MySys()
-	if has("win32")
+  if has("win32")
     return "windows"
   elseif has("mac")
     return "mac"
@@ -11,6 +11,7 @@ function! MySys()
     return "linux"
   endif
 endfunction
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -28,6 +29,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'AutoComplPop'
+Bundle 'FencView.vim'
 Bundle 'html5.vim'
 Bundle 'jsbeautify'
 Bundle 'jshint.vim'
@@ -88,9 +90,7 @@ set ruler "Always show current position
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "Enable syntax highlight
-
-
-"syntax on 
+syntax on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -108,6 +108,9 @@ set tw=500
 :nmap <F6> :TagbarToggle<CR>
 :nmap <F7> :tabprev<CR>
 :nmap <F8> :tabnext<CR>
+map  <F12> :set hls!<CR>
+imap <F12> <ESC>:set hls!<CR>a
+vmap <F12> <ESC>:set hls!<CR>gv
 
 " Show tab and space
 set list
@@ -120,36 +123,11 @@ set wildmode=longest:full
 " Generate coffeescript into js
 " autocmd BufWritePost,FileWritePost *.coffee :silent !coffee -c <afile>
 
-"Auto complete
-let g:AutoComplPop_Behavior = { 
-\ 'c': [ {'command' : "\<C-x>\<C-o>",
-\ 'pattern' : ".",
-\ 'repeat' : 0}
-\ ] 
-\}
-
 "Set JS_CMD to node in Mac
 if(MySys() =="mac")
   let $JS_CMD="node"
 endif
 let $JS_CMD="node"
-let g:vimwiki_list = [{'path': '~/.vimwiki',
-\ 'path_html': '~/.vimwiki/html/',
-\ 'html_header': '~/.Vimwiki/template/header.tpl',}]
-
-"Vimwiki
-"if MySys() == 'linux'
-  "let g:vimwiki_list = [{'path': '/home/imcoddy/Dropbox/Wiki/',
-  "\ 'path_html': '/home/imcoddy/Dropbox/Wiki/html/',
-  "\ 'html_header': '/home/imcoddy/Dropbox/Wiki/template/header.tpl',}]
-"elseif MySys() == 'windows'
-  "let g:vimwiki_list = [{'path': 'D:/My Documents/My Dropbox/Wiki/',
-  "\ 'path_html': 'D:/My Documents/My Dropbox/Wiki/html/',
-  "\ 'html_header': 'D:/My Documents/My Dropbox/Wiki/template/header.tpl',}]
-"endif
-let g:vimwiki_use_mouse = 1
-map <F4> :VimwikiAll2HTML<cr>
-
 
 "Auto complete the matching pair
 "Source: https://gist.github.com/449512
@@ -232,19 +210,17 @@ function! CompleteQuote(quote)
     endif
 endfunction
 
+""""""""""""""""""""""""""""""
+"   AutoComplPop
+""""""""""""""""""""""""""""""
+"Auto complete
+let g:AutoComplPop_Behavior = { 
+\ 'c': [ {'command' : "\<C-x>\<C-o>",
+\ 'pattern' : ".",
+\ 'repeat' : 0}
+\ ]
+\}
 let g:acp_noVersionWarning=1
-
-""""""""""""""""""""""""""""""
-"   Taglist (ctags)
-""""""""""""""""""""""""""""""
-if MySys() == "windows"                "设定windows系统中ctags程序的位置
-let Tlist_Ctags_Cmd = 'ctags'
-elseif MySys() == "linux"              "设定linux系统中ctags程序的位置
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'
-endif
-let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口 
 
 """"""""""""""""""""""""""""""
 "   easyMotion
@@ -260,7 +236,13 @@ hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 """"""""""""""""""""""""""""""
-" 设置NERDTree的选项
+"   FencView的选项
+""""""""""""""""""""""""""""""
+let g:fencview_autodetect = 1    "打开文件时自动识别编码
+let g:fencview_checklines = 10   "检查前后10行来判断编码
+
+""""""""""""""""""""""""""""""
+"   NERDTree的选项
 """"""""""""""""""""""""""""""
 nmap <leader>nt :NERDTree<cr>:set rnu<cr>
 let NERDTreeShowBookmarks=1
@@ -278,7 +260,7 @@ let NERDChristmasTree=1
 :nmap <F5> :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""
-" 设置powerline状态栏
+"   powerline状态栏
 """"""""""""""""""""""""""""""
 set nocompatible
 set t_Co=256
@@ -287,3 +269,37 @@ let termencoding=&encoding
 set fileencodings=utf-8,gbk,ucs-bom,cp936
 let g:Powerline_symbols = 'fancy'
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+
+""""""""""""""""""""""""""""""
+"   Taglist (ctags)
+""""""""""""""""""""""""""""""
+if MySys() == "windows"                "设定windows系统中ctags程序的位置
+let Tlist_Ctags_Cmd = 'ctags'
+elseif MySys() == "linux"              "设定linux系统中ctags程序的位置
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+endif
+let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
+let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
+
+""""""""""""""""""""""""""""""
+"   Vimwiki
+""""""""""""""""""""""""""""""
+let g:vimwiki_list = [{'path': '~/.vimwiki',
+\ 'path_html': '~/.vimwiki/html/',
+\ 'html_header': '~/.Vimwiki/template/header.tpl',}]
+
+"Vimwiki
+"if MySys() == 'linux'
+  "let g:vimwiki_list = [{'path': '/home/imcoddy/Dropbox/Wiki/',
+  "\ 'path_html': '/home/imcoddy/Dropbox/Wiki/html/',
+  "\ 'html_header': '/home/imcoddy/Dropbox/Wiki/template/header.tpl',}]
+"elseif MySys() == 'windows'
+  "let g:vimwiki_list = [{'path': 'D:/My Documents/My Dropbox/Wiki/',
+  "\ 'path_html': 'D:/My Documents/My Dropbox/Wiki/html/',
+  "\ 'html_header': 'D:/My Documents/My Dropbox/Wiki/template/header.tpl',}]
+"endif
+let g:vimwiki_use_mouse = 1
+map <F4> :VimwikiAll2HTML<cr>
+
+
