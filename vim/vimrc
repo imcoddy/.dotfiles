@@ -28,22 +28,24 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'AutoComplPop'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'html5.vim'
 Bundle 'jsbeautify'
 Bundle 'jshint.vim'
 Bundle 'jslint.vim'
-Bundle 'The-NERD-tree'
+Bundle 'ShowTrailingWhitespace'
 Bundle 'imcoddy/snipmate.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'The-NERD-Commenter'
+Bundle 'The-NERD-tree'
 "Bundle 'smarty.vim'
 Bundle 'vim-coffee-script'
 Bundle "Chiel92/vim-autoformat"
-Bundle 'digitaltoad/vim-jade'
 Bundle "pangloss/vim-javascript"
+Bundle 'digitaltoad/vim-jade'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'h2rd/vim-phpdoc'
 Bundle 'wavded/vim-stylus'
 Bundle 'vimwiki'
@@ -243,3 +245,45 @@ endif
 let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口 
+
+""""""""""""""""""""""""""""""
+"   easyMotion
+""""""""""""""""""""""""""""""
+" ホームポジションに近いキーを使う
+let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
+" 「'」 + 何かにマッピング
+let g:EasyMotion_leader_key=";"
+" 1 ストローク選択を優先する
+let g:EasyMotion_grouping=1
+" カラー設定変更
+hi EasyMotionTarget ctermbg=none ctermfg=red
+hi EasyMotionShade  ctermbg=none ctermfg=blue
+
+""""""""""""""""""""""""""""""
+" 设置NERDTree的选项
+""""""""""""""""""""""""""""""
+nmap <leader>nt :NERDTree<cr>:set rnu<cr>
+let NERDTreeShowBookmarks=1
+let NERDTreeShowFiles=1
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.$','\~$']
+let NERDTreeShowLineNumbers=1
+let NERDTreeWinPos=1
+let NERDTreeMinimalUI=1
+let NERDChristmasTree=1
+"autocmd VimEnter * NERDTree
+"autocmd BufEnter * NERDTreeMirror
+
+" Give a shortcut key to NERD Tree
+:nmap <F5> :NERDTreeToggle<CR>
+
+""""""""""""""""""""""""""""""
+" 设置powerline状态栏
+""""""""""""""""""""""""""""""
+set nocompatible
+set t_Co=256
+set enc=utf-8
+let termencoding=&encoding
+set fileencodings=utf-8,gbk,ucs-bom,cp936
+let g:Powerline_symbols = 'fancy'
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
