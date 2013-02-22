@@ -30,10 +30,15 @@ Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'AutoComplPop'
 Bundle 'FencView.vim'
+Bundle 'FuzzyFinder'
+Bundle 'Indent-Guides'
 Bundle 'html5.vim'
 Bundle 'jsbeautify'
 Bundle 'jshint.vim'
 Bundle 'jslint.vim'
+Bundle 'L9'
+Bundle 'Mark'
+Bundle 'Markdown'
 Bundle 'Shougo/neocomplcache.git'
 Bundle 'Shougo/neosnippet.git'
 Bundle 'ShowTrailingWhitespace'
@@ -49,7 +54,7 @@ Bundle "Chiel92/vim-autoformat"
 Bundle "pangloss/vim-javascript"
 Bundle 'digitaltoad/vim-jade'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-powerline'
 Bundle 'h2rd/vim-phpdoc'
 Bundle 'wavded/vim-stylus'
 Bundle 'vimwiki'
@@ -62,6 +67,10 @@ let g:html_indent_style1 = "inc"
 
 " Sets how many lines of history VIM has to remember
 set history=700
+
+" Set color column
+"set cc=81
+
 
 " Enable filetype plugin
 filetype plugin on
@@ -242,6 +251,11 @@ hi EasyMotionShade  ctermbg=none ctermfg=blue
 """"""""""""""""""""""""""""""
 let g:fencview_autodetect = 1    "打开文件时自动识别编码
 let g:fencview_checklines = 10   "检查前后10行来判断编码
+
+""""""""""""""""""""""""""""""
+"   Indent-Guides的选项
+""""""""""""""""""""""""""""""
+let g:indent_guides_guide_size=1
 
 """"""""""""""""""""""""""""""
 "   NeoSnippet的选项
