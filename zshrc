@@ -73,8 +73,8 @@ alias gd="git diff"
 
 #autoload bashcompinit
 #bashcompinit
-#source ~/.git-completion.bash
-zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
+source ~/.git-completion.bash
+#zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
 #zstyle ':completion:*' completer _complete _match _approximate
