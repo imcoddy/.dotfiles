@@ -216,7 +216,7 @@ endfunction
 "   AutoComplPop
 """"""""""""""""""""""""""""""
 "Auto complete
-let g:AutoComplPop_Behavior = { 
+let g:AutoComplPop_Behavior = {
 \ 'c': [ {'command' : "\<C-x>\<C-o>",
 \ 'pattern' : ".",
 \ 'repeat' : 0}
