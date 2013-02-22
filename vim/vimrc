@@ -28,6 +28,7 @@ call vundle#rc()
 " let Vundle manage Vundle required!
 Bundle 'gmarik/vundle'
 " vim-scripts repos
+Bundle 'AutoClose'
 Bundle 'AutoComplPop'
 Bundle 'FencView.vim'
 Bundle 'html5.vim'
@@ -43,7 +44,7 @@ Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
-"Bundle 'smarty.vim'
+Bundle 'smarty-syntax'
 Bundle 'vim-coffee-script'
 Bundle "Chiel92/vim-autoformat"
 Bundle "pangloss/vim-javascript"
@@ -80,7 +81,7 @@ let g:mapleader = "\\"
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the curors - when moving vertical..
-set so=7
+set so=8
 set number "show line number
 set ignorecase smartcase "Ignore case when searching
 set hlsearch "Highlight search things
@@ -88,6 +89,7 @@ set incsearch "Make search act like search in modern browsers
 set magic "Set magic on, for regular expressions
 set showmatch "Show matching bracets when text indicator is over them
 set ruler "Always show current position
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -107,13 +109,6 @@ set wrap "Wrap lines
 set lbr
 set tw=500
 
-:nmap <F6> :TagbarToggle<CR>
-:nmap <F7> :tabprev<CR>
-:nmap <F8> :tabnext<CR>
-map  <F12> :set hls!<CR>
-imap <F12> <ESC>:set hls!<CR>a
-vmap <F12> <ESC>:set hls!<CR>gv
-
 " Show tab and space
 set list
 set listchars=tab:>-,trail:-
@@ -121,6 +116,25 @@ set listchars=tab:>-,trail:-
 " Set tab complete
 set wildmenu
 set wildmode=longest:full
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Basic mapping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" hit '/' highlights then enter search mode
+nnoremap / :set hlsearch<cr>/
+":let @/ = ""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fn key mapping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" switch higlight no matter the previous state
+:nmap <F3> :set hls! <cr>
+:nmap <F4> :VimwikiAll2HTML<cr>
+" Give a shortcut key to NERD Tree
+:nmap <F5> :NERDTreeToggle<CR>
+:nmap <F6> :TagbarToggle<CR>
+:nmap <F7> :tabprev<CR>
+:nmap <F8> :tabnext<CR>
 
 " Generate coffeescript into js
 " autocmd BufWritePost,FileWritePost *.coffee :silent !coffee -c <afile>
@@ -131,91 +145,13 @@ if(MySys() =="mac")
 endif
 let $JS_CMD="node"
 
-"Auto complete the matching pair
-"Source: https://gist.github.com/449512
-inoremap ( <c-r>=OpenPair('(')<CR>
-inoremap ) <c-r>=ClosePair(')')<CR>
-inoremap { <c-r>=OpenPair('{')<CR>
-inoremap } <c-r>=ClosePair('}')<CR>
-inoremap [ <c-r>=OpenPair('[')<CR>
-inoremap ] <c-r>=ClosePair(']')<CR>
-" just for xml document, but need not for now.
-"inoremap < <c-r>=OpenPair('<')<CR>
-"inoremap > <c-r>=ClosePair('>')<CR>
-function! OpenPair(char)
-    let PAIRs = {
-                \ '{' : '}',
-                \ '[' : ']',
-                \ '(' : ')',
-                \ '<' : '>'
-                \}
-    if line('$')>2000
-        let line = getline('.')
-
-        let txt = strpart(line, col('.')-1)
-    else
-        let lines = getline(1,line('$'))
-        let line=""
-        for str in lines
-            let line = line . str . "\n"
-        endfor
-
-        let blines = getline(line('.')-1, line("$"))
-        let txt = strpart(getline("."), col('.')-1)
-        for str in blines
-            let txt = txt . str . "\n"
-        endfor
-    endif
-    let oL = len(split(line, a:char, 1))-1
-    let cL = len(split(line, PAIRs[a:char], 1))-1
-
-    let ol = len(split(txt, a:char, 1))-1
-    let cl = len(split(txt, PAIRs[a:char], 1))-1
-
-    if oL>=cL || (oL<cL && ol>=cl)
-        return a:char . PAIRs[a:char] . "\<Left>"
-    else
-        return a:char
-    endif
-endfunction
-function! ClosePair(char)
-    if getline('.')[col('.')-1] == a:char
-        return "\<Right>"
-    else
-        return a:char
-    endif
-endf
-
-inoremap ' <c-r>=CompleteQuote("'")<CR>
-inoremap " <c-r>=CompleteQuote('"')<CR>
-function! CompleteQuote(quote)
-    let ql = len(split(getline('.'), a:quote, 1))-1
-    let slen = len(split(strpart(getline("."), 0, col(".")-1), a:quote, 1))-1
-    let elen = len(split(strpart(getline("."), col(".")-1), a:quote, 1))-1
-    let isBefreQuote = getline('.')[col('.') - 1] == a:quote
-
-    if '"'==a:quote && "vim"==&ft && 0==match(strpart(getline('.'), 0, col('.')-1), "^[\t ]*$")
-        " for vim comment.
-        return a:quote
-    elseif "'"==a:quote && 0==match(getline('.')[col('.')-2], "[a-zA-Z0-9]")
-        " for Name's Blog.
-        return a:quote
-    elseif (ql%2)==1
-        " a:quote length is odd.
-        return a:quote
-    elseif ((slen%2)==1 && (elen%2)==1 && !isBefreQuote) || ((slen%2)==0 && (elen%2)==0)
-        return a:quote . a:quote . "\<Left>"
-    elseif isBefreQuote
-        return "\<Right>"
-    else
-        return a:quote . a:quote . "\<Left>"
-    endif
-endfunction
+""""""""""""""""""""""""""""""
+"   Plugins Configuration
+""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
 "   AutoComplPop
 """"""""""""""""""""""""""""""
-"Auto complete
 let g:AutoComplPop_Behavior = {
 \ 'c': [ {'command' : "\<C-x>\<C-o>",
 \ 'pattern' : ".",
@@ -276,8 +212,6 @@ let NERDChristmasTree=1
 "autocmd VimEnter * NERDTree
 "autocmd BufEnter * NERDTreeMirror
 
-" Give a shortcut key to NERD Tree
-:nmap <F5> :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""
 "   powerline状态栏
@@ -320,6 +254,5 @@ let g:vimwiki_list = [{'path': '~/.vimwiki',
   "\ 'html_header': 'D:/My Documents/My Dropbox/Wiki/template/header.tpl',}]
 "endif
 let g:vimwiki_use_mouse = 1
-map <F4> :VimwikiAll2HTML<cr>
 
 
