@@ -189,6 +189,15 @@ let g:fencview_autodetect = 1    "打开文件时自动识别编码
 let g:fencview_checklines = 10   "检查前后10行来判断编码
 
 """"""""""""""""""""""""""""""
+"   FuzzyFinder的选项
+""""""""""""""""""""""""""""""
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,f :FufFileRecursive<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+
+
+""""""""""""""""""""""""""""""
 "   Indent-Guides的选项
 """"""""""""""""""""""""""""""
 let g:indent_guides_guide_size=1
