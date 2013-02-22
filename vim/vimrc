@@ -255,4 +255,21 @@ let g:vimwiki_list = [{'path': '~/.vimwiki',
 "endif
 let g:vimwiki_use_mouse = 1
 
-
+""""""""""""""""""""""""""""""
+"   ZenCoding
+""""""""""""""""""""""""""""""
+let g:user_zen_settings = {
+\ 'haml' : {
+\ 'extends' : 'html',
+\ },
+\ 'php' : {
+\ 'extends' : 'html',
+\ 'filters' : 'c',
+\ },
+\ 'tpl' : {
+\ 'extends' : 'html',
+\ },
+\ 'xml' : {
+\ 'extends' : 'html',
+\ },
+\}
