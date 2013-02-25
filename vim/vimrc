@@ -54,6 +54,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'h2rd/vim-phpdoc'
 Bundle 'wavded/vim-stylus'
 Bundle 'vimwiki'
+Bundle 'YankRing.vim'
 Bundle 'mattn/zencoding-vim'
 
 "HTML indent
@@ -135,6 +136,7 @@ nnoremap / :set hlsearch<cr>/
 :nmap <F6> :TagbarToggle<CR>
 :nmap <F7> :tabprev<CR>
 :nmap <F8> :tabnext<CR>
+:nmap <F9> :YRShow<CR>
 
 " Generate coffeescript into js
 " autocmd BufWritePost,FileWritePost *.coffee :silent !coffee -c <afile>
@@ -254,6 +256,10 @@ let g:vimwiki_list = [{'path': '~/.vimwiki',
   "\ 'html_header': 'D:/My Documents/My Dropbox/Wiki/template/header.tpl',}]
 "endif
 let g:vimwiki_use_mouse = 1
+
+""""""""""""""""""""""""""""""
+"   YankRing
+""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
 "   ZenCoding
