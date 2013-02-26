@@ -104,6 +104,7 @@ alias c="clear"
 alias ex="exit"
 alias z="exit"
 alias q="exit"
+alias cz="cd ~/.dotfiles/"
 alias dir='ls -1'
 alias gvim='gvim -geom 82x35'
 alias ..='cd ..'
@@ -126,7 +127,7 @@ alias s='screen -S'
 alias sls='screen -ls '
 alias sr='screen -R'
 # command L equivalent to command |less
-alias -g L='|less' 
+alias -g L='|less'
 
 # command S equivalent to command &> /dev/null &
 alias -g S='&> /dev/null &'

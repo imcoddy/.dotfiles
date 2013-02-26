@@ -12,6 +12,10 @@ function! MySys()
   endif
 endfunction
 
+fun! <SID>StripWhite()
+  %s/[ \t]\+$//ge
+  %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
+endfun
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -22,6 +26,8 @@ filetype off        " required!
 set encoding=utf-8
 set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 
+autocmd BufWritePre * :call <SID>StripWhite()
+" Vundle"
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -30,15 +36,22 @@ Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'AutoClose'
 Bundle 'AutoComplPop'
+Bundle 'ctrlp.vim'
 Bundle 'FencView.vim'
+Bundle 'FuzzyFinder'
+Bundle 'Indent-Guides'
 Bundle 'html5.vim'
 Bundle 'jsbeautify'
 Bundle 'jshint.vim'
 Bundle 'jslint.vim'
+Bundle 'L9'
+Bundle 'Mark'
+Bundle 'Markdown'
 Bundle 'Shougo/neocomplcache.git'
 Bundle 'Shougo/neosnippet.git'
 Bundle 'ShowTrailingWhitespace'
 Bundle 'imcoddy/snipmate.vim'
+Bundle 'surround.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'taglist.vim'
 Bundle 'majutsushi/tagbar'
@@ -50,7 +63,7 @@ Bundle "Chiel92/vim-autoformat"
 Bundle "pangloss/vim-javascript"
 Bundle 'digitaltoad/vim-jade'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-powerline'
 Bundle 'h2rd/vim-phpdoc'
 Bundle 'wavded/vim-stylus'
 Bundle 'vimwiki'
@@ -64,6 +77,10 @@ let g:html_indent_style1 = "inc"
 
 " Sets how many lines of history VIM has to remember
 set history=700
+
+" Set color column
+"set cc=81
+
 
 " Enable filetype plugin
 filetype plugin on
@@ -163,6 +180,28 @@ let g:AutoComplPop_Behavior = {
 let g:acp_noVersionWarning=1
 
 """"""""""""""""""""""""""""""
+"   CtrlP
+""""""""""""""""""""""""""""""
+noremap <C-W><C-U> :CtrlPMRU<CR>
+nnoremap <C-W>u :CtrlPMRU<CR>
+nnoremap <C-O> :CtrlPMRU<CR>
+
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height=15
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_mruf_max=500
+let g:ctrlp_follow_symlinks=1
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_working_path_mode='ra'
+let g:ctrlp_prompt_mappings = {
+\ 'AcceptSelection("e")': ['<c-t>'],
+\ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+\ }
+
+
+
+""""""""""""""""""""""""""""""
 "   easyMotion
 """"""""""""""""""""""""""""""
 " ホームポジションに近いキーを使う
@@ -180,6 +219,20 @@ hi EasyMotionShade  ctermbg=none ctermfg=blue
 """"""""""""""""""""""""""""""
 let g:fencview_autodetect = 1    "打开文件时自动识别编码
 let g:fencview_checklines = 10   "检查前后10行来判断编码
+
+""""""""""""""""""""""""""""""
+"   FuzzyFinder的选项
+""""""""""""""""""""""""""""""
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,f :FufFileRecursive<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+
+
+""""""""""""""""""""""""""""""
+"   Indent-Guides的选项
+""""""""""""""""""""""""""""""
+let g:indent_guides_guide_size=1
 
 """"""""""""""""""""""""""""""
 "   NeoSnippet的选项
