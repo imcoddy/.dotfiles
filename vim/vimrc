@@ -12,6 +12,10 @@ function! MySys()
   endif
 endfunction
 
+fun! <SID>StripWhite()
+  %s/[ \t]\+$//ge
+  %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
+endfun
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -22,6 +26,8 @@ filetype off        " required!
 set encoding=utf-8
 set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 
+autocmd BufWritePre * :call <SID>StripWhite()
+" Vundle"
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -178,6 +184,7 @@ let g:acp_noVersionWarning=1
 """"""""""""""""""""""""""""""
 noremap <C-W><C-U> :CtrlPMRU<CR>
 nnoremap <C-W>u :CtrlPMRU<CR>
+nnoremap <C-O> :CtrlPMRU<CR>
 
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
 let g:ctrlp_match_window_bottom=1
