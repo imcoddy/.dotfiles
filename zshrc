@@ -94,8 +94,9 @@ nvm use v0.10.20
 #zle -N backward-delete-to-slash
 
 # Normal aliases
-alias ls='ls -FHG --color=tty'
+#alias ls='ls -FHG --color=tty'
 alias vim='vim -p'
+alias ls='ls -G'
 alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
 alias f='find |grep'
