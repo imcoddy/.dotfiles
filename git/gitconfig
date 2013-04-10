@@ -9,11 +9,17 @@
 	ui = true
 	diff = auto
 	status = auto
+[branch]
+    ;autosetuprebase = always
 [alias]
+    amend = commit --amend
+    ap = commit --amend
+    append = commit --amend
 	br = branch
 
 	ci = commit
 	cm = commit -a -m
+    cma = commit --amend
 
 	co = checkout
 	com = checkout master
@@ -43,6 +49,7 @@
 	ft = fetch
 	fto = fetch origin
 	ftu = fetch upstream
+	fto = fetch origin
 
 	info = remote -v
 
@@ -55,14 +62,28 @@
 	md = merge --no-ff develop
 	mnf = merge --no-ff
 
+    pick = cherry-pick
+	pin = stash
 	pl = pull
+	plr = pull --rebase
+	pop = stash pop
+	pru = pull --rebase upstream
+	pro = pull --rebase origin
 	ps = push
 	pu = push
 
+    rb = rebase
+    rbc = rebase --continue
+    rbd = rebase -i develop
+    rbi = rebase -i HEAD~
+
 	reset = reset HEAD --
-    
     recent = log -5 HEAD
 
 	st = status
+
+    trace = update-index --no-assume-unchanged
+    untrace = update-index --assume-unchanged
+
 	unstage = reset HEAD --
 	us = reset HEAD --
