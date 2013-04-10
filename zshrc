@@ -66,6 +66,7 @@ export LC_ALL=en_US.UTF-8
 #flush privileges;
 alias mysql="mysql -u gree-ro -p"
 alias mysqltestdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
+alias mysqlrealdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias gt="git status"
 alias gd="git diff"
 
@@ -104,17 +105,21 @@ alias c="clear"
 alias ex="exit"
 alias z="exit"
 alias q="exit"
+alias :q="exit"
 alias cz="cd ~/.dotfiles/"
 alias dir='ls -1'
 alias gvim='gvim -geom 82x35'
 alias ..='cd ..'
 alias w='cd /home/gree/xgree/tracker/'
 alias wa='cd /home/gree/xgree/tracker/frontend/stdashboard/act/'
+alias wam='cd /home/gree/xgree/tracker/frontend/stdashboard/class/Module/'
+alias was='cd /home/gree/xgree/tracker/frontend/stdashboard/'
+alias watm='cd /home/gree/xgree/tracker/frontend/stdashboard/test/Module/'
 alias wat='cd /home/gree/xgree/tracker/frontend/stdashboard/tpl/'
 alias ws='cd /home/gree/xgree/tracker/Service/stadmaster/class/'
 alias wdf='cd /home/gree/xgree/tracker/Service/stadmaster/class/Cascade/DataFormat/'
 alias wmo='cd /home/gree/xgree/tracker/Service/stadmaster/class/Model/'
-alias wt='cd /home/gree/xgree/tracker/Service/stadmaster/'
+alias wt='cd /home/gree/xgree/tracker/Service/stadmaster/test/'
 
 alias vz='vim ~/.zshrc'
 alias vv='vim ~/.vimrc'

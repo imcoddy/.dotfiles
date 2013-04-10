@@ -26,7 +26,21 @@ filetype off        " required!
 set encoding=utf-8
 set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 
-autocmd BufWritePre * :call <SID>StripWhite()
+"autocmd BufWritePre * :call <SID>StripWhite()
+
+"copy to system clipboard"
+set clipboard=unnamedplus
+if has('mouse')
+  set mouse=a
+  vmap <C-c> "+y
+endif
+
+"set indent according to filetype
+au FileType python setl sw=2 sts=2 et
+au FileType coffee setl sw=2 sts=2 et
+au FileType coffeescript setl sw=2 sts=2 et
+
+
 " Vundle"
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -46,7 +60,7 @@ Bundle 'jshint.vim'
 Bundle 'jslint.vim'
 Bundle 'L9'
 Bundle 'Mark'
-Bundle 'Markdown'
+"Bundle 'Markdown'
 Bundle 'Shougo/neocomplcache.git'
 Bundle 'Shougo/neosnippet.git'
 Bundle 'ShowTrailingWhitespace'
@@ -60,9 +74,10 @@ Bundle 'The-NERD-tree'
 Bundle 'smarty-syntax'
 Bundle 'vim-coffee-script'
 Bundle "Chiel92/vim-autoformat"
+Bundle 'Lokaltog/vim-easymotion'
 Bundle "pangloss/vim-javascript"
 Bundle 'digitaltoad/vim-jade'
-Bundle 'Lokaltog/vim-easymotion'
+Bundle 'vim-jsbeautify'
 "Bundle 'Lokaltog/vim-powerline'
 Bundle 'h2rd/vim-phpdoc'
 Bundle 'wavded/vim-stylus'
@@ -205,7 +220,7 @@ let g:ctrlp_prompt_mappings = {
 "   easyMotion
 """"""""""""""""""""""""""""""
 " ホームポジションに近いキーを使う
-let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvbHJKLASDFGYUIOPQWERTNMZXCVB'
+let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvb'
 " 「'」 + 何かにマッピング
 let g:EasyMotion_leader_key=";"
 " 1 ストローク選択を優先する
@@ -294,10 +309,20 @@ let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
 """"""""""""""""""""""""""""""
 "   Vimwiki
 """"""""""""""""""""""""""""""
-let g:vimwiki_list = [{'path': '~/.vimwiki',
+let g:vimwiki_list = [{
+\ 'auto_export': 0,
+\ 'ext': '.md',
+\ 'html_header': '~/.vimwiki/template/header.tpl',
+\ 'path': '~/.vimwiki',
 \ 'path_html': '~/.vimwiki/html/',
-\ 'html_header': '~/.Vimwiki/template/header.tpl',}]
+\ 'syntax': 'markdown',
+\ }]
 
+let s:vimwiki_ext = '.md'
+let g:vimwiki_ext2syntax = {'.md': 'markdown',
+\ '.mkd': 'markdown',
+\ '.wiki': 'media'}
+""\ 'syntax': 'markdown',
 "Vimwiki
 "if MySys() == 'linux'
   "let g:vimwiki_list = [{'path': '/home/imcoddy/Dropbox/Wiki/',
