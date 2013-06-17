@@ -71,6 +71,7 @@
 	pro = pull --rebase origin
 	ps = push
 	pu = push
+	pud = pull upstream develop
 
     rb = rebase
     rbc = rebase --continue
