@@ -4,6 +4,7 @@ ln -s ~/.dotfiles/git/git-completion.bash ~/.git-completion.bash
 
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/zshrc ~/.zshrc
+ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/screenrc ~/.screenrc
 
 #mv ~/.vim ~/.vim_back
