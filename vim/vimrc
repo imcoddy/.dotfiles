@@ -76,10 +76,11 @@ Bundle 'vim-coffee-script'
 Bundle "Chiel92/vim-autoformat"
 Bundle 'Lokaltog/vim-easymotion'
 Bundle "pangloss/vim-javascript"
+Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'vim-jsbeautify'
+Bundle 'evidens/vim-twig'
 "Bundle 'Lokaltog/vim-powerline'
-Bundle 'h2rd/vim-phpdoc'
 Bundle 'wavded/vim-stylus'
 Bundle 'vimwiki'
 Bundle 'YankRing.vim'

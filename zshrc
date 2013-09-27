@@ -49,13 +49,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-#ETHNA_LIB=/home/gree/common/pub/lib/Ethna/lib
-ETHNA_LIB=/home/gree/common/pub/lib/Ethna/bin
-
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/games
-export PATH=$PATH:$ETHNA_LIB
-alias  ethna="ethna.sh"
-
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
@@ -64,7 +57,7 @@ export LC_ALL=en_US.UTF-8
 #add database user
 #grant select,insert,delete,update,create,drop,file,alter,index on *.* to 'gree' identified by 'password_you_want_to_set';
 #flush privileges;
-alias mysql="mysql -u gree-ro -p"
+alias mysql="mysql -u gree -p"
 alias mysqltestdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias mysqlrealdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias gt="git status"
@@ -75,6 +68,7 @@ alias gd="git diff"
 #autoload bashcompinit
 #bashcompinit
 source ~/.git-completion.bash
+source ~/.nvm/nvm.sh
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
@@ -110,17 +104,18 @@ alias cz="cd ~/.dotfiles/"
 alias dir='ls -1'
 alias gvim='gvim -geom 82x35'
 alias ..='cd ..'
-alias w='cd /home/gree/xgree/tracker/'
+alias w='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/'
+alias ws='cd /home/di-qiu/workspace/'
 alias wa='cd /home/gree/xgree/tracker/frontend/stdashboard/act/'
 alias wam='cd /home/gree/xgree/tracker/frontend/stdashboard/class/Module/'
 alias was='cd /home/gree/xgree/tracker/frontend/stdashboard/'
 alias watm='cd /home/gree/xgree/tracker/frontend/stdashboard/test/Module/'
 alias wat='cd /home/gree/xgree/tracker/frontend/stdashboard/tpl/'
-alias ws='cd /home/gree/xgree/tracker/Service/stadmaster/class/'
 alias wdf='cd /home/gree/xgree/tracker/Service/stadmaster/class/Cascade/DataFormat/'
 alias wmo='cd /home/gree/xgree/tracker/Service/stadmaster/class/Model/'
 alias wt='cd /home/gree/xgree/tracker/Service/stadmaster/test/'
 
+alias vim='vim -p'
 alias vz='vim ~/.zshrc'
 alias vv='vim ~/.vimrc'
 alias fixme='grep "FIXME" -r .'
