@@ -62,6 +62,7 @@ alias mysqltestdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias mysqlrealdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias gt="git status"
 alias gd="git diff"
+alias gclean="git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
 
 #autoload -U compinit compinit
 
@@ -92,6 +93,7 @@ source ~/.nvm/nvm.sh
 
 # Normal aliases
 alias ls='ls --color=auto -F'
+alias vim='vim -p'
 alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
 alias f='find |grep'
@@ -116,7 +118,12 @@ alias wb='cd /home/di-qiu/workspace/sites/blog/'
 alias wba='cd /home/di-qiu/workspace/sites/blog/fuel/app/'
 alias wdf='cd /home/gree/xgree/tracker/Service/stadmaster/class/Cascade/DataFormat/'
 alias wmo='cd /home/gree/xgree/tracker/Service/stadmaster/class/Model/'
-alias wt='cd /home/gree/xgree/tracker/Service/stadmaster/test/'
+alias ws='cd /home/gree/xgree/tracker/Service/stadmaster/'
+alias wst='cd /home/gree/xgree/tracker/Service/stadmaster/test/'
+alias wt='cd /home/gree/xgree/tracker/Service/Tracker/'
+alias wtt='cd /home/gree/xgree/tracker/Service/Tracker/test/class/'
+alias wtr='cd /home/gree/xgree/tracker/Service/Tracker/class/Report/Data/'
+alias gge='cd /home/gree/etc/'
 
 alias vim='vim -p'
 alias vt='vim ~/.tmux.conf'
@@ -140,3 +147,5 @@ alias -g L='|less'
 # command S equivalent to command &> /dev/null &
 alias -g S='&> /dev/null &'
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

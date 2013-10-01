@@ -55,7 +55,10 @@
 
 	last = log -1 HEAD
 
+    l = log --oneline --decorate -12 --color
+    lc = log --graph --color
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    ll = log --oneline --decorate --color
 
 	mg = merge
 	mgnf = merge --no-ff
@@ -71,7 +74,7 @@
 	pro = pull --rebase origin
 	ps = push
 	pu = push
-    pud = pull upstream develop
+	pud = pull upstream develop
 
     rb = rebase
     rbc = rebase --continue
@@ -81,6 +84,10 @@
 	reset = reset HEAD --
     recent = log -5 HEAD
 
+    sbi = submodule init
+    sbu = submodule update
+    sbp = submodule foreach git pull
+    sbc = submodule foreach git co master
 	st = status
 
     trace = update-index --no-assume-unchanged
