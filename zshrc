@@ -93,7 +93,7 @@ nvm use v0.10.20
 #zle -N backward-delete-to-slash
 
 # Normal aliases
-alias ls='ls --color=auto -F'
+alias ls='ls -FHG'
 alias vim='vim -p'
 alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
