@@ -126,6 +126,7 @@ alias todo="grep 'TODO' -r ."
 
 alias gree_update='cd /home/gree && /home/gree/bin/update_dev.php -b -f'
 
+alias t='tree'
 alias tx='tmux'
 alias txa='tmux attach'
 alias txw='tmux attach -t work'
