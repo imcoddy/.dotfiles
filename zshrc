@@ -128,6 +128,7 @@ alias gree_update='cd /home/gree && /home/gree/bin/update_dev.php -b -f'
 
 alias tx='tmux'
 alias txa='tmux attach'
+alias txw='tmux attach -t work'
 alias txc='tmux new -s'
 
 alias s='screen -S'
