@@ -70,6 +70,7 @@ alias gclean="git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
 #bashcompinit
 source ~/.git-completion.bash
 source ~/.nvm/nvm.sh
+nvm use v0.10.20
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
@@ -110,14 +111,10 @@ alias w='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/'
 alias ws='cd /home/di-qiu/workspace/'
 alias wa='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/fuel/app/'
 alias wap='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/public/'
-alias wam='cd /home/gree/xgree/tracker/frontend/stdashboard/class/Module/'
-alias was='cd /home/gree/xgree/tracker/frontend/stdashboard/'
-alias watm='cd /home/gree/xgree/tracker/frontend/stdashboard/test/Module/'
-alias wat='cd /home/gree/xgree/tracker/frontend/stdashboard/tpl/'
 alias wb='cd /home/di-qiu/workspace/sites/blog/'
 alias wba='cd /home/di-qiu/workspace/sites/blog/fuel/app/'
-alias wdf='cd /home/gree/xgree/tracker/Service/stadmaster/class/Cascade/DataFormat/'
-alias wmo='cd /home/gree/xgree/tracker/Service/stadmaster/class/Model/'
+alias wm='cd /home/di-qiu/workspace/sites/multi-feedback'
+alias wma='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/'
 alias gge='cd /home/gree/etc/'
 
 alias vim='vim -p'
