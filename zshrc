@@ -93,7 +93,7 @@ nvm use v0.10.20
 #zle -N backward-delete-to-slash
 
 # Normal aliases
-alias ls='ls -FHG'
+alias ls='ls -FHG --color=tty'
 alias vim='vim -p'
 alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
@@ -115,6 +115,8 @@ alias wb='cd /home/di-qiu/workspace/sites/blog/'
 alias wba='cd /home/di-qiu/workspace/sites/blog/fuel/app/'
 alias wm='cd /home/di-qiu/workspace/sites/multi-feedback'
 alias wma='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/'
+alias wmc='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/classes/'
+alias wmv='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/views/'
 alias gge='cd /home/gree/etc/'
 
 alias vim='vim -p'
@@ -127,6 +129,8 @@ alias todo="grep 'TODO' -r ."
 alias gree_update='cd /home/gree && /home/gree/bin/update_dev.php -b -f'
 
 alias t='tree'
+alias tl='tree -L'
+alias t2='tree -L 2'
 alias tx='tmux'
 alias txa='tmux attach'
 alias txw='tmux attach -t work'
@@ -142,4 +146,11 @@ alias -g L='|less'
 alias -g S='&> /dev/null &'
 
 
+# Use hub as git
+# install on OS X
+# $ brew install hub
+# # other systems
+# $ curl http://hub.github.com/standalone -sLo ~/bin/hub
+# $ chmod +x ~/bin/hub
+alias git='hub'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

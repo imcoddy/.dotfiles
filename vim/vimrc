@@ -40,6 +40,8 @@ au FileType python setl sw=2 sts=2 et
 au FileType coffee setl sw=2 sts=2 et
 au FileType coffeescript setl sw=2 sts=2 et
 
+"set temp dir
+set directory=/tmp
 
 " Vundle"
 set rtp+=~/.vim/bundle/vundle/
@@ -54,7 +56,7 @@ Bundle 'ctrlp.vim'
 Bundle 'FencView.vim'
 Bundle 'FuzzyFinder'
 Bundle 'Indent-Guides'
-Bundle 'html5.vim'
+"Bundle 'html5.vim'
 Bundle 'jsbeautify'
 Bundle 'jshint.vim'
 Bundle 'jslint.vim'
@@ -68,10 +70,11 @@ Bundle 'imcoddy/snipmate.vim'
 Bundle 'surround.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'taglist.vim'
-Bundle 'majutsushi/tagbar'
+"Bundle 'majutsushi/tagbar'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'smarty-syntax'
+"Bundle 'snipmate-snippets'
 Bundle 'vim-coffee-script'
 Bundle "Chiel92/vim-autoformat"
 Bundle 'Lokaltog/vim-easymotion'
@@ -84,7 +87,8 @@ Bundle 'evidens/vim-twig'
 Bundle 'wavded/vim-stylus'
 Bundle 'vimwiki'
 Bundle 'YankRing.vim'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
+"Bundle 'mattn/zencoding-vim'
 
 "HTML indent
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -265,7 +269,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expan
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate.vim/snippets/'
 
 
 """"""""""""""""""""""""""""""
@@ -352,6 +356,9 @@ let g:user_zen_settings = {
 \ 'filters' : 'c',
 \ },
 \ 'tpl' : {
+\ 'extends' : 'html',
+\ },
+\ 'twig' : {
 \ 'extends' : 'html',
 \ },
 \ 'xml' : {
