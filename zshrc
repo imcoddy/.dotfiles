@@ -62,7 +62,8 @@ alias mysqltestdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias mysqlrealdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias gt="git status"
 alias gd="git diff"
-alias gclean="git branch --merged | grep -v "\*" | xargs -n 1 git branch -d"
+alias gbc="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
+alias gcb="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
 
 #autoload -U compinit compinit
 
@@ -107,15 +108,15 @@ alias cz="cd ~/.dotfiles/"
 alias dir='ls -1'
 alias gvim='gvim -geom 82x35'
 alias ..='cd ..'
-alias w='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/'
+alias w='cd /home/di-qiu/workspace/'
 alias ws='cd /home/di-qiu/workspace/'
 alias wa='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/fuel/app/'
 alias wap='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/public/'
-alias wb='cd /home/di-qiu/workspace/sites/blog/'
+alias wb='cd /home/di-qiu/workspace/git/coffee-coin/'
 alias wba='cd /home/di-qiu/workspace/sites/blog/fuel/app/'
 alias wm='cd /home/di-qiu/workspace/sites/multi-feedback'
 alias wma='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/'
-alias wmc='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/classes/'
+alias wmc='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/classes/controller/'
 alias wmv='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/views/'
 alias gge='cd /home/gree/etc/'
 
@@ -152,5 +153,5 @@ alias -g S='&> /dev/null &'
 # # other systems
 # $ curl http://hub.github.com/standalone -sLo ~/bin/hub
 # $ chmod +x ~/bin/hub
-alias git='hub'
+#alias git='hub'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
