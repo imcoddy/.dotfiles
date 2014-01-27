@@ -64,6 +64,11 @@ alias gt="git status"
 alias gd="git diff"
 alias gbc="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
 alias gcb="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
+alias lvm='slogin di-qiu@qiu-php5.dev.gree.jp'
+alias lvmq='slogin -o ServerAliveInterval=60 di-qiu@diqiu.dev.gree.jp'
+alias lvmp='slogin -o ServerAliveInterval=60 di-qiu@qiu54.dev.gree.jp'
+alias lvmt='slogin admin@tracker-dev-hadoop.dev.gree.jp'
+alias lvmu='slogin di-qiu@utility-stg01.dev.gree.jp'
 
 #autoload -U compinit compinit
 
@@ -96,6 +101,7 @@ nvm use v0.10.20
 # Normal aliases
 #alias ls='ls -FHG --color=tty'
 alias vim='vim -p'
+alias rake="noglob rake"
 alias ls='ls -G'
 alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
@@ -129,6 +135,7 @@ alias fixme='grep "FIXME" -r .'
 alias todo="grep 'TODO' -r ."
 
 alias gree_update='cd /home/gree && /home/gree/bin/update_dev.php -b -f'
+alias greeproxy='ssh -f -N -D 10080 ns.dev.gree.jp -l di-qiu'
 
 alias t='tree'
 alias tl='tree -L'

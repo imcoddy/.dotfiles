@@ -75,6 +75,9 @@
 	ps = push
 	pu = push
 	pud = pull upstream develop
+	pum = pull upstream master
+	pom = push origin master
+	pod = push origin develop
 
     rb = rebase
     rbc = rebase --continue
@@ -105,3 +108,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[hub]
+	host = git.gree-dev.net

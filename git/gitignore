@@ -5,9 +5,12 @@ node_modules
 build/
 tmp/
 
+platforms
+
 coverage-report
 *.[oa]
 *.swp
 *.swo
 *.bak
+*.log
 *.*~
