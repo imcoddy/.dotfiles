@@ -151,6 +151,9 @@ set tw=500
 " Show tab and space
 set list
 set listchars=tab:>-,trail:-
+highlight SpecialKey ctermfg=4 guifg=4
+highlight JpSpace cterm=underline ctermfg=7 guifg=7
+au BufRead,BufNew * match JpSpace /　/
 
 " Set tab complete
 set wildmenu
