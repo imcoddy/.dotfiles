@@ -1,4 +1,5 @@
 curl -L http://install.ohmyz.sh | sh
+curl https://raw.github.com/creationix/nvm/v0.5.0/install.sh | sh
 rm ~/.zshrc
 
 ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig

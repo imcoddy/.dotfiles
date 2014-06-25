@@ -20,7 +20,8 @@ endfun
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible    " be iMproved
-filetype off        " required!
+filetype on        " required!
+au BufNewFile,BufRead *.tt set filetype=html
 
 "encoding
 set encoding=utf-8
@@ -50,6 +51,7 @@ call vundle#rc()
 " let Vundle manage Vundle required!
 Bundle 'gmarik/vundle'
 " vim-scripts repos
+Bundle 'yonchu/accelerated-smooth-scroll'
 Bundle 'AutoClose'
 Bundle 'AutoComplPop'
 Bundle 'cmdline-completion'
@@ -136,6 +138,7 @@ set ruler "Always show current position
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "Enable syntax highlight
 syntax on
+colorscheme default
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -275,8 +278,10 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expan
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate.vim/snippets/'
-
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 """"""""""""""""""""""""""""""
 "   NERDTree的选项
