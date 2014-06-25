@@ -84,6 +84,7 @@ Bundle "pangloss/vim-javascript"
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'vim-jsbeautify'
+Bundle 'dzeban/vim-log-syntax'
 Bundle 'evidens/vim-twig'
 "Bundle 'Lokaltog/vim-powerline'
 Bundle 'wavded/vim-stylus'
@@ -255,6 +256,9 @@ nmap ,t :FufTaggedFile<CR>
 "   Indent-Guides的选项
 """"""""""""""""""""""""""""""
 let g:indent_guides_guide_size=1
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  guibg=red   ctermbg=3
+hi IndentGuidesEven guibg=green ctermbg=4
 
 """"""""""""""""""""""""""""""
 "   NeoSnippet的选项
