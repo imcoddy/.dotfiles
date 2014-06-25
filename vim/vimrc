@@ -20,7 +20,8 @@ endfun
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible    " be iMproved
-filetype off        " required!
+filetype on        " required!
+au BufNewFile,BufRead *.tt set filetype=html
 
 "encoding
 set encoding=utf-8
@@ -51,8 +52,10 @@ call vundle#rc()
 " let Vundle manage Vundle required!
 Bundle 'gmarik/vundle'
 " vim-scripts repos
+Bundle 'yonchu/accelerated-smooth-scroll'
 Bundle 'AutoClose'
 Bundle 'AutoComplPop'
+Bundle 'cmdline-completion'
 Bundle 'ctrlp.vim'
 Bundle 'FencView.vim'
 Bundle 'FuzzyFinder'
@@ -67,6 +70,7 @@ Bundle 'Mark'
 "Bundle 'Markdown'
 Bundle 'Shougo/neocomplcache.git'
 Bundle 'Shougo/neosnippet.git'
+Bundle 'imcoddy/neosnippet-snippets.git'
 Bundle 'ShowTrailingWhitespace'
 Bundle 'imcoddy/snipmate.vim'
 Bundle 'surround.vim'
@@ -77,21 +81,21 @@ Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'smarty-syntax'
 "Bundle 'snipmate-snippets'
-Bundle 'vim-coffee-script'
 Bundle "Chiel92/vim-autoformat"
+Bundle 'vim-coffee-script'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle "pangloss/vim-javascript"
-Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
+Bundle "pangloss/vim-javascript"
 Bundle 'vim-jsbeautify'
+Bundle 'groenewege/vim-less'
 Bundle 'dzeban/vim-log-syntax'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'evidens/vim-twig'
-"Bundle 'Lokaltog/vim-powerline'
 Bundle 'wavded/vim-stylus'
-Bundle 'vimwiki'
+Bundle 'evidens/vim-twig'
+"Bundle 'vimwiki'
 Bundle 'YankRing.vim'
 Bundle 'mattn/emmet-vim'
-"Bundle 'mattn/zencoding-vim'
 
 "HTML indent
 "let g:html_indent_inctags = "html,body,head,tbody"
@@ -136,6 +140,7 @@ set ruler "Always show current position
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "Enable syntax highlight
 syntax on
+colorscheme default
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -153,6 +158,9 @@ set tw=500
 " Show tab and space
 set list
 set listchars=tab:>-,trail:-
+highlight SpecialKey ctermfg=4 guifg=4
+highlight JpSpace cterm=underline ctermfg=7 guifg=7
+au BufRead,BufNew * match JpSpace /　/
 
 " Set tab complete
 set wildmenu
@@ -275,8 +283,10 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expan
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate.vim/snippets/'
-
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 """"""""""""""""""""""""""""""
 "   NERDTree的选项
