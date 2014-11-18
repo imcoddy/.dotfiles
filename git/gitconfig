@@ -1,38 +1,38 @@
 [user]
-	name = Qiu Di
-	email = di.qiu@gree.net
+    name = Qiu Di
+    email = di.qiu@gree.net
 [core]
-	whitespace = trailing-space,space-before-tab,indent-with-non-tab
-	editor = vim
-	excludesfile = ~/.gitignore
+    whitespace = trailing-space,space-before-tab,indent-with-non-tab
+    editor = vim
+    excludesfile = ~/.gitignore
 [color]
-	ui = true
-	diff = auto
-	status = auto
+    ui = true
+    diff = auto
+    status = auto
 [branch]
     ;autosetuprebase = always
 [alias]
     amend = commit --amend
     ap = commit --amend
     append = commit --amend
-	br = branch
+    br = branch
 
-	ci = commit
-	cm = commit -a -m
+    ci = commit
+    cm = commit -a -m
     cma = commit --amend
 
-	co = checkout
-	com = checkout master
-	cod = checkout develop
-	cof = checkout feature
-	cob = checkout bugfix
-	cor = checkout release
+    co = checkout
+    com = checkout master
+    cod = checkout develop
+    cof = checkout feature
+    cob = checkout bugfix
+    cor = checkout release
 
-	df = diff
-	dft = difftool
-	di = diff
-	did = diff develop upstream/develop
-	dt = difftool
+    df = diff
+    dft = difftool
+    di = diff
+    did = diff develop upstream/develop
+    dt = difftool
 
     fl = flow
     fi = flow init
@@ -46,67 +46,67 @@
     frf = flow release finish
     ff = flow feature finish
 
-	ft = fetch
-	fto = fetch origin
-	ftu = fetch upstream
-	fto = fetch origin
+    ft = fetch
+    fto = fetch origin
+    ftu = fetch upstream
+    fto = fetch origin
 
-	info = remote -v
+    info = remote -v
 
-	last = log -1 HEAD
+    last = log -1 HEAD
 
     l = log --oneline --decorate -12 --color
     lc = log --graph --color
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
     ll = log --oneline --decorate --color
 
-	mg = merge
-	mgnf = merge --no-ff
-	md = merge --no-ff develop
-	mnf = merge --no-ff
+    mg = merge
+    mgnf = merge --no-ff
+    md = merge --no-ff develop
+    mnf = merge --no-ff
 
     pick = cherry-pick
-	pin = stash
-	pl = pull
-	plr = pull --rebase
-	pop = stash pop
-	pru = pull --rebase upstream
-	pro = pull --rebase origin
-	ps = push
-	pu = push
-	pud = pull upstream develop
-	pum = pull upstream master
-	pom = push origin master
-	pod = push origin develop
+    pin = stash
+    pl = pull
+    plr = pull --rebase
+    pop = stash pop
+    pru = pull --rebase upstream
+    pro = pull --rebase origin
+    ps = push
+    pu = push
+    pud = pull upstream develop
+    pum = pull upstream master
+    pom = push origin master
+    pod = push origin develop
 
     rb = rebase
     rbc = rebase --continue
     rbd = rebase -i develop
     rbi = rebase -i HEAD~
 
-	reset = reset HEAD --
+    reset = reset HEAD --
     recent = log -5 HEAD
 
     sbi = submodule init
     sbu = submodule update
     sbp = submodule foreach git pull
     sbc = submodule foreach git co master
-	st = status
+    st = status
 
     trace = update-index --no-assume-unchanged
     untrace = update-index --assume-unchanged
 
-	unstage = reset HEAD --
-	us = reset HEAD --
+    unstage = reset HEAD --
+    us = reset HEAD --
 
-	last = log -1 HEAD
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    last = log -1 HEAD
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
 [hub]
-	host = git.gree-dev.net
+    host = git.gree-dev.net
