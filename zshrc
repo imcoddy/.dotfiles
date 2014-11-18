@@ -100,6 +100,9 @@ nvm use v0.10.20
 
 # Normal aliases
 #alias ls='ls -FHG --color=tty'
+alias .2='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
 alias vim='vim -p'
 alias rake="noglob rake"
 alias ls='ls -G'
