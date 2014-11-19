@@ -31,7 +31,7 @@
     df = diff
     dft = difftool
     di = diff
-    did = diff develop upstream/develop
+    did = diff develop
     dt = difftool
 
     fl = flow

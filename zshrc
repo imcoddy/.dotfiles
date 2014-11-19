@@ -100,6 +100,8 @@ nvm use v0.10.20
 
 # Normal aliases
 #alias ls='ls -FHG --color=tty'
+alias ..='cd ..'
+alias .1='cd ../'
 alias .2='cd ../../'
 alias .3='cd ../../../'
 alias .4='cd ../../../../'
@@ -117,7 +119,6 @@ alias :q="exit"
 alias cz="cd ~/.dotfiles/"
 alias dir='ls -1'
 alias gvim='gvim -geom 82x35'
-alias ..='cd ..'
 alias w='cd /home/di-qiu/workspace/'
 alias ws='cd /home/di-qiu/workspace/'
 alias wa='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/fuel/app/'
