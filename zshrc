@@ -54,6 +54,7 @@ export LC_CTYPE=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# History work related aliases
 #add database user
 #grant select,insert,delete,update,create,drop,file,alter,index on *.* to 'gree' identified by 'password_you_want_to_set';
 #flush privileges;
@@ -64,11 +65,22 @@ alias gt="git status"
 alias gd="git diff"
 alias gbc="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
 alias gcb="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
+alias gge='cd /home/gree/etc/'
 alias lvm='slogin di-qiu@qiu-php5.dev.gree.jp'
 alias lvmq='slogin -o ServerAliveInterval=60 di-qiu@diqiu.dev.gree.jp'
 alias lvmp='slogin -o ServerAliveInterval=60 di-qiu@qiu54.dev.gree.jp'
 alias lvmt='slogin admin@tracker-dev-hadoop.dev.gree.jp'
 alias lvmu='slogin di-qiu@utility-stg01.dev.gree.jp'
+alias w='cd /home/di-qiu/workspace/'
+alias wa='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/fuel/app/'
+alias wap='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/public/'
+alias wb='cd /home/di-qiu/workspace/git/coffee-coin/'
+alias wba='cd /home/di-qiu/workspace/sites/blog/fuel/app/'
+alias wm='cd /home/di-qiu/workspace/sites/multi-feedback'
+alias wma='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/'
+alias wmc='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/classes/controller/'
+alias wmv='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/views/'
+alias ws='cd /home/di-qiu/workspace/'
 
 #autoload -U compinit compinit
 
@@ -105,62 +117,47 @@ alias .1='cd ../'
 alias .2='cd ../../'
 alias .3='cd ../../../'
 alias .4='cd ../../../../'
-alias rake="noglob rake"
+alias :q="exit"
+alias c="clear"
+alias cz="cd ~/.dotfiles/"
+alias dir='ls -1'
+alias ex="exit"
+alias f='find |grep'
+alias fixme='grep "FIXME" -r .'
+alias gge='cd /home/gree/etc/'
+alias gvim='gvim -geom 82x35'
 alias ls='ls -G'
 alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
-alias f='find |grep'
-alias c="clear"
-alias ex="exit"
-alias z="exit"
 alias q="exit"
-alias :q="exit"
-alias cz="cd ~/.dotfiles/"
-alias dir='ls -1'
-alias gvim='gvim -geom 82x35'
-alias vd='vimdiff'
-alias vim='vim -p'
-alias vi='vim -p'
-alias vin='vim -p'
-alias w='cd /home/di-qiu/workspace/'
-alias ws='cd /home/di-qiu/workspace/'
-alias wa='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/fuel/app/'
-alias wap='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/public/'
-alias wb='cd /home/di-qiu/workspace/git/coffee-coin/'
-alias wba='cd /home/di-qiu/workspace/sites/blog/fuel/app/'
-alias wm='cd /home/di-qiu/workspace/sites/multi-feedback'
-alias wma='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/'
-alias wmc='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/classes/controller/'
-alias wmv='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/views/'
-alias gge='cd /home/gree/etc/'
-
-alias vim='vim -p'
-alias vt='vim ~/.tmux.conf'
-alias vz='vim ~/.zshrc'
-alias vv='vim ~/.vimrc'
-alias fixme='grep "FIXME" -r .'
-alias todo="grep 'TODO' -r ."
-
-alias gree_update='cd /home/gree && /home/gree/bin/update_dev.php -b -f'
-alias greeproxy='ssh -f -N -D 10080 ns.dev.gree.jp -l di-qiu'
-
+alias rake="noglob rake"
+alias s='screen -S'
+alias sls='screen -ls '
+alias sr='screen -R'
 alias t='tree'
-alias tl='tree -L'
 alias t2='tree -L 2'
+alias tl='tree -L'
+alias todo="grep 'TODO' -r ."
 alias tx='tmux'
 alias txa='tmux attach'
 alias txw='tmux attach -t work'
 alias txc='tmux new -s'
+alias vd='vimdiff'
+alias vi='vim -p'
+alias vim='vim -p'
+alias vin='vim -p'
+alias vt='vim ~/.tmux.conf'
+alias vv='vim ~/.vimrc'
+alias vz='vim ~/.zshrc'
+alias w='cd /home/di-qiu/workspace/'
+alias ws='cd /home/di-qiu/workspace/'
+alias z="exit"
 
-alias s='screen -S'
-alias sls='screen -ls '
-alias sr='screen -R'
 # command L equivalent to command |less
 alias -g L='|less'
 
 # command S equivalent to command &> /dev/null &
 alias -g S='&> /dev/null &'
-
 
 # Use hub as git
 # install on OS X
