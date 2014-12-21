@@ -79,6 +79,9 @@
     pom = push origin master
     pod = push origin develop
 
+    ra = remote add
+    rab = remote add bitbucket
+    rau = remote add upstream
     rb = rebase
     rbc = rebase --continue
     rbd = rebase -i develop

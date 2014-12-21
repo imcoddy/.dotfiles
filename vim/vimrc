@@ -30,7 +30,7 @@ set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 "autocmd BufWritePre * :call <SID>StripWhite()
 
 "copy to system clipboard"
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 if has('mouse')
   set mouse=a
   vmap <C-c> "+y
