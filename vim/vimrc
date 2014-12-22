@@ -42,6 +42,10 @@ au FileType coffee setl sw=2 sts=2 et
 au FileType coffeescript setl sw=2 sts=2 et
 au FileType html setl sw=2 sts=2 et
 
+"fix html auto completion
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags noci
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags noci
+
 "set temp dir
 set directory=/tmp
 
