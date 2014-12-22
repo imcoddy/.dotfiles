@@ -88,7 +88,7 @@ alias ws='cd /home/di-qiu/workspace/'
 #bashcompinit
 source ~/.git-completion.bash
 source ~/.nvm/nvm.sh
-nvm use v0.10.20
+nvm use v0.10.34
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
