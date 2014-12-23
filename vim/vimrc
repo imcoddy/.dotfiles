@@ -61,6 +61,7 @@ Bundle 'AutoClose'
 Bundle 'AutoComplPop'
 Bundle 'cmdline-completion'
 Bundle 'ctrlp.vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'FencView.vim'
 Bundle 'FuzzyFinder'
 Bundle 'grep.vim'
@@ -99,7 +100,6 @@ Bundle 'wavded/vim-stylus'
 Bundle 'evidens/vim-twig'
 "Bundle 'vimwiki'
 Bundle 'YankRing.vim'
-Bundle 'mattn/emmet-vim'
 
 "HTML indent
 "let g:html_indent_inctags = "html,body,head,tbody"
