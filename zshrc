@@ -119,6 +119,7 @@ alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias :q="exit"
 alias c="clear"
+alias cs="cd ~/.dotfiles/vim/vim/bundle/neosnippet-snippets/neosnippets/"
 alias cz="cd ~/.dotfiles/"
 alias dir='ls -1'
 alias ex="exit"
