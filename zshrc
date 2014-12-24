@@ -129,7 +129,8 @@ alias gfs='git flow feature start'
 alias gff='git flow feature finish'
 alias gge='cd /home/gree/etc/'
 alias gvim='gvim -geom 82x35'
-alias ls='ls -G'
+alias ls='ls -FHG --color=tty' # Linux
+alias ls='ls -G' # Mac
 alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
 alias q="exit"
