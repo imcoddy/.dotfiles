@@ -63,8 +63,8 @@ alias mysqltestdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias mysqlrealdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
 alias gt="git status"
 alias gd="git diff"
-alias gbc="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
-alias gcb="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
+alias gbc="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
+alias gcb="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
 alias gge='cd /home/gree/etc/'
 alias lvm='slogin di-qiu@qiu-php5.dev.gree.jp'
 alias lvmq='slogin -o ServerAliveInterval=60 di-qiu@diqiu.dev.gree.jp'
