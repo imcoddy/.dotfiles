@@ -1,0 +1,7 @@
+'atom-text-editor:not(mini).autocomplete-active':
+  'tab': 'autocomplete-plus:confirm'
+  'enter': 'autocomplete-plus:confirm'
+  'up': 'autocomplete-plus:select-previous'
+  'down': 'autocomplete-plus:select-next'
+  'ctrl-p': 'autocomplete-plus:select-previous'
+  'ctrl-n': 'autocomplete-plus:select-next'

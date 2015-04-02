@@ -1,0 +1,12 @@
+"*":
+  "exception-reporting":
+    userId: "8d289f1b-e66f-8977-da87-f5d38ec84d91"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "one-light-ui"
+      "one-dark-syntax"
+    ]
+  editor:
+    invisibles: {}
