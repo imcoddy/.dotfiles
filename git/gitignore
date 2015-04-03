@@ -5,6 +5,7 @@ atom/.apm
 atom/.node-gyp
 atom/compile-cache
 atom/packages
+atom/storage
 build/
 node_modules
 tmp/

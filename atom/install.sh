@@ -8,7 +8,6 @@ apm install file-icons
 apm install filetype-color
 apm install jshint
 apm install linter
-apm install markdown-preview
 apm install merge-conflicts
 apm install terminal-status
 apm install todo-show
