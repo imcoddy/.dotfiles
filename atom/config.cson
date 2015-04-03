@@ -8,9 +8,28 @@
       "one-light-ui"
       "one-light-syntax"
     ]
+    disabledPackages: [
+      "welcome"
+      "editor-stats"
+    ]
   editor:
     invisibles: {}
+    softWrap: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrapAtPreferredLineLength: true
   "filetype-color":
     enabled: "false"
   linter: {}
   "terminal-status": {}
+  "atom-beautify": {}
+  "vim-mode":
+    startInInsertMode: true
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+  "japanese-wrap":
+    characterWidth: {}
+    lineBreakingRule: {}
+  emmet: {}
+  "autocomplete-plus":
+    confirmCompletion: "tab and enter"

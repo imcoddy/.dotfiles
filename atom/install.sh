@@ -1,4 +1,5 @@
 apm install atom-beautify
+apm install atom-ctags
 apm install autocomplete-plus
 apm install autocomplete-snippets
 apm install color-picker
@@ -6,9 +7,18 @@ apm install editor-stats
 apm install emmet
 apm install file-icons
 apm install filetype-color
+apm install highlight-line
+apm install highlight-selected
+apm install japanese-wrap
 apm install jshint
 apm install linter
+apm install linter-jshint
+apm install minimap
+apm install minimap-highlight-selected
 apm install merge-conflicts
+apm install project-manager
+apm install seti-ui
+apm install seti-monokai
 apm install terminal-status
 apm install todo-show
 apm install vim-mode
