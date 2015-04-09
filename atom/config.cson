@@ -6,10 +6,11 @@
   core:
     themes: [
       "one-light-ui"
-      "one-dark-syntax"
+      "one-light-syntax"
     ]
   editor:
     invisibles: {}
   "filetype-color":
     enabled: "false"
   linter: {}
+  "terminal-status": {}
