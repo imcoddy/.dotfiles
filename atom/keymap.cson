@@ -27,3 +27,5 @@
   'down': 'autocomplete-plus:select-next'
   'ctrl-p': 'autocomplete-plus:select-previous'
   'ctrl-n': 'autocomplete-plus:select-next'
+'.platform-darwin':
+  'ctrl-o': 'fuzzy-finder:toggle-file-finder'
