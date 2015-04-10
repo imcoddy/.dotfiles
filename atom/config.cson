@@ -5,12 +5,14 @@
     showOnStartup: false
   core:
     themes: [
-      "one-light-ui"
-      "one-light-syntax"
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
     ]
     disabledPackages: [
       "welcome"
       "editor-stats"
+      "symbols-view"
+      "symbols-tree-view"
     ]
   editor:
     invisibles: {}
@@ -18,6 +20,9 @@
     showIndentGuide: true
     showInvisibles: true
     softWrapAtPreferredLineLength: true
+    fontSize: 14
+    lineHeight: 1.2
+    tabLength: 8
   "filetype-color":
     enabled: "false"
   linter: {}
@@ -33,3 +38,6 @@
   emmet: {}
   "autocomplete-plus":
     confirmCompletion: "tab and enter"
+  minimap:
+    plugins:
+      "highlight-selected": true
