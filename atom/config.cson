@@ -19,6 +19,10 @@
   autosave:
     enabled: true
   core:
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
     disabledPackages: [
       "atom-color-highlight"
       "atom-ctags"
@@ -26,13 +30,17 @@
       "editor-stats"
       "exception-reporting"
       "feedback"
+      "git-plus"
       "git-tab-status"
       "language-scheme"
+      "linter-coffeelint"
       "metrics"
+      "merge-conflicts"
       "minimap-highlight-selected"
       "mocha-test-runner"
       "symbols-tree-view"
       "symbols-view"
+      "terminal-status"
       "welcome"
       "linter-eslint"
       "terminal-status"
@@ -62,6 +70,9 @@
     lineBreakingRule: {}
   linter: {}
   "linter-jshint": {}
+  "autocomplete-plus":
+    confirmCompletion: "tab and enter"
+    includeCompletionsFromAllBuffers: true
   minimap:
     plugins:
       "highlight-selected": true

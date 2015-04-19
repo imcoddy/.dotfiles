@@ -1,3 +1,4 @@
+angularjs
 atom-beautify
 atom-color-highlight
 atom-ctags
