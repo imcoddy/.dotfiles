@@ -23,14 +23,12 @@
     softWrapAtPreferredLineLength: true
     fontSize: 14
     lineHeight: 1.2
-    tabLength: 8
   "filetype-color":
     enabled: "false"
   linter: {}
   "terminal-status": {}
   "atom-beautify": {}
   "vim-mode":
-    startInInsertMode: true
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
   "japanese-wrap":
