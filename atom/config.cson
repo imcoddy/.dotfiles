@@ -23,11 +23,14 @@
     softWrapAtPreferredLineLength: true
     fontSize: 14
     lineHeight: 1.2
+    tabLength: 4
   "filetype-color":
     enabled: "false"
   linter: {}
   "terminal-status": {}
-  "atom-beautify": {}
+  "atom-beautify":
+    beautifyOnSave: true
+    analytics: false
   "vim-mode":
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
