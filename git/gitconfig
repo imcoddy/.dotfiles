@@ -114,3 +114,5 @@
     trustExitCode = true
 [hub]
     host = git.gree-dev.net
+[branch]
+	autosetuprebase = always
