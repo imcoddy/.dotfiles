@@ -8,6 +8,7 @@ color-picker
 easy-motion
 editor-stats
 emmet
+ex-mode
 file-icons
 filetype-color
 git-plus
@@ -34,3 +35,4 @@ symbols-tree-view
 terminal-status
 todo-show
 vim-mode
+vim-surround
