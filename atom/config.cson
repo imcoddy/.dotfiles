@@ -1,6 +1,5 @@
 "*":
-  "exception-reporting":
-    userId: "8d289f1b-e66f-8977-da87-f5d38ec84d91"
+  "exception-reporting": {}
   welcome:
     showOnStartup: false
   core:
@@ -13,6 +12,20 @@
       "editor-stats"
       "symbols-view"
       "symbols-tree-view"
+      "atom-pair"
+      "emmet"
+      "git-plus"
+      "git-tab-status"
+      "atom-color-highlight"
+      "language-scheme"
+      "linter-coffeelint"
+      "merge-conflicts"
+      "minimap"
+      "minimap-highlight-selected"
+      "mocha-test-runner"
+      "metrics"
+      "feedback"
+      "exception-reporting"
     ]
     followSymlinks: true
   editor:
@@ -29,8 +42,17 @@
   linter: {}
   "terminal-status": {}
   "atom-beautify":
-    beautifyOnSave: true
     analytics: false
+    muteUnsupportedLanguageErrors: true
+    language_coffeescript_beautify_on_save: true
+    language_css_beautify_on_save: true
+    language_csv_beautify_on_save: true
+    language_html_beautify_on_save: true
+    language_js_beautify_on_save: true
+    language_json_beautify_on_save: true
+    language_scss_beautify_on_save: true
+    language_ruby_disabled: true
+    language_python_beautify_on_save: true
   "vim-mode":
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
@@ -43,3 +65,9 @@
   minimap:
     plugins:
       "highlight-selected": true
+  "atom-ctags": {}
+  "atom-pair": {}
+  "atom-color-highlight": {}
+  "linter-jshint": {}
+  "vim-surround": {}
+  autosave: {}

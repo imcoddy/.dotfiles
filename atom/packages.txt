@@ -5,6 +5,7 @@ atom-pair
 autocomplete-plus
 autocomplete-snippets
 color-picker
+comment
 easy-motion
 editor-stats
 emmet
