@@ -13,3 +13,53 @@
 #     'prefix': 'log'
 #     'body': 'console.log $1'
 #
+
+'.source.js':
+  'Leetcode Dummy Link Node':
+    'prefix': 'ldln'
+    'body': """
+      var dummy = new ListNode(null);
+      var tail = dummy;
+      var p = head;
+    """
+
+  'Leetcode Link Node Defination':
+    'prefix': 'lln'
+    'body': """
+      function ListNode(val) {
+        this.val = val;
+        this.next = null;
+      }
+    """
+
+  'Leetcode Result':
+    'prefix': 'lpass'
+    'body': """
+      /**
+       * Memo: $4
+       * Runtime: $1ms
+       * Tests: $2 test cases passed
+       * Rank: $3
+       */
+    """
+
+  'Leetcode Result':
+    'prefix': 'lresult'
+    'body': """
+      var result = ${1:"[]"};
+      $2
+      return result;'
+    """
+
+  'Leetcode Tree Node Defination':
+    'prefix': 'ltn'
+    'body': """
+      function TreeNode(val) {
+        this.val = val;
+        this.left = this.right = null;
+      }
+    """
+
+  'Leetcode Util':
+    'prefix': 'lutil'
+    'body': 'var util = require("./util.js");'
