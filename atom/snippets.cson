@@ -32,23 +32,24 @@
       }
     """
 
-  'Leetcode Result':
+  'Leetcode Pass Result':
     'prefix': 'lpass'
     'body': """
       /**
-       * Memo: $4
-       * Runtime: $1ms
-       * Tests: $2 test cases passed
-       * Rank: $3
+       * Memo: $3
+       * Complex: O($4)
+       * Runtime: $5ms
+       * Tests: $1 test cases passed
+       * Rank: ${2:S}
        */
     """
 
   'Leetcode Result':
     'prefix': 'lresult'
     'body': """
-      var result = ${1:"[]"};
+      var result = ${1:[]};
       $2
-      return result;'
+      return result;
     """
 
   'Leetcode Tree Node Defination':
