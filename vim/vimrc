@@ -61,6 +61,7 @@ Bundle 'AutoClose'
 "Bundle 'AutoComplPop'
 Bundle 'cmdline-completion'
 Bundle 'ctrlp.vim'
+Bundle 'rizzatti/dash.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'FencView.vim'
 Bundle 'FuzzyFinder'
@@ -235,6 +236,11 @@ let g:ctrlp_prompt_mappings = {
 \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
 \ }
 
+
+""""""""""""""""""""""""""""""
+"   Dash
+""""""""""""""""""""""""""""""
+:nmap <silent> <leader>d <Plug>DashSearch
 
 
 """"""""""""""""""""""""""""""

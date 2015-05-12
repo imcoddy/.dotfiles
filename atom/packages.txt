@@ -6,6 +6,7 @@ autocomplete-plus
 autocomplete-snippets
 color-picker
 comment
+dash
 easy-motion
 editor-stats
 emmet
@@ -29,6 +30,7 @@ mocha-test-runner
 open-last-project
 pretty-json
 project-manager
+remote-edit
 script
 seti-monokai
 seti-ui
