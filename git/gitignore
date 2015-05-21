@@ -12,6 +12,7 @@ tmp/
 
 platforms
 
+coverage
 coverage-report
 *.[oa]
 *.swp

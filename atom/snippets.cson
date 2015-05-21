@@ -52,6 +52,16 @@
       return result;
     """
 
+  'Leetcode Test Cases':
+    'prefix': 'ltest'
+    'body': """
+      var should = require('should');
+      console.time('Runtime');
+      $1($2).should.equal($3);
+
+      console.timeEnd('Runtime');
+    """
+
   'Leetcode Tree Node Defination':
     'prefix': 'ltn'
     'body': """
