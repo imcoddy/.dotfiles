@@ -54,36 +54,6 @@ export LC_CTYPE=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# History work related aliases
-#add database user
-#grant select,insert,delete,update,create,drop,file,alter,index on *.* to 'gree' identified by 'password_you_want_to_set';
-#flush privileges;
-alias mysql="mysql -u gree -p"
-alias mysqltestdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
-alias mysqlrealdb="mysql -u root -h 116.93.145.228 -P 13806 -p"
-alias gt="git status"
-alias gd="git diff"
-alias gbc="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
-alias gcb="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
-alias gge='cd /home/gree/etc/'
-alias lvm='slogin di-qiu@qiu-php5.dev.gree.jp'
-alias lvmq='slogin -o ServerAliveInterval=60 di-qiu@diqiu.dev.gree.jp'
-alias lvmp='slogin -o ServerAliveInterval=60 di-qiu@qiu54.dev.gree.jp'
-alias lvmt='slogin admin@tracker-dev-hadoop.dev.gree.jp'
-alias lvmu='slogin di-qiu@utility-stg01.dev.gree.jp'
-alias w='cd /home/di-qiu/workspace/'
-alias wa='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/fuel/app/'
-alias wap='cd /home/di-qiu/workspace/infrainvoice/infrainvoice/public/'
-alias wb='cd /home/di-qiu/workspace/git/coffee-coin/'
-alias wba='cd /home/di-qiu/workspace/sites/blog/fuel/app/'
-alias wm='cd /home/di-qiu/workspace/sites/multi-feedback'
-alias wma='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/'
-alias wmc='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/classes/controller/'
-alias wmv='cd /home/di-qiu/workspace/sites/multi-feedback/fuel/app/views/'
-alias ws='cd /home/di-qiu/workspace/'
-
-#autoload -U compinit compinit
-
 #autoload bashcompinit
 #bashcompinit
 source ~/.git-completion.bash
