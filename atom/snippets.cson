@@ -23,6 +23,16 @@
       var p = head;
     """
 
+  'Leetcode Graph Node Undirected':
+    'prefix': 'lgn'
+    'alias': 'lgnu'
+    'body': """
+      function UndirectedGraphNode(label) {
+        this.label = label;
+        this.neighbors = []; // Array of UndirectedGraphNode
+      }
+    """
+
   'Leetcode Link Node Defination':
     'prefix': 'lln'
     'body': """
@@ -45,6 +55,7 @@
        * Runtime: $5ms
        * Tests: $1 test cases passed
        * Rank: ${2:S}
+       * Updated: 2015-${6}-${7}
        */
     """
 
