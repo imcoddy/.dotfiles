@@ -32,6 +32,10 @@
       }
     """
 
+  'Leetcode HashMap Defination':
+    'prefix': 'lmap'
+    'body': 'var map = Object.create(null);'
+
   'Leetcode Pass Result':
     'prefix': 'lpass'
     'body': """
