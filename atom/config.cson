@@ -84,3 +84,5 @@
     {}
   autosave:
     enabled: true
+  script:
+    scrollWithOutput: false
