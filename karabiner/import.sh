@@ -25,3 +25,4 @@ $cli set remap.hhkmode_vi_cursor 1
 $cli set remap.shiftDelete2tilde 1
 /bin/echo -n .
 /bin/echo
+ln -sfv ./private.xml ~/Library/Application\ Support/Karabiner/private.xml
