@@ -1,6 +1,5 @@
 "*":
-  "exception-reporting":
-    {}
+  "exception-reporting": {}
   welcome:
     showOnStartup: false
   core:
@@ -30,8 +29,7 @@
     ]
     followSymlinks: true
   editor:
-    invisibles:
-      {}
+    invisibles: {}
     softWrap: true
     showIndentGuide: true
     showInvisibles: true
@@ -41,10 +39,8 @@
     tabLength: 4
   "filetype-color":
     enabled: "false"
-  linter:
-    {}
-  "terminal-status":
-    {}
+  linter: {}
+  "terminal-status": {}
   "atom-beautify":
     analytics: false
     muteUnsupportedLanguageErrors: true
@@ -61,27 +57,19 @@
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
   "japanese-wrap":
-    characterWidth:
-      {}
-    lineBreakingRule:
-      {}
-  emmet:
-    {}
+    characterWidth: {}
+    lineBreakingRule: {}
+  emmet: {}
   "autocomplete-plus":
     confirmCompletion: "tab and enter"
   minimap:
     plugins:
       "highlight-selected": true
-  "atom-ctags":
-    {}
-  "atom-pair":
-    {}
-  "atom-color-highlight":
-    {}
-  "linter-jshint":
-    {}
-  "vim-surround":
-    {}
+  "atom-ctags": {}
+  "atom-pair": {}
+  "atom-color-highlight": {}
+  "linter-jshint": {}
+  "vim-surround": {}
   autosave:
     enabled: true
   script:
