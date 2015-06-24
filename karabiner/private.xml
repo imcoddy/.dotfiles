@@ -1,8 +1,19 @@
 <?xml version="1.0"?>
 <root>
+<!-- 设备定义 -->
+    <devicevendordef>
+        <vendorname>FILCO_MINILA</vendorname>
+        <vendorid>0x0a5c</vendorid>
+    </devicevendordef>
+    <deviceproductdef>
+        <productname>MINILA_KEYBOARD</productname>
+        <productid>0x8502</productid>
+    </deviceproductdef>
+<!-- 将App键映射为一个修饰键 -->
+    <modifierdef>PC_APPLICATION_MOD</modifierdef>
 <!-- 使用 Insert / Home / PageUp 来 减小 / 增大 / 静音 音量 -->
     <item>
-        <name>Volume Keys</name>
+        <name>Fn + Volume Keys</name>
         <appendix>Up, Down, Mute</appendix>
         <identifier>remap.volumeKeys</identifier>
         <autogen>
@@ -17,10 +28,50 @@
     </item>
 <!-- 使用 右Application键 来切换输入法 -->
     <item>
-        <name>Switch Input Source</name>
-        <identifier>private.remap.input_source</identifier>
+        <name>[FILCO_MINILA]App to Switch Input Source</name>
+        <identifier>private.filco.app_to_space_command_l</identifier>
         <autogen>
             __KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::SPACE, ModifierFlag::COMMAND_L
         </autogen>
+    </item>
+    <item>
+        <name>[FILCO_MINILA]App to Option_R</name>
+        <identifier>private.filco.app_to_option_r</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA</device_only>
+        <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::OPTION_R</autogen>
+    </item>
+    <item>
+        <name>[FILCO_MINILA]Forward Delete to Right Shift</name>
+        <identifier>private.filco.forward_delete_to_shift_r</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA</device_only>
+        <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
+    </item>
+    <item>
+        <name>[FILCO_MINILA]Right Shift to Forward Delete</name>
+        <identifier>private.filco.shift_r_to_forward_delete</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA</device_only>
+        <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
+    </item>
+<!-- 互换按键设定 -->
+    <item>
+        <name>[FILCO_MINILA]Swap Delete and RightShift With Filco Minila</name>
+        <identifier>private.swap_delete_and_rightshift_with_minila</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+        <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
+        <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
+    </item>
+    <item>
+        <name>[FILCO_MINILA]Swap LeftCommand and LeftOption</name>
+        <identifier>private.swap_leftcommand_and_leftoption_with_minila</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+        <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+    </item>
+<!-- 改变按键设定 -->
+    <item>
+        <name>[FILCO_MINILA]RightCommand To RightOption</name>
+        <identifier>private.change_rightcommand_to_rightoption_with_minila</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+        <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
     </item>
 </root>
