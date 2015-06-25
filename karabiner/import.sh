@@ -22,6 +22,8 @@ $cli set remap.space_to_command 1
 /bin/echo -n .
 $cli set option.vimode_fn_hjkl_rapid 1
 /bin/echo -n .
+$cli set private.filco.swap_command_l_and_option_l 1
+/bin/echo -n .
 $cli set option.extra_cursor_optionL_kjhl 1
 /bin/echo -n .
 $cli set remap.controlL2controlL_escape 1
@@ -29,6 +31,8 @@ $cli set remap.controlL2controlL_escape 1
 $cli set private.appkey_and_numberkey_consumerkey_with_minila 1
 /bin/echo -n .
 $cli set remap.shiftEscape2tilde 1
+/bin/echo -n .
+$cli set remap.shiftDelete2tilde 1
 /bin/echo -n .
 /bin/echo
 ln -sfv ~/.dotfiles/karabiner/private.xml ~/Library/Application\ Support/Karabiner/private.xml
