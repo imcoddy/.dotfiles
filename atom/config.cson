@@ -26,6 +26,8 @@
       "metrics"
       "feedback"
       "exception-reporting"
+      "color-picker"
+      "atom-ctags"
     ]
     followSymlinks: true
   editor:
@@ -34,7 +36,6 @@
     showIndentGuide: true
     showInvisibles: true
     softWrapAtPreferredLineLength: true
-    fontSize: 14
     lineHeight: 1.2
     tabLength: 4
   "filetype-color":
