@@ -31,3 +31,7 @@
   'ctrl-o': 'fuzzy-finder:toggle-file-finder'
 '.editor':
   'ctrl-alt-b': 'atom-beautify:beautify-editor'
+'atom-text-editor':
+  'ctrl-l': 'dash:shortcut'
+'.editor':
+  'ctrl-h': 'core:backspace'
