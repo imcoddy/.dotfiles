@@ -121,8 +121,9 @@ alias gvim='gvim -geom 82x35'
 alias gvim='gvim -geom 82x35'
 alias ls='ls -FHG --color=tty' # Linux
 alias ls='ls -G' # Mac
-alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
+alias lsd='ls -ld *(-/DN)'
+alias lss='du -sh *' # List size
 alias n="node"
 alias q="exit"
 alias rake="noglob rake"
