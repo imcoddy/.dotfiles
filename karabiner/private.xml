@@ -88,5 +88,12 @@
             <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
             <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
         </item>
+        <item>
+            <name>[FILCO_MINILA]Swap Backquote(`) and Backslash(\)</name>
+            <identifier>private.filco.swap_backquote_and_backslash</identifier>
+            <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+            <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::BACKQUOTE</autogen>
+            <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::BACKSLASH</autogen>
+        </item>
     </item>
 </root>

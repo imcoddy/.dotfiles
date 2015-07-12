@@ -44,7 +44,7 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(atom bower brew git git-flow github grunt heroku node npm osx tmux vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,6 +119,7 @@ alias gps='git push'
 alias gpsod='git push origin develop'
 alias gpsom='git push origin master'
 alias gt="git status"
+alias glh="g l | head"
 alias glup="gulp"
 alias gvim='gvim -geom 82x35'
 alias gvim='gvim -geom 82x35'
