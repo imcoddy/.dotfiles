@@ -12,15 +12,19 @@ $cli set private.appkey_and_numberkey_consumerkey_with_minila 1
 /bin/echo -n .
 $cli set remap.volumeKeys 1
 /bin/echo -n .
+$cli set remap.hhkmode 1
+/bin/echo -n .
 $cli set option.vimode_fn_hjkl_rapid 1
 /bin/echo -n .
-$cli set remap.shiftDelete2tilde 1
+$cli set remap.hhkmode_vi_cursor 1
 /bin/echo -n .
-$cli set private.filco.swap_backquote_and_backslash 1
+$cli set remap.shiftDelete2tilde 1
 /bin/echo -n .
 $cli set private.filco.app_to_space_command_l 1
 /bin/echo -n .
 $cli set private.remap.input_source 1
+/bin/echo -n .
+$cli set private.filco.swap_backquote_and_backslash 1
 /bin/echo -n .
 $cli set remap.controlL2controlL_escape 1
 /bin/echo -n .
