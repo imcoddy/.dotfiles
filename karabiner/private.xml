@@ -16,6 +16,14 @@
         <item>
             <name>General</name>
             <item>
+                <name>Command + Escape To Command + Backquote(`)</name>
+                <appendix>Map cmd+Esc to cmd+` to make switching with application easier</appendix>
+                <identifier>private.general.control_esc_to_control_backquote</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::ESCAPE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::BACKQUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND,
+                </autogen>
+            </item>
+            <item>
                 <name>Control+V/T To Jump By Word</name>
                 <appendix>Map Control+V/T to jump forward/backforward by words</appendix>
                 <identifier>private.general.control_to_jump_by_word</identifier>

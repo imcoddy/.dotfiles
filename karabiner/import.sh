@@ -30,6 +30,8 @@ $cli set private.remap.input_source 1
 /bin/echo -n .
 $cli set private.filco.swap_backquote_and_backslash 1
 /bin/echo -n .
+$cli set private.general.control_esc_to_control_backquote 1
+/bin/echo -n .
 $cli set parameter.holdingkeytokey_wait 400
 /bin/echo -n .
 $cli set private.general.control_v_to_option_arrow_left 1
