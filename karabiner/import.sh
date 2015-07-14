@@ -4,13 +4,17 @@ cli=/Applications/Karabiner.app/Contents/Library/bin/karabiner
 
 $cli set option.extra_cursor_optionL_kjhl 1
 /bin/echo -n .
+$cli set remap.doublepresscommandQ 1
+/bin/echo -n .
+$cli set private.general.control_to_jump_by_word 1
+/bin/echo -n .
+$cli set private.general.control_np_to_updown 1
+/bin/echo -n .
 $cli set remap.optionR2optionR_commandSpace 1
 /bin/echo -n .
-$cli set private.swap_leftcommand_and_leftoption_with_minila 1
+$cli set private.general.control_r_to_option_arrow_right 1
 /bin/echo -n .
-$cli set private.appkey_and_numberkey_consumerkey_with_minila 1
-/bin/echo -n .
-$cli set remap.volumeKeys 1
+$cli set private.filco.volume_control 1
 /bin/echo -n .
 $cli set remap.hhkmode 1
 /bin/echo -n .
@@ -25,6 +29,10 @@ $cli set private.filco.app_to_space_command_l 1
 $cli set private.remap.input_source 1
 /bin/echo -n .
 $cli set private.filco.swap_backquote_and_backslash 1
+/bin/echo -n .
+$cli set parameter.holdingkeytokey_wait 400
+/bin/echo -n .
+$cli set private.general.control_v_to_option_arrow_left 1
 /bin/echo -n .
 $cli set remap.controlL2controlL_escape 1
 /bin/echo -n .

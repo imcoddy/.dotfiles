@@ -15,9 +15,9 @@
         <name>Private</name>
 <!-- 使用 Insert / Home / PageUp 来 减小 / 增大 / 静音 音量 -->
         <item>
-            <name>Fn + Volume Keys</name>
-            <appendix>Up, Down, Mute</appendix>
-            <identifier>remap.volumeKeys</identifier>
+            <name>[FILCO_MINILA]Fn + Volume Keys</name>
+            <appendix>Mute, Down, Up</appendix>
+            <identifier>private.filco.volume_control</identifier>
             <autogen>
                 --KeyToConsumer-- KeyCode::PC_INSERT, ConsumerKeyCode::VOLUME_MUTE
             </autogen>
@@ -49,6 +49,36 @@
             <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::COMMAND_R</autogen>
         </item>
 <!-- 改变按键设定 -->
+        <item>
+            <name>[GENERAL]Control+V/T To Jump By Word</name>
+            <appendix>Map Control+V/T to jump forward/backforward by words</appendix>
+            <identifier>private.general.control_to_jump_by_word</identifier>
+            <autogen>
+                __KeyToKey__
+                KeyCode::V, ModifierFlag::CONTROL_L,
+                KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L,
+            </autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::T, ModifierFlag::CONTROL_L,
+                KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L,
+            </autogen>
+        </item>
+        <item>
+            <name>[GENERAL]Control+P/N To Up/Down</name>
+            <appendix>Map Control+P/N to up/down globally</appendix>
+            <identifier>private.general.control_np_to_updown</identifier>
+            <autogen>
+                __KeyToKey__
+                KeyCode::N, ModifierFlag::CONTROL_L,
+                KeyCode::CURSOR_DOWN,
+            </autogen>
+            <autogen>
+                __KeyToKey__
+                KeyCode::P, ModifierFlag::CONTROL_L,
+                KeyCode::CURSOR_UP,
+            </autogen>
+        </item>
         <item>
             <name>[FILCO_MINILA]Command_R To Option_R</name>
             <identifier>private.filco.command_r_to_option_r</identifier>
