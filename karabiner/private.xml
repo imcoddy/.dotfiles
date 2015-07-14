@@ -13,117 +13,116 @@
     <modifierdef>PC_APPLICATION_MOD</modifierdef>
     <item>
         <name>Private</name>
+        <item>
+            <name>General</name>
+            <item>
+                <name>Control+V/T To Jump By Word</name>
+                <appendix>Map Control+V/T to jump forward/backforward by words</appendix>
+                <identifier>private.general.control_to_jump_by_word</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::V, ModifierFlag::CONTROL_L, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L,
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::T, ModifierFlag::CONTROL_L, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L,
+                </autogen>
+            </item>
+            <item>
+                <name>Control+P/N To Up/Down</name>
+                <appendix>Map Control+P/N to up/down globally</appendix>
+                <identifier>private.general.control_np_to_updown</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN,
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP,
+                </autogen>
+            </item>
+        </item>
+
+        <item>
+            <name>Filco Minila</name>
 <!-- 使用 Insert / Home / PageUp 来 减小 / 增大 / 静音 音量 -->
-        <item>
-            <name>[FILCO_MINILA]Fn + Volume Keys</name>
-            <appendix>Mute, Down, Up</appendix>
-            <identifier>private.filco.volume_control</identifier>
-            <autogen>
-                --KeyToConsumer-- KeyCode::PC_INSERT, ConsumerKeyCode::VOLUME_MUTE
-            </autogen>
-            <autogen>
-                --KeyToConsumer-- KeyCode::HOME, ConsumerKeyCode::VOLUME_DOWN
-            </autogen>
-            <autogen>
-                --KeyToConsumer-- KeyCode::PAGEUP, ConsumerKeyCode::VOLUME_UP
-            </autogen>
-        </item>
+            <item>
+                <name>[FILCO_MINILA]Fn + Volume Keys</name>
+                <appendix>Mute, Down, Up</appendix>
+                <identifier>private.filco.volume_control</identifier>
+                <autogen>
+                    --KeyToConsumer-- KeyCode::PC_INSERT, ConsumerKeyCode::VOLUME_MUTE
+                </autogen>
+                <autogen>
+                    --KeyToConsumer-- KeyCode::HOME, ConsumerKeyCode::VOLUME_DOWN
+                </autogen>
+                <autogen>
+                    --KeyToConsumer-- KeyCode::PAGEUP, ConsumerKeyCode::VOLUME_UP
+                </autogen>
+            </item>
 <!-- 重置 Application键 -->
-        <item>
-            <name>[FILCO_MINILA]App to Switch Input Source</name>
-            <identifier>private.filco.app_to_space_command_l</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::SPACE, ModifierFlag::COMMAND_L
-            </autogen>
-        </item>
-        <item>
-            <name>[FILCO_MINILA]App to Option_R</name>
-            <identifier>private.filco.app_to_option_r</identifier>
-            <device_only>DeviceVendor::FILCO_MINILA</device_only>
-            <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::OPTION_R</autogen>
-        </item>
-        <item>
-            <name>[FILCO_MINILA]App to Command_R</name>
-            <identifier>private.filco.app_to_command_r</identifier>
-            <device_only>DeviceVendor::FILCO_MINILA</device_only>
-            <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::COMMAND_R</autogen>
-        </item>
+            <item>
+                <name>[FILCO_MINILA]App to Switch Input Source</name>
+                <identifier>private.filco.app_to_space_command_l</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::SPACE, ModifierFlag::COMMAND_L
+                </autogen>
+            </item>
+            <item>
+                <name>[FILCO_MINILA]App to Option_R</name>
+                <identifier>private.filco.app_to_option_r</identifier>
+                <device_only>DeviceVendor::FILCO_MINILA</device_only>
+                <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::OPTION_R</autogen>
+            </item>
+            <item>
+                <name>[FILCO_MINILA]App to Command_R</name>
+                <identifier>private.filco.app_to_command_r</identifier>
+                <device_only>DeviceVendor::FILCO_MINILA</device_only>
+                <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::COMMAND_R</autogen>
+            </item>
 <!-- 改变按键设定 -->
-        <item>
-            <name>[GENERAL]Control+V/T To Jump By Word</name>
-            <appendix>Map Control+V/T to jump forward/backforward by words</appendix>
-            <identifier>private.general.control_to_jump_by_word</identifier>
-            <autogen>
-                __KeyToKey__
-                KeyCode::V, ModifierFlag::CONTROL_L,
-                KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L,
-            </autogen>
-            <autogen>
-                __KeyToKey__
-                KeyCode::T, ModifierFlag::CONTROL_L,
-                KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L,
-            </autogen>
-        </item>
-        <item>
-            <name>[GENERAL]Control+P/N To Up/Down</name>
-            <appendix>Map Control+P/N to up/down globally</appendix>
-            <identifier>private.general.control_np_to_updown</identifier>
-            <autogen>
-                __KeyToKey__
-                KeyCode::N, ModifierFlag::CONTROL_L,
-                KeyCode::CURSOR_DOWN,
-            </autogen>
-            <autogen>
-                __KeyToKey__
-                KeyCode::P, ModifierFlag::CONTROL_L,
-                KeyCode::CURSOR_UP,
-            </autogen>
-        </item>
-        <item>
-            <name>[FILCO_MINILA]Command_R To Option_R</name>
-            <identifier>private.filco.command_r_to_option_r</identifier>
-            <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
-            <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
-        </item>
-        <item>
-            <name>[FILCO_MINILA]Fwd_Delete to Shift_R</name>
-            <identifier>private.filco.forward_delete_to_shift_r</identifier>
-            <device_only>DeviceVendor::FILCO_MINILA</device_only>
-            <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
-        </item>
-        <item>
-            <name>[FILCO_MINILA]Shift_R to Fwd_Delete</name>
-            <identifier>private.filco.shift_r_to_forward_delete</identifier>
-            <device_only>DeviceVendor::FILCO_MINILA</device_only>
-            <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
-        </item>
-        <item>
-            <name>[FILCO_MINILA]Fwd_Delete to Command_R</name>
-            <identifier>private.filco.forward_delete_to_command_r</identifier>
-            <device_only>DeviceVendor::FILCO_MINILA</device_only>
-            <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::COMMAND_R</autogen>
-        </item>
+            <item>
+                <name>[FILCO_MINILA]Command_R To Option_R</name>
+                <identifier>private.filco.command_r_to_option_r</identifier>
+                <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+                <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+            </item>
+            <item>
+                <name>[FILCO_MINILA]Fwd_Delete to Shift_R</name>
+                <identifier>private.filco.forward_delete_to_shift_r</identifier>
+                <device_only>DeviceVendor::FILCO_MINILA</device_only>
+                <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
+            </item>
+            <item>
+                <name>[FILCO_MINILA]Shift_R to Fwd_Delete</name>
+                <identifier>private.filco.shift_r_to_forward_delete</identifier>
+                <device_only>DeviceVendor::FILCO_MINILA</device_only>
+                <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
+            </item>
+            <item>
+                <name>[FILCO_MINILA]Fwd_Delete to Command_R</name>
+                <identifier>private.filco.forward_delete_to_command_r</identifier>
+                <device_only>DeviceVendor::FILCO_MINILA</device_only>
+                <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::COMMAND_R</autogen>
+            </item>
 <!-- 互换按键设定 -->
-        <item>
-            <name>[FILCO_MINILA]Swap Delete and Shift_R</name>
-            <identifier>private.filco.swap_delete_and_shift_r</identifier>
-            <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
-            <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
-            <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
-        </item>
-        <item>
-            <name>[FILCO_MINILA]Swap Command_L and Option_L</name>
-            <identifier>private.filco.swap_command_l_and_option_l</identifier>
-            <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
-            <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
-            <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
-        </item>
-        <item>
-            <name>[FILCO_MINILA]Swap Backquote(`) and Backslash(\)</name>
-            <identifier>private.filco.swap_backquote_and_backslash</identifier>
-            <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
-            <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::BACKQUOTE</autogen>
-            <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::BACKSLASH</autogen>
+            <item>
+                <name>[FILCO_MINILA]Swap Delete and Shift_R</name>
+                <identifier>private.filco.swap_delete_and_shift_r</identifier>
+                <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+                <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
+                <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
+            </item>
+            <item>
+                <name>[FILCO_MINILA]Swap Command_L and Option_L</name>
+                <identifier>private.filco.swap_command_l_and_option_l</identifier>
+                <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+                <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+                <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+            </item>
+            <item>
+                <name>[FILCO_MINILA]Swap Backquote(`) and Backslash(\)</name>
+                <identifier>private.filco.swap_backquote_and_backslash</identifier>
+                <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+                <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::BACKQUOTE</autogen>
+                <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::BACKSLASH</autogen>
+            </item>
         </item>
     </item>
 </root>
