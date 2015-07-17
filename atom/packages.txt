@@ -8,6 +8,7 @@ color-picker
 comment
 dash
 easy-motion
+editorconfig
 editor-stats
 emmet
 ex-mode
