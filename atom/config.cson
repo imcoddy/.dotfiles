@@ -28,6 +28,7 @@
       "symbols-tree-view"
       "symbols-view"
       "welcome"
+      "linter-eslint"
     ]
     followSymlinks: true
   editor:
@@ -37,7 +38,6 @@
     showInvisibles: true
     softWrapAtPreferredLineLength: true
     lineHeight: 1.2
-    tabLength: 4
   "filetype-color":
     enabled: "false"
   linter: {}

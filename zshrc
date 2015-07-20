@@ -132,6 +132,7 @@ alias lss='du -sh *' # List size
 alias n="node"
 alias q="exit"
 alias rake="noglob rake"
+alias resetgit="rm -rf .git && git init && git add . && git cm 'init' && git fi"
 alias s='screen -S'
 alias sls='screen -ls '
 alias sr='screen -R'
