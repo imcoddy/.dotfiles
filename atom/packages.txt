@@ -30,6 +30,7 @@ minimap
 minimap-highlight-selected
 mocha-test-runner
 open-last-project
+pigments
 pretty-json
 project-manager
 remote-edit
