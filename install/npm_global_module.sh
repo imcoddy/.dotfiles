@@ -6,6 +6,11 @@ npm install -g eslint
 npm install -g express
 npm install -g grunt-cli
 npm install -g gulp
+npm install -g gulp-concat
+npm install -g gulp-jshint
+npm install -g gulp-rename
+npm install -g gulp-sass
+npm install -g gulp-uglify
 npm install -g hexo
 #npm install -g html2jade
 npm install -g jslint
