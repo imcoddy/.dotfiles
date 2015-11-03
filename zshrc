@@ -58,7 +58,7 @@ export LC_ALL=en_US.UTF-8
 #bashcompinit
 source ~/.git-completion.bash
 source ~/.nvm/nvm.sh
-nvm use v4.1.1
+nvm use v4.2.1
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate

@@ -33,6 +33,7 @@ open-last-project
 pigments
 pretty-json
 project-manager
+react
 remote-edit
 script
 seti-monokai

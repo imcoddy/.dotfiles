@@ -18,5 +18,7 @@ npm install -g karma
 # npm install -g mean-cli
 npm install -g mocha
 npm install -g nodemon
+npm install -g react
+npm install -g react-dom
 npm install -g yo
 npm install -g uglify-js
