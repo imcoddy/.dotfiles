@@ -2,8 +2,6 @@ atom-beautify
 atom-color-highlight
 atom-ctags
 atom-pair
-autocomplete-plus
-autocomplete-snippets
 color-picker
 comment
 dash
