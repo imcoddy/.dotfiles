@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Configuring Homebrew..."
+
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
@@ -8,8 +10,16 @@ if test ! $(which brew); then
   echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 fi
 
+repositories=(
+  mpv-player/mpv
+)
+
 # Update homebrew recipes
+echo "Updating Homebrew..."
 brew update
+
+echo "Adding repositories..."
+brew tap ${repositories[@]}
 
 # Install brew packages
 
@@ -19,6 +29,8 @@ binaries=(
   git
   git-flow
   mackup
+  mpv
+  nvm
   tree
   # webkit2png
   # rename
@@ -37,7 +49,7 @@ brew install ${binaries[@]}
 
 # Apps
 apps=(
-  alfred
+  # alfred
   appcleaner
   arq
   atom
@@ -46,7 +58,7 @@ apps=(
   dropbox
   firefox
   flux
-  google-chrome
+  # google-chrome
   hazel
   iterm2
   nvalt
@@ -56,13 +68,14 @@ apps=(
   quicklook-csv
   quicklook-json
   screenflick
-  seil
+  # seil
   shiori
   sketch
   slack
   spotify
-  sublime-text3
-  tower
+  squirrel
+  sublime-text
+  # tower
   vagrant
   virtualbox
   vlc
@@ -72,5 +85,3 @@ apps=(
 # Default is: /Users/$user/Applications
 echo "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
-
-brew cask alfred link
