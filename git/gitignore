@@ -6,6 +6,7 @@ atom/.node-gyp
 atom/compile-cache
 atom/packages
 atom/storage
+atom/blob-store
 build/
 node_modules
 tmp/
