@@ -46,7 +46,37 @@
                 </autogen>
             </item>
         </item>
-
+        <item>
+            <name>Japanese</name>
+            <item>
+                <name>[JPN]Command_R to Switch Input Source</name>
+                <identifier>private.japanese.command_r_to_space_command_l</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::COMMAND_R, KeyCode::SPACE, ModifierFlag::COMMAND_L
+                </autogen>
+            </item>
+            <item>
+                <name>[JPN]Underscore(Ro) to Backslash(\)</name>
+                <identifier>private.japanese.underscore_ro_to_backslash</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::JIS_UNDERSCORE, KeyCode::BACKSLASH
+                </autogen>
+            </item>
+            <item>
+                <name>[JPN]Shift + Underscore(Ro) to Shift + Backslash(\)</name>
+                <identifier>private.japanese.shift_underscore_ro_to_shift_backslash</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::JIS_UNDERSCORE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+                </autogen>
+            </item>
+            <item>
+                <name>[JPN]Shift + Japanese Yen to Pipe(|)</name>
+                <identifier>private.japanese.shift_jis_yen_to_pipe</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::JIS_YEN, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+                </autogen>
+            </item>
+        </item>
         <item>
             <name>Filco Minila</name>
 <!-- 使用 Insert / Home / PageUp 来 减小 / 增大 / 静音 音量 -->
