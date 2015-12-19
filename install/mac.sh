@@ -32,6 +32,7 @@ binaries=(
   mpv
   nvm
   tree
+  vim
   # webkit2png
   # rename
   # zopfli
@@ -51,34 +52,31 @@ brew install ${binaries[@]}
 apps=(
   # alfred
   appcleaner
-  arq
   atom
   cheatsheet
-  cloudup
   dropbox
-  firefox
+  # firefox
   flux
-  # google-chrome
+  google-chrome
+  google-japanese-ime
   hazel
-  iterm2
-  nvalt
+  karabiner
   qlcolorcode
   qlprettypatch
   qlstephen
   quicklook-csv
   quicklook-json
   screenflick
-  # seil
-  shiori
-  sketch
-  slack
-  spotify
+  seil
+  # shiori
+  # sketch
+  # slack
   squirrel
   sublime-text
   # tower
   vagrant
   virtualbox
-  vlc
+  # vlc
 )
 
 # Install apps to /Applications
