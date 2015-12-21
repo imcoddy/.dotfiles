@@ -76,6 +76,12 @@
                     __KeyToKey__ KeyCode::JIS_YEN, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
                 </autogen>
             </item>
+            <item>
+                <name>[JPN]EISUU to Command_L</name>
+                <appendix>(+ When you press EISUU only send Space)</appendix>
+                <identifier>private.japanese.jis_eisuu_to_command_l_space</identifier>
+                <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::COMMAND_L, KeyCode::SPACE</autogen>
+            </item>
         </item>
         <item>
             <name>Filco Minila</name>
