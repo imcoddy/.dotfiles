@@ -91,12 +91,13 @@ alias :q="exit"
 alias a="atom"
 alias b='brew'
 alias bc='brew cask'
-alias bci='brew cask install'
+alias bci='brew cask install --appdir="/Applications"'
 alias bcs='brew cask search'
 alias bcu='brew cask uninstall'
 alias c="clear"
 alias cs="cd ~/.dotfiles/vim/vim/bundle/neosnippet-snippets/neosnippets/"
 alias cz="cd ~/.dotfiles/"
+alias cask="brew cask"
 alias dir='ls -1'
 alias ex="exit"
 alias f='find |grep'

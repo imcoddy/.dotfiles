@@ -53,8 +53,10 @@ apps=(
   # alfred
   appcleaner
   atom
+  bartender
   cheatsheet
   dropbox
+  day-o
   # firefox
   flux
   google-chrome
@@ -73,6 +75,7 @@ apps=(
   # slack
   squirrel
   sublime-text
+  typora
   # tower
   vagrant
   virtualbox
