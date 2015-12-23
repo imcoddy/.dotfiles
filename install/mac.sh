@@ -61,7 +61,7 @@ apps=(
   flux
   google-chrome
   google-japanese-ime
-  hazel
+  # hazel
   karabiner
   qlcolorcode
   qlprettypatch
@@ -77,7 +77,7 @@ apps=(
   sublime-text
   typora
   # tower
-  vagrant
+  # vagrant
   virtualbox
   # vlc
 )
