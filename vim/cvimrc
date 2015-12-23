@@ -1,0 +1,88 @@
+# Copy and past the following into Chrome cvim config setting
+
+set nocncpcompletion
+set nosmoothscroll
+set nohud
+set noregex
+set noinsertmappings
+set noautoupdategist
+set typelinkhints
+set defaultnewtabpage
+let scrollstep = 120
+let scrollduration = 10
+let searchlimit = 40
+let searchalias g = "google"
+let mapleader = ","
+let barposition = "top"
+let typelinkhintsdelay = 0
+let hintcharacters = "fdsawerjkiop"
+let locale = "jp"
+let blacklists = ["*://*/*.pdf", "chrome://*", "https://mail.google.com/*", "https://www.google.com/calendar/*"]
+
+site 'https://www.tumblr.com/*' {
+  unmap j
+  unmap k
+  unmap r
+  unmap l
+}
+site 'https://github.com/*' {
+  unmap l
+}
+site 'https://tweetdeck.twitter.com/*' {
+  unmap n
+  unmap s
+}
+site 'https://calendar.sunrise.am/*' {
+  call :pintab
+}
+
+map ; openCommandBar
+map l nextTab
+map h previousTab
+map <C-l> nextTab
+map <C-h> previousTab
+map <C-f> scrollFullPageDown
+map <C-b> scrollFullPageUp
+map s :open google<Space>
+map S :open! google<Space>
+map i goToInput
+map u lastClosedTab
+map B :bookmarks!<Space>
+map t :tabnew<CR>
+map F createActiveTabbedHint
+
+map <Leader>cl :open! chrome://chrome/settings/clearBrowserData<CR>
+map <Leader>ex :open! chrome://extensions<CR>
+
+map <Leader>gh :open! https://github.com/calorie<CR>
+map <Leader>Gh :open https://github.com/calorie<CR>
+map <Leader>gi :open! https://gist.github.com/calorie<CR>
+map <Leader>Gi :open https://gist.github.com/calorie<CR>
+map <Leader>tw :open! http://twitter.com<CR>
+map <Leader>Tw :open http://twitter.com<CR>
+map <Leader>td :open! https://tweetdeck.twitter.com<CR>
+map <Leader>Td :open https://tweetdeck.twitter.com<CR>
+map <Leader>gm :open! https://mail.google.com/mail/#index<CR>
+map <Leader>Gm :open https://mail.google.com/mail/#index<CR>
+map <Leader>so :open! http://stackoverflow.com<CR>
+map <Leader>So :open http://stackoverflow.com<CR>
+map <Leader>tu :open! http://www.tumblr.com/dashboard<CR>
+map <Leader>Tu :open http://www.tumblr.com/dashboard<CR>
+map <Leader>nf :open! https://mail.nifty.com/mailer<CR>
+map <Leader>Nf :open https://mail.nifty.com/mailer<CR>
+map <Leader>nc :open! http://www.nicovideo.jp<CR>
+map <Leader>Nc :open http://www.nicovideo.jp<CR>
+map <Leader>fb :open! http://www.facebook.com<CR>
+map <Leader>Fb :open http://www.facebook.com<CR>
+map <Leader>qi :open! http://qiita.com<CR>
+map <Leader>Qi :open http://qiita.com<CR>
+map <Leader>jl :open! http://www.jorudan.co.jp<CR>
+map <Leader>Jl :open http://www.jorudan.co.jp<CR>
+map <Leader>rm :open! https://webmail.ritsumei.ac.jp/cgi-bin/start?m=1356548256&wrap=1<CR>
+map <Leader>Rm :open https://webmail.ritsumei.ac.jp/cgi-bin/start?m=1356548256&wrap=1<CR>
+map <Leader>hp :open! http://www.hpcss.is.ritsumei.ac.jp/LabOnly<CR>
+map <Leader>Hp :open http://www.hpcss.is.ritsumei.ac.jp/LabOnly<CR>
+map <Leader>su :open! https://calendar.sunrise.am<CR>
+map <Leader>Su :open https://calendar.sunrise.am<CR>
+map <Leader>sl :open! https://mosaaaa.slack.com/messages/general/<CR>
+map <Leader>Sl :open https://mosaaaa.slack.com/messages/general/<CR>

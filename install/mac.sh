@@ -54,6 +54,7 @@ apps=(
   appcleaner
   atom
   bartender
+  bettertouchtool
   cheatsheet
   dropbox
   day-o
