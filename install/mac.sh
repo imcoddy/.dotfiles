@@ -59,10 +59,12 @@ apps=(
   dropbox
   day-o
   # firefox
+  enpass
   flux
   google-chrome
   google-japanese-ime
   # hazel
+  hammerspoon
   karabiner
   qlcolorcode
   qlprettypatch
