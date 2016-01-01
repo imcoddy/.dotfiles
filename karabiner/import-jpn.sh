@@ -14,6 +14,8 @@ $cli set private.general.control_np_to_updown 1
 $cli set private.general.control_r_to_option_arrow_right 1
 $cli set private.general.control_to_jump_by_word 1
 $cli set private.general.control_v_to_option_arrow_left 1
+$cli set private.hyper.hyper_tab_to_capslock 1
+$cli set private.hyper.hyper_to_hyper 1
 $cli set private.japanese.jis_eisuu_to_command_l_space 1
 $cli set private.japanese.shift_jis_yen_to_pipe 1
 $cli set private.japanese.shift_underscore_ro_to_shift_backslash 1
@@ -25,7 +27,6 @@ $cli set remap.commandR2commandR_commandSpace 1
 $cli set remap.commandR2optionR 1
 $cli set remap.controlL2controlL_escape 1
 $cli set remap.doublepresscommandQ 1
-$cli set remap.hjkl_arrow 1
 $cli set remap.jis_jansi 1
 $cli set remap.jis_kana2optionL 1
 $cli set remap.optionR2optionR_commandSpace 1

@@ -1,172 +1,231 @@
 <?xml version="1.0"?>
 <root>
-<!-- 设备定义 -->
-    <devicevendordef>
-        <vendorname>FILCO_MINILA</vendorname>
-        <vendorid>0x0a5c</vendorid>
-    </devicevendordef>
-    <deviceproductdef>
-        <productname>MINILA_KEYBOARD</productname>
-        <productid>0x8502</productid>
-    </deviceproductdef>
-<!-- 将App键映射为一个修饰键 -->
-    <modifierdef>PC_APPLICATION_MOD</modifierdef>
+  <!-- 设备定义 -->
+  <devicevendordef>
+    <vendorname>FILCO_MINILA</vendorname>
+    <vendorid>0x0a5c</vendorid>
+  </devicevendordef>
+  <deviceproductdef>
+    <productname>MINILA_KEYBOARD</productname>
+    <productid>0x8502</productid>
+  </deviceproductdef>
+  <!-- 将App键映射为一个修饰键 -->
+  <modifierdef>PC_APPLICATION_MOD</modifierdef>
+  <item>
+    <name>Private</name>
     <item>
-        <name>Private</name>
-        <item>
-            <name>General</name>
-            <item>
-                <name>Command + Escape To Command + Backquote(`)</name>
-                <appendix>Map cmd+Esc to cmd+` to make switching with application easier</appendix>
-                <identifier>private.general.control_esc_to_control_backquote</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::ESCAPE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::BACKQUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND,
-                </autogen>
-            </item>
-            <item>
-                <name>Control+V/T To Jump By Word</name>
-                <appendix>Map Control+V/T to jump forward/backforward by words</appendix>
-                <identifier>private.general.control_to_jump_by_word</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::V, ModifierFlag::CONTROL_L, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L,
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::T, ModifierFlag::CONTROL_L, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L,
-                </autogen>
-            </item>
-            <item>
-                <name>Control+P/N To Up/Down</name>
-                <appendix>Map Control+P/N to up/down globally</appendix>
-                <identifier>private.general.control_np_to_updown</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN,
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP,
-                </autogen>
-            </item>
-        </item>
-        <item>
-            <name>Japanese</name>
-            <item>
-                <name>[JPN]Command_R to Switch Input Source</name>
-                <identifier>private.japanese.command_r_to_space_command_l</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::COMMAND_R, KeyCode::SPACE, ModifierFlag::COMMAND_L
-                </autogen>
-            </item>
-            <item>
-                <name>[JPN]Underscore(Ro) to Backslash(\)</name>
-                <identifier>private.japanese.underscore_ro_to_backslash</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::JIS_UNDERSCORE, KeyCode::BACKSLASH
-                </autogen>
-            </item>
-            <item>
-                <name>[JPN]Shift + Underscore(Ro) to Shift + Backslash(\)</name>
-                <identifier>private.japanese.shift_underscore_ro_to_shift_backslash</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::JIS_UNDERSCORE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
-                </autogen>
-            </item>
-            <item>
-                <name>[JPN]Shift + Japanese Yen to Pipe(|)</name>
-                <identifier>private.japanese.shift_jis_yen_to_pipe</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::JIS_YEN, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
-                </autogen>
-            </item>
-            <item>
-                <name>[JPN]EISUU to Command_L</name>
-                <appendix>(+ When you press EISUU only send Space)</appendix>
-                <identifier>private.japanese.jis_eisuu_to_command_l_space</identifier>
-                <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::COMMAND_L, KeyCode::SPACE</autogen>
-            </item>
-        </item>
-        <item>
-            <name>Filco Minila</name>
-<!-- 使用 Insert / Home / PageUp 来 减小 / 增大 / 静音 音量 -->
-            <item>
-                <name>[FILCO_MINILA]Fn + Volume Keys</name>
-                <appendix>Mute, Down, Up</appendix>
-                <identifier>private.filco.volume_control</identifier>
-                <autogen>
-                    --KeyToConsumer-- KeyCode::PC_INSERT, ConsumerKeyCode::VOLUME_MUTE
-                </autogen>
-                <autogen>
-                    --KeyToConsumer-- KeyCode::HOME, ConsumerKeyCode::VOLUME_DOWN
-                </autogen>
-                <autogen>
-                    --KeyToConsumer-- KeyCode::PAGEUP, ConsumerKeyCode::VOLUME_UP
-                </autogen>
-            </item>
-<!-- 重置 Application键 -->
-            <item>
-                <name>[FILCO_MINILA]App to Switch Input Source</name>
-                <identifier>private.filco.app_to_space_command_l</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::SPACE, ModifierFlag::COMMAND_L
-                </autogen>
-            </item>
-            <item>
-                <name>[FILCO_MINILA]App to Option_R</name>
-                <identifier>private.filco.app_to_option_r</identifier>
-                <device_only>DeviceVendor::FILCO_MINILA</device_only>
-                <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::OPTION_R</autogen>
-            </item>
-            <item>
-                <name>[FILCO_MINILA]App to Command_R</name>
-                <identifier>private.filco.app_to_command_r</identifier>
-                <device_only>DeviceVendor::FILCO_MINILA</device_only>
-                <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::COMMAND_R</autogen>
-            </item>
-<!-- 改变按键设定 -->
-            <item>
-                <name>[FILCO_MINILA]Command_R To Option_R</name>
-                <identifier>private.filco.command_r_to_option_r</identifier>
-                <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
-                <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
-            </item>
-            <item>
-                <name>[FILCO_MINILA]Fwd_Delete to Shift_R</name>
-                <identifier>private.filco.forward_delete_to_shift_r</identifier>
-                <device_only>DeviceVendor::FILCO_MINILA</device_only>
-                <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
-            </item>
-            <item>
-                <name>[FILCO_MINILA]Shift_R to Fwd_Delete</name>
-                <identifier>private.filco.shift_r_to_forward_delete</identifier>
-                <device_only>DeviceVendor::FILCO_MINILA</device_only>
-                <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
-            </item>
-            <item>
-                <name>[FILCO_MINILA]Fwd_Delete to Command_R</name>
-                <identifier>private.filco.forward_delete_to_command_r</identifier>
-                <device_only>DeviceVendor::FILCO_MINILA</device_only>
-                <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::COMMAND_R</autogen>
-            </item>
-<!-- 互换按键设定 -->
-            <item>
-                <name>[FILCO_MINILA]Swap Delete and Shift_R</name>
-                <identifier>private.filco.swap_delete_and_shift_r</identifier>
-                <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
-                <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
-                <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
-            </item>
-            <item>
-                <name>[FILCO_MINILA]Swap Command_L and Option_L</name>
-                <identifier>private.filco.swap_command_l_and_option_l</identifier>
-                <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
-                <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
-                <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
-            </item>
-            <item>
-                <name>[FILCO_MINILA]Swap Backquote(`) and Backslash(\)</name>
-                <identifier>private.filco.swap_backquote_and_backslash</identifier>
-                <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
-                <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::BACKQUOTE</autogen>
-                <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::BACKSLASH</autogen>
-            </item>
-        </item>
+      <name>General</name>
+      <item>
+        <name>Command + Escape To Command + Backquote(`)</name>
+        <appendix>Map cmd+Esc to cmd+` to make switching with application easier</appendix>
+        <identifier>private.general.control_esc_to_control_backquote</identifier>
+        <autogen>
+          __KeyToKey__ KeyCode::ESCAPE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::BACKQUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND,
+        </autogen>
+      </item>
+      <item>
+        <name>Control+V/T To Jump By Word</name>
+        <appendix>Map Control+V/T to jump forward/backforward by words</appendix>
+        <identifier>private.general.control_to_jump_by_word</identifier>
+        <autogen>
+          __KeyToKey__ KeyCode::V, ModifierFlag::CONTROL_L, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L,
+        </autogen>
+        <autogen>
+          __KeyToKey__ KeyCode::T, ModifierFlag::CONTROL_L, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L,
+        </autogen>
+      </item>
+      <item>
+        <name>Control+P/N To Up/Down</name>
+        <appendix>Map Control+P/N to up/down globally</appendix>
+        <identifier>private.general.control_np_to_updown</identifier>
+        <autogen>
+          __KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN,
+        </autogen>
+        <autogen>
+          __KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP,
+        </autogen>
+      </item>
     </item>
+    <item>
+      <name>Japanese</name>
+      <item>
+        <name>[JPN]Command_R to Switch Input Source</name>
+        <identifier>private.japanese.command_r_to_space_command_l</identifier>
+        <autogen>
+          __KeyToKey__ KeyCode::COMMAND_R, KeyCode::SPACE, ModifierFlag::COMMAND_L
+        </autogen>
+      </item>
+      <item>
+        <name>[JPN]Underscore(Ro) to Backslash(\)</name>
+        <identifier>private.japanese.underscore_ro_to_backslash</identifier>
+        <autogen>
+          __KeyToKey__ KeyCode::JIS_UNDERSCORE, KeyCode::BACKSLASH
+        </autogen>
+      </item>
+      <item>
+        <name>[JPN]Shift + Underscore(Ro) to Shift + Backslash(\)</name>
+        <identifier>private.japanese.shift_underscore_ro_to_shift_backslash</identifier>
+        <autogen>
+          __KeyToKey__ KeyCode::JIS_UNDERSCORE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+        </autogen>
+      </item>
+      <item>
+        <name>[JPN]Shift + Japanese Yen to Pipe(|)</name>
+        <identifier>private.japanese.shift_jis_yen_to_pipe</identifier>
+        <autogen>
+          __KeyToKey__ KeyCode::JIS_YEN, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+        </autogen>
+      </item>
+      <item>
+        <name>[JPN]EISUU to Command_L</name>
+        <appendix>(+ When you press EISUU only send Space)</appendix>
+        <identifier>private.japanese.jis_eisuu_to_command_l_space</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::COMMAND_L, KeyCode::SPACE</autogen>
+      </item>
+    </item>
+    <item>
+      <name>Filco Minila</name>
+      <!-- 使用 Insert / Home / PageUp 来 减小 / 增大 / 静音 音量 -->
+      <item>
+        <name>[FILCO_MINILA]Fn + Volume Keys</name>
+        <appendix>Mute, Down, Up</appendix>
+        <identifier>private.filco.volume_control</identifier>
+        <autogen>
+          --KeyToConsumer-- KeyCode::PC_INSERT, ConsumerKeyCode::VOLUME_MUTE
+        </autogen>
+        <autogen>
+          --KeyToConsumer-- KeyCode::HOME, ConsumerKeyCode::VOLUME_DOWN
+        </autogen>
+        <autogen>
+          --KeyToConsumer-- KeyCode::PAGEUP, ConsumerKeyCode::VOLUME_UP
+        </autogen>
+      </item>
+      <!-- 重置 Application键 -->
+      <item>
+        <name>[FILCO_MINILA]App to Switch Input Source</name>
+        <identifier>private.filco.app_to_space_command_l</identifier>
+        <autogen>
+          __KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::SPACE, ModifierFlag::COMMAND_L
+        </autogen>
+      </item>
+      <item>
+        <name>[FILCO_MINILA]App to Option_R</name>
+        <identifier>private.filco.app_to_option_r</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA</device_only>
+        <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::OPTION_R</autogen>
+      </item>
+      <item>
+        <name>[FILCO_MINILA]App to Command_R</name>
+        <identifier>private.filco.app_to_command_r</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA</device_only>
+        <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::COMMAND_R</autogen>
+      </item>
+      <!-- 改变按键设定 -->
+      <item>
+        <name>[FILCO_MINILA]Command_R To Option_R</name>
+        <identifier>private.filco.command_r_to_option_r</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+        <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+      </item>
+      <item>
+        <name>[FILCO_MINILA]Fwd_Delete to Shift_R</name>
+        <identifier>private.filco.forward_delete_to_shift_r</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA</device_only>
+        <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
+      </item>
+      <item>
+        <name>[FILCO_MINILA]Shift_R to Fwd_Delete</name>
+        <identifier>private.filco.shift_r_to_forward_delete</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA</device_only>
+        <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
+      </item>
+      <item>
+        <name>[FILCO_MINILA]Fwd_Delete to Command_R</name>
+        <identifier>private.filco.forward_delete_to_command_r</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA</device_only>
+        <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::COMMAND_R</autogen>
+      </item>
+      <!-- 互换按键设定 -->
+      <item>
+        <name>[FILCO_MINILA]Swap Delete and Shift_R</name>
+        <identifier>private.filco.swap_delete_and_shift_r</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+        <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::SHIFT_R</autogen>
+        <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
+      </item>
+      <item>
+        <name>[FILCO_MINILA]Swap Command_L and Option_L</name>
+        <identifier>private.filco.swap_command_l_and_option_l</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+        <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+      </item>
+      <item>
+        <name>[FILCO_MINILA]Swap Backquote(`) and Backslash(\)</name>
+        <identifier>private.filco.swap_backquote_and_backslash</identifier>
+        <device_only>DeviceVendor::FILCO_MINILA,DeviceProduct::MINILA_KEYBOARD</device_only>
+        <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::BACKQUOTE</autogen>
+        <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::BACKSLASH</autogen>
+      </item>
+    </item>
+    <item>
+      <name>Hyper</name>
+      <item>
+        <name>F19 to F19</name>
+        <appendix>(F19 to Hyper (ctrl+shift+cmd+opt) + F19 Only, F19)</appendix>
+        <identifier>private.hyper.hyper_to_hyper</identifier>
+        <autogen>
+          --KeyOverlaidModifier-- KeyCode::F19, KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L, KeyCode::F19
+        </autogen>
+      </item>
+      <item>
+        <name>Hyper+space To Enter</name>
+        <appendix>Hyper(cmd+ctrl+shift+opt)+space, send enter</appendix>
+        <identifier>private.hyper.hyper_space_to_enter</identifier>
+        <autogen>
+          --KeyToKey-- KeyCode::SPACE, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, KeyCode::ENTER
+        </autogen>
+      </item>
+      <item>
+        <name>Hyper+J To Down</name>
+        <appendix>Hyper(cmd+ctrl+shift+opt)+J, send down</appendix>
+        <identifier>private.hyper.hyper_j_to_down</identifier>
+        <autogen>
+          --KeyToKey-- KeyCode::J, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, KeyCode::CURSOR_DOWN
+        </autogen>
+      </item>
+      <item>
+        <name>Hyper+K To Up</name>
+        <appendix>Hyper(cmd+ctrl+shift+opt)+k, send up</appendix>
+        <identifier>private.hyper.hyper_k_to_up</identifier>
+        <autogen>
+          --KeyToKey-- KeyCode::K, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, KeyCode::CURSOR_UP
+        </autogen>
+      </item>
+      <item>
+        <name>Hyper+H To Left</name>
+        <appendix>Hyper(cmd+ctrl+shift+opt)+h, send left</appendix>
+        <identifier>private.hyper.hyper_h_to_left</identifier>
+        <autogen>
+          --KeyToKey-- KeyCode::H, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, KeyCode::CURSOR_LEFT
+        </autogen>
+      </item>
+      <item>
+        <name>Hyper+L To Right</name>
+        <appendix>Hyper(cmd+ctrl+shift+opt)+l, send right</appendix>
+        <identifier>private.hyper.hyper_l_to_right</identifier>
+        <autogen>
+          --KeyToKey-- KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, KeyCode::CURSOR_RIGHT
+        </autogen>
+      </item>
+      <item>
+        <name>Hyper+Tab To Capslock</name>
+        <appendix>Hyper(cmd+ctrl+shift+opt)+tab, send capslock</appendix>
+        <identifier>private.hyper.hyper_tab_to_capslock</identifier>
+        <autogen>
+          --KeyToKey-- KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, KeyCode::CAPSLOCK
+        </autogen>
+      </item>
+    </item>
+  </item>
 </root>
