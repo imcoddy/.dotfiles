@@ -27,6 +27,8 @@
   #'down': 'autocomplete-plus:select-next'
   #'ctrl-p': 'autocomplete-plus:select-previous'
   #'ctrl-n': 'autocomplete-plus:select-next'
+'atom-text-editor.autocomplete-active:not([mini])':
+  'tab': 'autocomplete-plus:confirm'
 '.platform-darwin':
   'ctrl-o': 'fuzzy-finder:toggle-file-finder'
 '.editor':
