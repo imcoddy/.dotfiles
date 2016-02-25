@@ -1,4 +1,5 @@
 npm install -g generator-angular-fullstack
+npm install -g babel-cli
 npm install -g babel-eslint
 npm install -g browser-sync
 #npm install -g coffee-script
