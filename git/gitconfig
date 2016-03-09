@@ -1,11 +1,11 @@
 [user]
     name = Qiu Di
-    email = di.qiu@gree.net
+    email = imcoddy@gmail.com
 [core]
     whitespace = trailing-space,space-before-tab,indent-with-non-tab
     editor = vim
     excludesfile = ~/.gitignore
-	pager = less -x1,5
+    pager = less -x1,5
 [color]
     ui = true
     diff = auto
@@ -84,6 +84,7 @@
     rab = remote add bitbucket
     rau = remote add upstream
     rb = rebase
+    rba = rebase --abort
     rbc = rebase --continue
     rbd = rebase -i develop
     rbi = rebase -i HEAD~
@@ -108,13 +109,5 @@
     last = log -1 HEAD
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path = 
-[mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
-[hub]
-    host = git.gree-dev.net
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
