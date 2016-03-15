@@ -186,3 +186,6 @@ alias -g S='&> /dev/null &'
 #alias git='hub'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source /usr/local/opt/nvm/nvm.sh
+
+# Add autojump.sh
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh

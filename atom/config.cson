@@ -1,12 +1,24 @@
 "*":
-  "exception-reporting": {}
-  welcome:
-    showOnStartup: false
+  "atom-beautify":
+    analytics: false
+    language_coffeescript_beautify_on_save: true
+    language_css_beautify_on_save: true
+    language_csv_beautify_on_save: true
+    language_html_beautify_on_save: true
+    language_js_beautify_on_save: true
+    language_json_beautify_on_save: true
+    language_python_beautify_on_save: true
+    language_ruby_disabled: true
+    language_scss_beautify_on_save: true
+    muteUnsupportedLanguageErrors: true
+  "atom-color-highlight": {}
+  "atom-ctags": {}
+  "atom-pair": {}
+  "autocomplete-plus":
+    confirmCompletion: "tab and enter"
+  autosave:
+    enabled: true
   core:
-    themes: [
-      "one-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
     disabledPackages: [
       "atom-color-highlight"
       "atom-ctags"
@@ -25,47 +37,35 @@
       "linter-eslint"
     ]
     followSymlinks: true
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
   editor:
     invisibles: {}
-    softWrap: true
+    lineHeight: 1.2
     showIndentGuide: true
     showInvisibles: true
+    softWrap: true
     softWrapAtPreferredLineLength: true
-    lineHeight: 1.2
+  emmet: {}
+  "exception-reporting": {}
   "filetype-color":
     enabled: "false"
-  linter: {}
-  "terminal-status": {}
-  "atom-beautify":
-    analytics: false
-    muteUnsupportedLanguageErrors: true
-    language_coffeescript_beautify_on_save: true
-    language_css_beautify_on_save: true
-    language_csv_beautify_on_save: true
-    language_html_beautify_on_save: true
-    language_js_beautify_on_save: true
-    language_json_beautify_on_save: true
-    language_scss_beautify_on_save: true
-    language_ruby_disabled: true
-    language_python_beautify_on_save: true
-  "vim-mode":
-    useClipboardAsDefaultRegister: true
-    useSmartcaseForSearch: true
   "japanese-wrap":
     characterWidth: {}
     lineBreakingRule: {}
-  emmet: {}
-  "autocomplete-plus":
-    confirmCompletion: "tab and enter"
+  linter: {}
+  "linter-jshint": {}
   minimap:
     plugins:
       "highlight-selected": true
-  "atom-ctags": {}
-  "atom-pair": {}
-  "atom-color-highlight": {}
-  "linter-jshint": {}
-  "vim-surround": {}
-  autosave:
-    enabled: true
   script:
     scrollWithOutput: false
+  "terminal-status": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+  "vim-surround": {}
+  welcome:
+    showOnStartup: false
