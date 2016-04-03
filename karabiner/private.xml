@@ -16,6 +16,14 @@
     <item>
       <name>General</name>
       <item>
+        <name>Command + VolumeUp To F12</name>
+        <appendix>Call F12 via command</appendix>
+        <identifier>private.general.command_volume_up_to_f12</identifier>
+        <autogen>
+          __KeyToKey__ ConsumerKeyCode::VOLUME_UP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::F12,
+        </autogen>
+      </item>
+      <item>
         <name>Command + Escape To Command + Backquote(`)</name>
         <appendix>Map cmd+Esc to cmd+` to make switching with application easier</appendix>
         <identifier>private.general.control_esc_to_control_backquote</identifier>
