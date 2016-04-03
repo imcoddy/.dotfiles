@@ -82,11 +82,17 @@ nvm use v5.7.0
 
 # Normal aliases
 #alias ls='ls -FHG --color=tty'
-alias ..='cd ..'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../'
 alias .1='cd ../'
 alias .2='cd ../../'
 alias .3='cd ../../../'
 alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+alias .6='cd ../../../../../../'
 alias :q="exit"
 alias a="atom"
 alias b='brew'

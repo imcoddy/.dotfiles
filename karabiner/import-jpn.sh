@@ -9,6 +9,7 @@ $cli set private.filco.forward_delete_to_command_r 1
 $cli set private.filco.swap_backquote_and_backslash 1
 $cli set private.filco.swap_command_l_and_option_l 1
 $cli set private.filco.volume_control 1
+$cli set private.general.command_volume_up_to_f12 1
 $cli set private.general.control_esc_to_control_backquote 1
 $cli set private.general.control_np_to_updown 1
 $cli set private.general.control_r_to_option_arrow_right 1
