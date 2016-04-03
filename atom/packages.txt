@@ -19,8 +19,8 @@ highlight-selected
 japanese-wrap
 jshint
 language-scheme
+language-babel
 linter
-linter-coffeelint
 linter-eslint
 linter-jshint
 merge-conflicts
