@@ -35,6 +35,11 @@
       "symbols-view"
       "welcome"
       "linter-eslint"
+      "terminal-status"
+      "atom-pair"
+      "pigments"
+      "minimap"
+      "react"
     ]
     followSymlinks: true
     themes: [
