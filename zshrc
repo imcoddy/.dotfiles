@@ -58,7 +58,7 @@ export LC_ALL=en_US.UTF-8
 #bashcompinit
 source ~/.git-completion.bash
 source ~/.nvm/nvm.sh
-nvm use v5.7.0
+nvm use v7.7.3
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
@@ -135,6 +135,9 @@ alias glh="g l | head"
 alias glup="gulp"
 alias gvim='gvim -geom 82x35'
 alias gvim='gvim -geom 82x35'
+alias h='hexo'
+alias hg='hexo generate'
+alias hs='hexo server --watch'
 alias lns='ln -s'
 alias ls='ls -FHG --color=tty' # Linux
 alias ls='ls -G' # Mac
@@ -173,8 +176,9 @@ alias vgu='vagrant up'
 alias vt='vim ~/.tmux.conf'
 alias vv='vim ~/.vimrc'
 alias vz='vim ~/.zshrc'
-alias w='cd /home/di-qiu/workspace/'
-alias ws='cd /home/di-qiu/workspace/'
+alias w='cd ~/workspace/git/'
+alias wb='cd ~/Blog/'
+alias ws='cd ~/workspace/git/'
 alias z="exit"
 
 # command L equivalent to command |less
@@ -191,7 +195,11 @@ alias -g S='&> /dev/null &'
 # $ chmod +x ~/bin/hub
 #alias git='hub'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Add nvm source
 source /usr/local/opt/nvm/nvm.sh
 
 # Add autojump.sh
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

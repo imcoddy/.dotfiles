@@ -25,6 +25,7 @@ brew tap ${repositories[@]}
 
 binaries=(
   # graphicsmagick
+  autojump
   caskroom/cask/brew-cask
   git
   git-flow
