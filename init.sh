@@ -8,6 +8,7 @@ ln -s ~/.dotfiles/git/gitignore ~/.gitignore
 ln -s ~/.dotfiles/git/git-completion.bash ~/.git-completion.bash
 
 ln -s ~/.dotfiles/atom ~/.atom
+ln -s ~/.dotfiles/config ~/.config
 ln -s ~/.dotfiles/editorconfig ~/.editorconfig
 ln -s ~/.dotfiles/mackup.cfg ~/.mackup.cfg
 ln -s ~/.dotfiles/screenrc ~/.screenrc
