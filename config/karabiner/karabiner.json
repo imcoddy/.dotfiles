@@ -6,6 +6,129 @@
     },
     "profiles": [
         {
+            "complex_modifications": {
+                "dummy": {
+                    "keep_me": true
+                },
+                "parameters": {
+                    "basic": {
+                        "dummy": {
+                            "keep_me": true
+                        },
+                        "to_if_alone_timeout_milliseconds": 800
+                    }
+                },
+                "rules": [
+                    {
+                        "manipulators": [
+                            {
+                                "description": "Change control+[ to escape.",
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "Change spacebar to left_shift. (Post spacebar if pressed alone)",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic": {
+                                        "to_if_alone_timeout_milliseconds": 400
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "spacebar"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "Change control to escape. (if pressed alone)",
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic": {
+                                        "to_if_alone_timeout_milliseconds": 400
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "description test",
+                        "manipulators": [
+                            {
+                                "description": "description test 2"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": []
+                    }
+                ]
+            },
             "devices": [
                 {
                     "disable_built_in_keyboard_if_exists": false,
@@ -33,7 +156,7 @@
                 "f8": "vk_consumer_play",
                 "f9": "vk_consumer_next"
             },
-            "name": "Default profile",
+            "name": "Japanese",
             "selected": true,
             "simple_modifications": {
                 "backslash": "return_or_enter",
@@ -42,131 +165,32 @@
                 "japanese_eisuu": "left_command",
                 "japanese_kana": "right_option"
             },
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "manipulators": [
-                            {
-                                "description": "Change control+[ to escape.",
-                                "type": "basic",
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "basic",
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace"
-                                    }
-                                ]
-                            },
-                            {
-                                "description": "Change spacebar to left_shift. (Post spacebar if pressed alone)",
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "spacebar"
-                                    }
-                                ],
-                                "type": "basic",
-                                "parameters": {
-                                    "basic": {
-                                        "to_if_alone_timeout_milliseconds": 400
-                                    }
-                                }
-                            },
-                            {
-                                "description": "Change control to escape. (if pressed alone)",
-                                "from": {
-                                    "key_code": "left_control",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic",
-                                "parameters": {
-                                    "basic": {
-                                        "to_if_alone_timeout_milliseconds": 400
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "description": "description test",
-                        "manipulators": [
-                            {
-                                "description": "description test 2"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": []
-                    }
-                ],
-                "dummy": {
-                    "keep_me": true
-                },
-                "parameters": {
-                    "basic": {
-                        "to_if_alone_timeout_milliseconds": 800,
-                        "dummy": {
-                            "keep_me": true
-                        }
-                    }
-                }
-            },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 100,
+                "keyboard_type": "ansi"
+            }
+        },
+        {
+            "devices": [],
+            "fn_function_keys": {
+                "f1": "display_brightness_decrement",
+                "f10": "mute",
+                "f11": "volume_decrement",
+                "f12": "volume_increment",
+                "f2": "display_brightness_increment",
+                "f3": "mission_control",
+                "f4": "launchpad",
+                "f5": "illumination_decrement",
+                "f6": "illumination_increment",
+                "f7": "rewind",
+                "f8": "play_or_pause",
+                "f9": "fastforward"
+            },
+            "name": "Default Profile",
+            "selected": false,
+            "simple_modifications": {},
+            "virtual_hid_keyboard": {
+                "caps_lock_delay_milliseconds": 0,
                 "keyboard_type": "ansi"
             }
         }
