@@ -118,33 +118,6 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Change spacebar to left_shift. (Post spacebar if pressed alone)",
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic": {
-                                        "to_if_alone_timeout_milliseconds": 400
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "spacebar"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
                                 "description": "Change control to escape. (if pressed alone)",
                                 "from": {
                                     "key_code": "left_control",
