@@ -28,6 +28,7 @@ merge-conflicts
 minimap
 minimap-highlight-selected
 mocha-test-runner
+multi-cursor
 open-last-project
 pigments
 pretty-json
@@ -40,5 +41,4 @@ seti-ui
 symbols-tree-view
 terminal-status
 todo-show
-vim-mode
-vim-surround
+vim-mode-plus

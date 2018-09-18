@@ -58,7 +58,7 @@ export LC_ALL=en_US.UTF-8
 #bashcompinit
 source ~/.git-completion.bash
 source ~/.nvm/nvm.sh
-nvm use v7.7.3
+nvm use v10.9.0
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
@@ -176,6 +176,7 @@ alias vgu='vagrant up'
 alias vt='vim ~/.tmux.conf'
 alias vv='vim ~/.vimrc'
 alias vz='vim ~/.zshrc'
+alias yd='youtube-dl'
 alias w='cd ~/workspace/git/'
 alias wb='cd ~/Blog/'
 alias ws='cd ~/workspace/git/'

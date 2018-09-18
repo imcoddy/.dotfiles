@@ -1,2 +1,6 @@
-vim/vim/bundle/*
+atom/github.cson
+atom/recovery/
 config/mpv/watch_later/*
+config/configstore/
+config/karabiner/assets/
+vim/vim/bundle/*
