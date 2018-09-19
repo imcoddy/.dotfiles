@@ -60,25 +60,23 @@ apps=(
   dropbox
   day-o
   # firefox
-  enpass
   flux
   google-chrome
   google-japanese-ime
   # hazel
   hammerspoon
-  karabiner
+  karabiner-elements
   qlcolorcode
   qlprettypatch
   qlstephen
   quicklook-csv
   quicklook-json
   screenflick
-  seil
   # shiori
   # sketch
   # slack
   squirrel
-  sublime-text
+  # sublime-text
   typora
   # tower
   # vagrant
@@ -90,3 +88,7 @@ apps=(
 # Default is: /Users/$user/Applications
 echo "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
+
+
+mkdir -p ~/Library/Application\ Support/iTerm2/DynamicProfiles
+ln -s ~/.dotfiles/iTerm2.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/iTerm2.json
