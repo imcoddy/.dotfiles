@@ -26,7 +26,8 @@ brew tap ${repositories[@]}
 binaries=(
   # graphicsmagick
   autojump
-  caskroom/cask/brew-cask
+  cask
+  # caskroom/cask/brew-cask
   git
   git-flow
   mackup
@@ -34,6 +35,8 @@ binaries=(
   nvm
   tree
   vim
+  wget
+  youtube-dl
   # webkit2png
   # rename
   # zopfli
@@ -52,36 +55,42 @@ brew install ${binaries[@]}
 # Apps
 apps=(
   # alfred
+  android-file-transfer
   appcleaner
   atom
   bartender
   bettertouchtool
+  bittorrent-sync
+  calibre
   cheatsheet
+  dash
   dropbox
-  day-o
-  # firefox
+  enpass
+  fantastical
   flux
   google-chrome
   google-japanese-ime
-  # hazel
-  hammerspoon
-  karabiner-elements
+  itsycal
+  karabiner
+  kitematic
+  ngrok
+  openemu
+  pdfexpert
   qlcolorcode
   qlprettypatch
   qlstephen
   quicklook-csv
   quicklook-json
   screenflick
-  # shiori
-  # sketch
-  # slack
+  slack
+  spectacle
   squirrel
-  # sublime-text
+  steam
+  textexpander
+  thunder
   typora
-  # tower
-  # vagrant
+  vagrant
   virtualbox
-  # vlc
 )
 
 # Install apps to /Applications
