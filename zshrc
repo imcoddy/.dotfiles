@@ -6,22 +6,6 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="frisk"
-#arrow.zsh-theme
-#clean.zsh-theme
-#cloud.zsh-theme
-#candy-kingdom
-#darkblood.zsh-theme
-#fino.zsh-theme
-#fletcherm.zsh-theme
-#fox.zsh-theme
-#frisk.zsh-theme
-#gnzh.zsh-theme
-#jonathan.zsh-theme
-#juanghurtado.zsh-theme
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -44,7 +28,7 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(atom bower brew git git-flow github grunt heroku node npm osx tmux vagrant)
+plugins=(autojump brew cask git git-extra git-flow gulp heroku node npm osx tmux vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,11 +82,9 @@ alias a="atom"
 alias b='brew'
 alias bc='brew cask'
 alias bci='brew cask install --appdir="/Applications"'
-alias bcs='brew cask search'
+alias bcs='brew search'
 alias bcu='brew cask uninstall'
 alias c="clear"
-alias cs="cd ~/.dotfiles/vim/vim/bundle/neosnippet-snippets/neosnippets/"
-alias cz="cd ~/.dotfiles/"
 alias cask="brew cask"
 alias dir='ls -1'
 alias ex="exit"
@@ -132,9 +114,6 @@ alias gpsod='git push origin develop'
 alias gpsom='git push origin master'
 alias gt="git status"
 alias glh="g l | head"
-alias glup="gulp"
-alias gvim='gvim -geom 82x35'
-alias gvim='gvim -geom 82x35'
 alias h='hexo'
 alias hg='hexo generate'
 alias hs='hexo server --watch'
@@ -145,17 +124,9 @@ alias lsa='ls -al'
 alias lsd='ls -ld *(-/DN)'
 alias lss='du -sh *' # List size
 alias n="node"
-alias pg="phonegap"
-alias pgc="phonegap create"
-alias pgr="phonegap run"
-alias pgra="phonegap run android"
-alias pgri="phonegap run ios"
 alias q="exit"
 alias rake="noglob rake"
 alias resetgit="rm -rf .git && git init && git add . && git cm 'init' && git fi"
-alias s='screen -S'
-alias sls='screen -ls '
-alias sr='screen -R'
 alias t='tree'
 alias t2='tree -L 2'
 alias tl='tree -L'
@@ -178,7 +149,6 @@ alias vv='vim ~/.vimrc'
 alias vz='vim ~/.zshrc'
 alias yd='youtube-dl'
 alias w='cd ~/workspace/git/'
-alias wb='cd ~/Blog/'
 alias ws='cd ~/workspace/git/'
 alias z="exit"
 
@@ -188,17 +158,13 @@ alias -g L='|less'
 # command S equivalent to command &> /dev/null &
 alias -g S='&> /dev/null &'
 
-# Use hub as git
-# install on OS X
-# $ brew install hub
-# # other systems
-# $ curl http://hub.github.com/standalone -sLo ~/bin/hub
-# $ chmod +x ~/bin/hub
-#alias git='hub'
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+alias -g G='|grep'
 
 # Add nvm source
-source /usr/local/opt/nvm/nvm.sh
+#source /usr/local/opt/nvm/nvm.sh
+
+# Add incr plugin
+source ~/.dotfiles/zsh/incr.zsh
 
 # Add autojump.sh
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
