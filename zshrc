@@ -64,8 +64,9 @@ nvm use v10.9.0
 #}
 #zle -N backward-delete-to-slash
 
+setopt no_nomatch
+
 # Normal aliases
-#alias ls='ls -FHG --color=tty'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -164,12 +165,13 @@ alias -g G='|grep'
 #source /usr/local/opt/nvm/nvm.sh
 
 # Add incr plugin
-source ~/.dotfiles/zsh/incr.zsh
+# source ~/.dotfiles/zsh/incr.zsh
+source ~/.dotfiles/zsh/zsh-autosuggestions.zsh
 
 # Add autojump.sh
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# Add iterm2 
+# Add iterm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 ### Added by the Heroku Toolbelt
