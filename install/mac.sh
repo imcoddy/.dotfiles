@@ -81,6 +81,7 @@ apps=(
   qlstephen
   quicklook-csv
   quicklook-json
+  rescuetime
   screenflick
   slack
   spectacle

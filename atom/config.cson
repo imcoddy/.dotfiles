@@ -112,5 +112,7 @@
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
   "vim-surround": {}
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
   welcome:
     showOnStartup: false
