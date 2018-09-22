@@ -4,7 +4,7 @@ npm install -g babel-eslint
 npm install -g browser-sync
 #npm install -g coffee-script
 npm install -g eslint
-npm install -g express
+#npm install -g express
 npm install -g grunt-cli
 npm install -g gulp
 npm install -g gulp-concat
@@ -20,6 +20,6 @@ npm install -g jslint
 npm install -g mocha
 npm install -g nodemon
 npm install -g react
-npm install -g react-dom
-npm install -g yo
+#npm install -g react-dom
+#npm install -g yo
 npm install -g uglify-js
