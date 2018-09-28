@@ -1098,7 +1098,7 @@
                         ]
                     },
                     {
-                        "description": "Command + Esc to Command + `",
+                        "description": "Esc to ` when pressed with Command or Shift",
                         "manipulators": [
                             {
                                 "from": {
@@ -1114,6 +1114,25 @@
                                         "key_code": "grave_accent_and_tilde",
                                         "modifiers": [
                                             "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": [
+                                            "left_shift"
                                         ]
                                     }
                                 ],
@@ -2434,7 +2453,7 @@
                         ]
                     },
                     {
-                        "description": "Command + Esc to Command + `",
+                        "description": "Esc to ` when pressed with Command or Shift",
                         "manipulators": [
                             {
                                 "from": {
@@ -2450,6 +2469,25 @@
                                         "key_code": "grave_accent_and_tilde",
                                         "modifiers": [
                                             "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": [
+                                            "left_shift"
                                         ]
                                     }
                                 ],
@@ -2474,10 +2512,34 @@
                     "simple_modifications": [
                         {
                             "from": {
+                                "key_code": "backslash"
+                            },
+                            "to": {
+                                "key_code": "grave_accent_and_tilde"
+                            }
+                        },
+                        {
+                            "from": {
                                 "key_code": "caps_lock"
                             },
                             "to": {
                                 "key_code": "caps_lock"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "delete_or_backspace"
+                            },
+                            "to": {
+                                "key_code": "delete_or_backspace"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "grave_accent_and_tilde"
+                            },
+                            "to": {
+                                "key_code": "backslash"
                             }
                         },
                         {
@@ -2502,22 +2564,6 @@
                             },
                             "to": {
                                 "key_code": "left_command"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "grave_accent_and_tilde"
-                            },
-                            "to": {
-                                "key_code": "backslash"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "backslash"
-                            },
-                            "to": {
-                                "key_code": "grave_accent_and_tilde"
                             }
                         }
                     ]
@@ -2528,29 +2574,12 @@
                     "identifiers": {
                         "is_keyboard": true,
                         "is_pointing_device": false,
-                        "product_id": 603,
+                        "product_id": 630,
                         "vendor_id": 1452
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
-                    "simple_modifications": [
-                        {
-                            "from": {
-                                "key_code": "delete_or_backspace"
-                            },
-                            "to": {
-                                "key_code": "backslash"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "backslash"
-                            },
-                            "to": {
-                                "key_code": "delete_or_backspace"
-                            }
-                        }
-                    ]
+                    "simple_modifications": []
                 }
             ],
             "fn_function_keys": [
