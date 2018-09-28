@@ -77,10 +77,19 @@ apps=(
   openemu
   pdfexpert
   qlcolorcode
+  qlcolorcode
+  qlimagesize
+  qlmarkdown
   qlprettypatch
   qlstephen
+  qlstephen
+  qlvideo
   quicklook-csv
   quicklook-json
+  quicklook-json
+  quicklookase
+  suspicious-package
+  webpquicklook
   rescuetime
   screenflick
   slack
