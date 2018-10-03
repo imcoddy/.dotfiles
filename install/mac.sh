@@ -31,6 +31,7 @@ binaries=(
   git
   git-flow
   mackup
+  mas
   mpv
   nvm
   tree
