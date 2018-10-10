@@ -1,8 +1,4 @@
-.
-..
-angularjs
 atom-beautify
-atom-pair
 autocomplete-paths
 busy-signal
 color-picker
@@ -30,11 +26,10 @@ linter-js-standard
 linter-jshint
 linter-ui-default
 merge-conflicts
-minimap
-minimap-highlight-selected
 mocha-test-runner
 multi-cursor
 pigments
+prettier-atom
 pretty-json
 project-manager
 regex-railroad-diagram

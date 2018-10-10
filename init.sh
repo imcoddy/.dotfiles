@@ -11,6 +11,7 @@ ln -s ~/.dotfiles/atom ~/.atom
 ln -s ~/.dotfiles/config ~/.config
 ln -s ~/.dotfiles/editorconfig ~/.editorconfig
 ln -s ~/.dotfiles/mackup.cfg ~/.mackup.cfg
+ln -s ~/.dotfiles/prettierrc ~/.prettierrc
 ln -s ~/.dotfiles/screenrc ~/.screenrc
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
