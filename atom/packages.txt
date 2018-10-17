@@ -1,10 +1,13 @@
 atom-beautify
+atom-bootstrap3
+atom-bootstrap4
 autocomplete-paths
 busy-signal
 color-picker
 comment
 dash
 docblockr
+easy-motion-redux
 editor-stats
 editorconfig
 ex-mode
@@ -29,6 +32,7 @@ merge-conflicts
 mocha-test-runner
 multi-cursor
 pigments
+platformio-ide-terminal
 prettier-atom
 pretty-json
 project-manager

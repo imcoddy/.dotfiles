@@ -91,6 +91,8 @@
   "exception-reporting": {}
   "filetype-color":
     enabled: "false"
+  hyperclick:
+    darwinTriggerKeys: "ctrlKey"
   "japanese-wrap":
     characterWidth: {}
     lineBreakingRule: {}
@@ -100,6 +102,8 @@
   minimap:
     plugins:
       "highlight-selected": true
+  "prettier-atom":
+    formatOnSaveOptions: {}
   script:
     scrollWithOutput: true
   "terminal-status": {}

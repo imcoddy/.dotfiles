@@ -27,13 +27,13 @@
   #'down': 'autocomplete-plus:select-next'
   #'ctrl-p': 'autocomplete-plus:select-previous'
   #'ctrl-n': 'autocomplete-plus:select-next'
-'atom-text-editor.autocomplete-active:not([mini])':
-  'tab': 'autocomplete-plus:confirm'
-'.platform-darwin':
-  'ctrl-o': 'fuzzy-finder:toggle-file-finder'
-'.editor':
-  'ctrl-alt-b': 'atom-beautify:beautify-editor'
 'atom-text-editor':
   'ctrl-l': 'dash:shortcut'
+'atom-text-editor.autocomplete-active:not([mini])':
+  'tab': 'autocomplete-plus:confirm'
 '.editor':
+  'ctrl-alt-b': 'atom-beautify:beautify-editor'
   'ctrl-h': 'core:backspace'
+  'ctrl-j': 'easy-motion-redux:letter'
+'.platform-darwin':
+  'ctrl-o': 'fuzzy-finder:toggle-file-finder'
