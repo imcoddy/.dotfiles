@@ -24,17 +24,21 @@ brew tap ${repositories[@]}
 # Install brew packages
 
 binaries=(
-  # graphicsmagick
+  ack
   autojump
   cask
+  ccat
   # caskroom/cask/brew-cask
   git
   git-flow
+  htop
+  # graphicsmagick
   mackup
   mas
   mpv
   nvm
   tree
+  tldr
   vim
   wget
   youtube-dl
@@ -44,9 +48,8 @@ binaries=(
   # ffmpeg
   # python
   # sshfs
-  # trash
+  trash
   # node
-  # ack
   # hub
 )
 
