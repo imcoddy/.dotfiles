@@ -4,17 +4,19 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "mpv-player/mpv"
+brew "ack"
 brew "autojump"
 brew "gettext"
 brew "libffi"
 brew "pixman"
 brew "emacs"
 brew "cask"
+brew "ccat"
 brew "cscope"
 brew "little-cms2"
 brew "docker"
-brew "docker-machine"
 brew "docker-compose"
+brew "docker-machine"
 brew "duti"
 brew "flow"
 brew "gdk-pixbuf"
@@ -27,6 +29,7 @@ brew "pango"
 brew "librsvg"
 brew "libvo-aacenc"
 brew "lua"
+brew "python"
 brew "mackup"
 brew "mas"
 brew "mongodb", restart_service: true
@@ -35,8 +38,8 @@ brew "mpv"
 brew "nvm"
 brew "opencc"
 brew "pyenv"
-brew "python"
 brew "redis", restart_service: true
+brew "tldr"
 brew "tmux"
 brew "tree"
 brew "vim"
@@ -53,8 +56,8 @@ cask "bettertouchtool"
 cask "bittorrent-sync"
 cask "calibre"
 cask "cheatsheet"
+cask "cleanmymac"
 cask "dash"
-cask "day-o"
 cask "dropbox"
 cask "enpass"
 cask "fantastical"
@@ -66,7 +69,7 @@ cask "hazel"
 cask "iina"
 cask "itsycal"
 cask "karabiner"
-cask "kitematic"
+cask "mpv"
 cask "ngrok"
 cask "openemu"
 cask "pdfexpert"
@@ -80,26 +83,23 @@ cask "quicklook-csv"
 cask "quicklook-json"
 cask "quicklookase"
 cask "screenflick"
-cask "seil"
 cask "spectacle"
 cask "squirrel"
-cask "steam"
-cask "sublime-text"
 cask "suspicious-package"
 cask "textexpander"
-cask "thunder"
-cask "typora"
 cask "vagrant"
 cask "virtualbox"
 cask "webpquicklook"
 mas "1Password", id: 443987910
 mas "AutoMute", id: 1118136179
+mas "BitdefenderVirusScanner", id: 500154009
 mas "Boom 2", id: 948176063
 mas "CatchMouse", id: 439700005
 mas "Clips", id: 1116588922
 mas "DaisyDisk", id: 411643860
-mas "Day One Classic", id: 422304217
 mas "Divvy", id: 413857545
+mas "DrUnarchiver", id: 1127253508
+mas "Evernote", id: 406056744
 mas "Gemini 2", id: 1090488118
 mas "Kindle", id: 405399194
 mas "Manico", id: 724472954
@@ -114,9 +114,9 @@ mas "Quiver", id: 866773894
 mas "Reeder", id: 880001334
 mas "Slack", id: 803453959
 mas "Snip", id: 512505421
-mas "Telegram Desktop", id: 946399090
 mas "The Unarchiver", id: 425424353
 mas "TickTick", id: 966085870
+mas "Unclutter", id: 577085396
 mas "WeChat", id: 836500024
 mas "Xcode", id: 497799835
 mas "unrar", id: 1071663619
