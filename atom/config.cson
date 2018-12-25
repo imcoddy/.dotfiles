@@ -14,6 +14,7 @@
       beautify_on_save: true
     js:
       beautify_on_save: true
+      default_beautifier: "Pretty Diff"
       end_with_comma: true
     json:
       beautify_on_save: true
