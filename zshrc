@@ -71,7 +71,7 @@ alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
-alias ......='cd ../../../../'
+alias ......='cd ../../../../../'
 alias .1='cd ../'
 alias .2='cd ../../'
 alias .3='cd ../../../'
@@ -87,9 +87,13 @@ alias bcs='brew search'
 alias bcu='brew cask uninstall'
 alias c="clear"
 alias cask="brew cask"
+alias cd..='cd ..'
+alias cp="cp -v"
 alias dir='ls -1'
+alias egrep='egrep --color=auto'
 alias ex="exit"
 alias f='find |grep'
+alias fgrep='fgrep --color=auto'
 alias fixme='grep "FIXME" -r .'
 alias gbc="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
 alias gcb="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
@@ -113,22 +117,28 @@ alias gplum='git pull upstream master'
 alias gps='git push'
 alias gpsod='git push origin develop'
 alias gpsom='git push origin master'
+alias grep='grep --color=auto'
 alias gt="git status"
 alias glh="g l | head"
 alias h='hexo'
 alias hg='hexo generate'
 alias hs='hexo server --watch'
 alias lns='ln -s'
-alias ls='ls -FHG --color=tty' # Linux
-alias ls='ls -G' # Mac
+alias ls='ls -FHG --color=auto' # Linux
+alias ls='ls -G --color=auto' # Mac
 alias lsa='ls -al'
 alias lsd='ls -ld *(-/DN)'
 alias lss='du -sh *' # List size
 alias m="meteor"
 alias ms="meteor --settings settings.json"
+alias mv="mv -v"
 alias n="node"
+alias ni="npm install"
+alias nis="npm install --save "
+alias ping='ping -c 5'
 alias q="exit"
 alias rake="noglob rake"
+alias rm="rm -vi"
 alias resetgit="rm -rf .git && git init && git add . && git cm 'init' && git fi"
 alias t='tree'
 alias t2='tree -L 2'
@@ -152,6 +162,7 @@ alias vv='vim ~/.vimrc'
 alias vz='vim ~/.zshrc'
 alias yd='youtube-dl'
 alias w='cd ~/workspace/git/'
+alias wget='wget -c'
 alias ws='cd ~/workspace/git/'
 alias z="exit"
 
