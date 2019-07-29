@@ -97,6 +97,8 @@ alias fgrep='fgrep --color=auto'
 alias fixme='grep "FIXME" -r .'
 alias gbc="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
 alias gcb="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
+alias gcl='git clone'
+alias gcl1='git clone --depth 1'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gcod='git checkout develop'
@@ -125,7 +127,7 @@ alias hg='hexo generate'
 alias hs='hexo server --watch'
 alias lns='ln -s'
 alias ls='ls -FHG --color=auto' # Linux
-alias ls='ls -G --color=auto' # Mac
+alias ls='ls -G' # Mac
 alias lsa='ls -al'
 alias lsd='ls -ld *(-/DN)'
 alias lss='du -sh *' # List size
