@@ -92,6 +92,9 @@
   minimap:
     plugins:
       "highlight-selected": true
+  pangu:
+    autoPanguEnabled: true
+    skipNoCJKLine: true
   "prettier-atom":
     formatOnSaveOptions: {}
   script:

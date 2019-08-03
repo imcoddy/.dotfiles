@@ -31,6 +31,7 @@ linter-ui-default
 merge-conflicts
 mocha-test-runner
 multi-cursor
+pangu
 pigments
 platformio-ide-terminal
 prettier-atom

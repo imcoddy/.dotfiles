@@ -1,3 +1,4 @@
+atom/.atom-socket-secret-*
 atom/github.cson
 atom/recovery/
 config/mpv/watch_later/*

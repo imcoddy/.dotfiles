@@ -95,6 +95,9 @@ alias ex="exit"
 alias f='find |grep'
 alias fgrep='fgrep --color=auto'
 alias fixme='grep "FIXME" -r .'
+alias gb="gitbook"
+alias gbi="gitbook init"
+alias gbs="gitbook serve"
 alias gbc="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
 alias gcb="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
 alias gcl='git clone'

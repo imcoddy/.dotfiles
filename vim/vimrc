@@ -78,6 +78,7 @@ Bundle 'Shougo/neocomplcache.git'
 Bundle 'Shougo/neocomplete.git'
 Bundle 'Shougo/neosnippet.git'
 Bundle 'imcoddy/neosnippet-snippets.git'
+Bundle "hotoo/pangu.vim"
 Bundle 'ShowTrailingWhitespace'
 "Bundle 'imcoddy/snipmate.vim'
 Bundle 'surround.vim'
@@ -122,6 +123,7 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 autocmd! bufwritepost .vimrc source %
+autocmd BufWritePre *.markdown,*.md,*.text,*.txt,*.wiki,*.cnx call PanGuSpacing()
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
