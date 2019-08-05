@@ -28,7 +28,7 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew cask git git-extra git-flow gulp heroku node npm osx tmux vagrant)
+plugins=(autojump brew extract git git-extra git-flow git-open gulp heroku node npm osx tmux vagrant vi-mode zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,8 +88,14 @@ alias bcu='brew cask uninstall'
 alias c="clear"
 alias cask="brew cask"
 alias cd..='cd ..'
-alias cp="cp -v"
+alias cp="cp -iv"
 alias dir='ls -1'
+alias dm="docker-machine"
+alias dme="docker-machine env"
+alias do="docker"
+alias doc="docker container"
+alias dom="docker-machine"
+alias dome="docker-machine env"
 alias egrep='egrep --color=auto'
 alias ex="exit"
 alias f='find |grep'
@@ -106,6 +112,7 @@ alias gcm='git commit -m'
 alias gco='git checkout'
 alias gcod='git checkout develop'
 alias gcom='git checkout master'
+alias gcl1='git clone --depth=1'
 alias gd="git diff"
 alias gff='git flow feature finish'
 alias gfs='git flow feature start'
@@ -136,6 +143,7 @@ alias lsd='ls -ld *(-/DN)'
 alias lss='du -sh *' # List size
 alias m="meteor"
 alias ms="meteor --settings settings.json"
+alias mt="meteor"
 alias mv="mv -v"
 alias n="node"
 alias ni="npm install"
@@ -194,3 +202,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+eval $(thefuck --alias)
