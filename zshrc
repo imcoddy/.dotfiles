@@ -28,7 +28,7 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew extract git git-extra git-flow git-open gulp heroku node npm osx tmux vagrant vi-mode zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(autojump brew extract git git-extra git-flow git-open gulp heroku node npm osx tmux vagrant vi-mode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -58,11 +58,11 @@ nvm use v10.9.0
 #zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 # useful for path editing — backward-delete-word, but with / as additional delimiter
-#backward-delete-to-slash () {
-  #local WORDCHARS=${WORDCHARS//\//}
-  #zle .backward-delete-word
-#}
-#zle -N backward-delete-to-slash
+backward-delete-to-slash () {
+  local WORDCHARS=${WORDCHARS//\//}
+  zle .backward-delete-word
+}
+zle -N backward-delete-to-slash
 
 setopt no_nomatch
 
@@ -192,7 +192,6 @@ alias -g G='|grep'
 
 # Add incr plugin
 # source ~/.dotfiles/zsh/incr.zsh
-source ~/.dotfiles/zsh/zsh-autosuggestions.zsh
 
 # Add autojump.sh
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
@@ -204,3 +203,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/usr/local/heroku/bin:$PATH"
 
 eval $(thefuck --alias)
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
