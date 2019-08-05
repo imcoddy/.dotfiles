@@ -28,7 +28,7 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew extract git git-extra git-flow git-open gulp heroku node npm osx tmux vagrant vi-mode zsh-syntax-highlighting)
+plugins=(autojump brew extract git git-extra git-flow git-open gulp heroku node npm osx tmux vagrant vi-mode zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -189,9 +189,6 @@ alias -g G='|grep'
 
 # Add nvm source
 #source /usr/local/opt/nvm/nvm.sh
-
-# Add incr plugin
-# source ~/.dotfiles/zsh/incr.zsh
 
 # Add autojump.sh
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
