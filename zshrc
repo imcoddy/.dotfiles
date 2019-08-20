@@ -101,7 +101,7 @@ alias ex="exit"
 alias f='find |grep'
 alias fgrep='fgrep --color=auto'
 alias fixme='grep "FIXME" -r .'
-alias gb="gitbook"
+alias gb="git branch"
 alias gbi="gitbook init"
 alias gbs="gitbook serve"
 alias gbc="git branch --merged | grep 'feature' | xargs -n 1 git branch -d"
@@ -197,7 +197,7 @@ alias -g G='|grep'
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"
 
 eval $(thefuck --alias)
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
