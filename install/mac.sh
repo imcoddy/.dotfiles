@@ -59,6 +59,7 @@ brew install ${binaries[@]}
 # Apps
 apps=(
   # alfred
+  1password
   android-file-transfer
   appcleaner
   atom
@@ -69,7 +70,6 @@ apps=(
   cheatsheet
   dash
   dropbox
-  enpass
   fantastical
   flux
   google-chrome
@@ -81,30 +81,27 @@ apps=(
   openemu
   pdfexpert
   qlcolorcode
-  qlcolorcode
   qlimagesize
   qlmarkdown
   qlprettypatch
   qlstephen
-  qlstephen
   qlvideo
   quicklook-csv
   quicklook-json
-  quicklook-json
   quicklookase
-  suspicious-package
-  webpquicklook
   rescuetime
   screenflick
   slack
   spectacle
   squirrel
   steam
+  suspicious-package
   textexpander
   thunder
   typora
   vagrant
   virtualbox
+  webpquicklook
 )
 
 # Install apps to /Applications

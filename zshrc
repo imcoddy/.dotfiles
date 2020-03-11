@@ -42,7 +42,7 @@ export LC_ALL=en_US.UTF-8
 #bashcompinit
 source ~/.git-completion.bash
 source ~/.nvm/nvm.sh
-nvm use v10.9.0
+nvm use v10.17.0
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
@@ -133,7 +133,9 @@ alias grep='grep --color=auto'
 alias gt="git status"
 alias glh="g l | head"
 alias h='hexo'
+alias hd='hexo generate -d'
 alias hg='hexo generate'
+alias hn='hexo new post'
 alias hs='hexo server --watch'
 alias lns='ln -s'
 alias ls='ls -FHG --color=auto' # Linux
@@ -151,8 +153,10 @@ alias nis="npm install --save "
 alias ping='ping -c 5'
 alias q="exit"
 alias rake="noglob rake"
-alias rm="rm -vi"
+#alias rm="rm -vi"
+alias rm='rm -I --preserve-root'
 alias resetgit="rm -rf .git && git init && git add . && git cm 'init' && git fi"
+alias sha='shasum -a 256 '
 alias t='tree'
 alias t2='tree -L 2'
 alias tl='tree -L'
@@ -161,8 +165,10 @@ alias tx='tmux'
 alias txa='tmux attach'
 alias txw='tmux attach -t work'
 alias txc='tmux new -s'
+alias untar='tar -zxvf '
 alias vd='vimdiff'
 alias v='vim -p'
+alias vc='vim ~/.ssh/config'
 alias vi='vim -p'
 alias vim='vim -p'
 alias vin='vim -p'
@@ -170,6 +176,7 @@ alias vg='vagrant'
 alias vgh='vagrant halt'
 alias vgs='vagrant ssh'
 alias vgu='vagrant up'
+alias vs='code '
 alias vt='vim ~/.tmux.conf'
 alias vv='vim ~/.vimrc'
 alias vz='vim ~/.zshrc'
