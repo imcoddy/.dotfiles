@@ -28,7 +28,25 @@ ZSH_THEME="frisk"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew extract git git-extra git-flow git-open gulp heroku node npm osx tmux vagrant vi-mode zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+    autojump
+    brew
+    extract
+    git
+    #git-extra
+    git-flow
+    #git-open
+    gulp
+    heroku
+    node
+    npm
+    osx
+    tmux
+    vagrant
+    vi-mode
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -153,8 +171,8 @@ alias nis="npm install --save "
 alias ping='ping -c 5'
 alias q="exit"
 alias rake="noglob rake"
-#alias rm="rm -vi"
-alias rm='rm -I --preserve-root'
+alias rm="rm -vi"
+#alias rm='rm -i --preserve-root'
 alias resetgit="rm -rf .git && git init && git add . && git cm 'init' && git fi"
 alias sha='shasum -a 256 '
 alias t='tree'
