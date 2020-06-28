@@ -197,12 +197,26 @@ alias vgu='vagrant up'
 alias vs='code '
 alias vt='vim ~/.tmux.conf'
 alias vv='vim ~/.vimrc'
+alias vw='vim ~/Library/Rime/wubi_pinyin.extended.dict.yaml'
 alias vz='vim ~/.zshrc'
 alias yd='youtube-dl'
 alias w='cd ~/workspace/git/'
 alias wget='wget -c'
 alias ws='cd ~/workspace/git/'
 alias z="exit"
+
+alias w='cd /var/www/html'
+alias wm='cd /var/www/html/modules'
+alias wt='cd /var/www/html/themes/'
+alias z="exit"
+
+alias ai="sudo apt-get install"
+alias auu="sudo apt-get update && sudo apt-get upgrade"
+alias mc="mycli -u user -p -A dbname"
+alias rn="sudo service nginx restart"
+alias rp="sudo service php7.2-fpm restart"
+alias tn="sudo tail -f /var/log/nginx/*.log"
+alias tp="sudo tail -f /var/log/php-fpm/*.log"
 
 # command L equivalent to command |less
 alias -g L='|less'
