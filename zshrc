@@ -38,9 +38,9 @@ plugins=(
     #git-open
     gulp
     heroku
+    macos
     node
     npm
-    osx
     tmux
     vagrant
     vi-mode
@@ -60,7 +60,7 @@ export LC_ALL=en_US.UTF-8
 #bashcompinit
 source ~/.git-completion.bash
 source ~/.nvm/nvm.sh
-nvm use v10.17.0
+nvm use v16.3.0
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
@@ -168,6 +168,7 @@ alias mv="mv -v"
 alias n="node"
 alias ni="npm install"
 alias nis="npm install --save "
+alias nr="npx playwright codegen "
 alias ping='ping -c 5'
 alias q="exit"
 alias rake="noglob rake"
@@ -203,11 +204,6 @@ alias yd='youtube-dl'
 alias w='cd ~/workspace/git/'
 alias wget='wget -c'
 alias ws='cd ~/workspace/git/'
-alias z="exit"
-
-alias w='cd /var/www/html'
-alias wm='cd /var/www/html/modules'
-alias wt='cd /var/www/html/themes/'
 alias z="exit"
 
 alias ai="sudo apt-get install"
