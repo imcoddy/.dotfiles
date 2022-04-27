@@ -36,9 +36,11 @@ binaries=(
   mackup
   mas
   mpv
+  ncdu
   nvm
-  tree
   tldr
+  trash
+  tree
   vim
   wget
   youtube-dl
@@ -48,7 +50,6 @@ binaries=(
   # ffmpeg
   # python
   # sshfs
-  trash
   # node
   # hub
 )
@@ -65,7 +66,7 @@ apps=(
   atom
   bartender
   bettertouchtool
-  bittorrent-sync
+  #bittorrent-sync
   calibre
   cheatsheet
   dash
@@ -96,11 +97,10 @@ apps=(
   squirrel
   steam
   suspicious-package
-  textexpander
-  thunder
-  typora
-  vagrant
-  virtualbox
+  #textexpander
+  #thunder
+  #vagrant
+  #virtualbox
   webpquicklook
 )
 
