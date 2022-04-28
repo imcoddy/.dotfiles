@@ -59,14 +59,11 @@ brew install ${binaries[@]}
 
 # Apps
 apps=(
-  # alfred
-  1password
+  alfred
   android-file-transfer
   appcleaner
-  atom
   bartender
   bettertouchtool
-  #bittorrent-sync
   calibre
   cheatsheet
   dash
@@ -90,10 +87,9 @@ apps=(
   quicklook-csv
   quicklook-json
   quicklookase
-  rescuetime
+  #rescuetime
+  resilio-sync
   screenflick
-  slack
-  spectacle
   squirrel
   steam
   suspicious-package
@@ -107,7 +103,7 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "installing apps..."
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --cask --appdir="/Applications" ${apps[@]}
 
 
 mkdir -p ~/Library/Application\ Support/iTerm2/DynamicProfiles

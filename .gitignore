@@ -1,9 +1,11 @@
 atom/.atom-socket-secret-*
 atom/github.cson
 atom/recovery/
-config/mpv/watch_later/*
 config/configstore/
 config/iterm2/
 config/karabiner/assets/
 config/karabiner/automatic_backups/*
+config/mpv/watch_later
+config/mpv/watch_later/*
+config/yarn/
 vim/vim/bundle/*

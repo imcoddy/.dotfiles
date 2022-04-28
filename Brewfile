@@ -22,8 +22,9 @@ brew "gdk-pixbuf"
 brew "git"
 brew "git-flow"
 brew "gnupg"
-brew "hardlink-osx"
+# brew "hardlink-osx"
 brew "htop"
+brew "iterm2"
 brew "libcroco"
 brew "pango"
 brew "librsvg"
@@ -52,11 +53,10 @@ cask "android-file-transfer"
 cask "android-platform-tools"
 cask "appcleaner"
 cask "apppolice"
-cask "atom"
 cask "bartender"
 cask "bettertouchtool"
-#cask "bittorrent-sync"
-#cask "boom-3d"
+# cask "bittorrent-sync"
+cask "boom-3d"
 cask "brave-browser"
 cask "calibre"
 cask "cheatsheet"
@@ -70,18 +70,13 @@ cask "fantastical"
 cask "flux"
 cask "google-chrome"
 cask "google-japanese-ime"
-cask "hammerspoon"
 cask "hazel"
-cask "iina"
 cask "imageoptim"
 cask "itsycal"
-#cask "karabiner"
 cask "karabiner-elements"
-cask "mpv"
 cask "ngrok"
-cask "openemu"
 cask "opera"
-cask "pdfexpert"
+cask "pdf-expert"
 cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
@@ -96,13 +91,14 @@ cask "spectacle"
 cask "squirrel"
 cask "suspicious-package"
 cask "textexpander"
-cask "vagrant"
+#cask "vagrant"
 #cask "virtualbox"
+cask visual-studio-code
 cask "vivaldi"
 cask "webpquicklook"
 mas "AutoMute", id: 1118136179
 mas "BitdefenderVirusScanner", id: 500154009
-mas "CatchMouse", id: 439700005
+# mas "CatchMouse", id: 439700005
 mas "Clips", id: 1116588922
 mas "DaisyDisk", id: 411643860
 mas "Divvy", id: 413857545
@@ -131,6 +127,6 @@ mas "TickTick", id: 966085870
 mas "Unclutter", id: 577085396
 mas "Web Dumper", id: 508050092
 mas "WeChat", id: 836500024
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
 mas "unrar", id: 1071663619
 mas "讯飞语音输入", id: 1243368435
