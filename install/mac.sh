@@ -106,5 +106,6 @@ echo "installing apps..."
 brew install --cask --appdir="/Applications" ${apps[@]}
 
 
+
 mkdir -p ~/Library/Application\ Support/iTerm2/DynamicProfiles
 ln -s ~/.dotfiles/iTerm2.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/iTerm2.json

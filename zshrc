@@ -56,6 +56,10 @@ export LC_CTYPE=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 #autoload bashcompinit
 #bashcompinit
 source ~/.git-completion.bash
@@ -100,9 +104,11 @@ alias :q="exit"
 alias a="atom"
 alias b='brew'
 alias bc='brew cask'
-alias bci='brew cask install --appdir="/Applications"'
+alias bci='brew install --cask --appdir="/Applications"'
 alias bcs='brew search'
-alias bcu='brew cask uninstall'
+alias bcu='brew uninstall --cask'
+alias bi='brew install'
+alias bs='brew search'
 alias c="clear"
 alias cask="brew cask"
 alias cd..='cd ..'
