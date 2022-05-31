@@ -90,10 +90,10 @@ cask "screenflick"
 cask "spectacle"
 cask "squirrel"
 cask "suspicious-package"
-cask "textexpander"
+#cask "textexpander"
 #cask "vagrant"
 #cask "virtualbox"
-cask visual-studio-code
+cask "visual-studio-code"
 cask "vivaldi"
 cask "webpquicklook"
 mas "AutoMute", id: 1118136179

@@ -16,6 +16,7 @@ platforms
 coverage
 coverage-report
 *.[oa]
+*.rslsc
 *.swp
 *.swo
 *.bak

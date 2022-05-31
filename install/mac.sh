@@ -73,7 +73,7 @@ apps=(
   google-chrome
   google-japanese-ime
   itsycal
-  karabiner
+  karabiner-elements
   kitematic
   ngrok
   openemu
@@ -91,7 +91,6 @@ apps=(
   resilio-sync
   screenflick
   squirrel
-  steam
   suspicious-package
   #textexpander
   #thunder
