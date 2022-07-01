@@ -6,6 +6,10 @@
     editor = vim
     excludesfile = ~/.gitignore
     pager = less -x1,5
+    quotepath = false
+    autocrlf = input
+    ignorecase = false
+    filemode = false
 [color]
     ui = true
     diff = auto
@@ -51,6 +55,9 @@
     fto = fetch origin
     ftu = fetch upstream
     fto = fetch origin
+
+    force-push = push --force-with-lease
+    fp = push --force-with-lease
 
     info = remote -v
 
@@ -111,3 +118,13 @@
 
 [branch]
     autosetuprebase = always
+[gui]
+    encoding = utf-8
+[mergetool]
+    keepBackup = false
+[push]
+	default = current
+[help]
+	autocorrect = 1
+[init]
+	defaultBranch = master
