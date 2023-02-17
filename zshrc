@@ -120,6 +120,9 @@ alias do="docker"
 alias doc="docker container"
 alias dom="docker-machine"
 alias dome="docker-machine env"
+alias dc="docker-compose"
+alias dcd="docker-compose down"
+alias dc="docker-compose up"
 alias egrep='egrep --color=auto'
 alias ex="exit"
 alias f='find |grep'
@@ -162,8 +165,8 @@ alias hg='hexo generate'
 alias hn='hexo new post'
 alias hs='hexo server --watch'
 alias lns='ln -s'
-alias ls='ls -FHG --color=auto' # Linux
 alias ls='ls -G' # Mac
+alias ls='ls -FHG --color=auto' # Linux
 alias lsa='ls -al'
 alias lsd='ls -ld *(-/DN)'
 alias lss='du -sh *' # List size
