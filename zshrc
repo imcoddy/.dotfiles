@@ -124,6 +124,7 @@ alias dome="docker-machine env"
 alias dc="docker-compose"
 alias dcd="docker-compose down"
 alias dcr="docker-compose restart"
+alias dcrm="docker-compose rm"
 alias dcu="docker-compose up"
 alias egrep='egrep --color=auto'
 alias ex="exit"
