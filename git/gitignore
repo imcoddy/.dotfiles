@@ -1,4 +1,5 @@
 #ignore .metadata
+.env
 .metadata
 .DS_Store
 atom/.apm
