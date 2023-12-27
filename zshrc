@@ -64,7 +64,7 @@ export NVM_DIR="$HOME/.nvm"
 #bashcompinit
 source ~/.git-completion.bash
 source ~/.nvm/nvm.sh
-nvm use v16.3.0
+nvm use v18.17.1
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
@@ -183,6 +183,7 @@ alias ni="npm install"
 alias nid="npm install --save-dev "
 alias nis="npm install --save "
 alias nr="npx playwright codegen "
+alias nv="nvim"
 alias ping='ping -c 5'
 alias q="exit"
 alias rake="noglob rake"
