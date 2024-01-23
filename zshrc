@@ -101,6 +101,8 @@ alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 alias .6='cd ../../../../../../'
 alias :q="exit"
+alias 7za="7z a -mhe=on "
+alias 7zap="7z a -mhe=on -p "
 alias a="atom"
 alias b='brew'
 alias bc='brew cask'
@@ -113,6 +115,7 @@ alias c="clear"
 alias cask="brew cask"
 alias cd..='cd ..'
 alias cp="cp -iv"
+alias csc="cat ~/.ssh/config"
 alias dir='ls -1'
 alias dm="docker-machine"
 alias dme="docker-machine env"
@@ -202,7 +205,7 @@ alias txw='tmux attach -t work'
 alias txc='tmux new -s'
 alias untar='tar -zxvf '
 alias vd='vimdiff'
-alias v='vim -p'
+alias v='nvim -p'
 alias vc='vim ~/.ssh/config'
 alias vi='vim -p'
 alias vim='vim -p'

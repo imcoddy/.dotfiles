@@ -1,11 +1,13 @@
 {
-    "useTabs": false,
-    "printWidth": 80,
-    "tabWidth": 4,
-    "singleQuote": false,
-    "trailingComma": "none",
-    "jsxBracketSameLine": false,
-    "parser": "babel",
-    "noSemi": true,
-    "rcVerbose": true
+  "parser": "babel",
+  "printWidth": 80,
+  "tabWidth": 4,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "rangeStart": 0,
+  "rangeEnd": 999999
 }

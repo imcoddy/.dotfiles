@@ -44,6 +44,7 @@ binaries=(
   mpv
   ncdu
   nvm
+  p7zip
   tldr
   trash
   tree
