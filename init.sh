@@ -9,6 +9,7 @@ ln -s ~/.dotfiles/git/git-completion.bash ~/.git-completion.bash
 
 ln -s ~/.dotfiles/config ~/.config
 ln -s ~/.dotfiles/editorconfig ~/.editorconfig
+ln -s ~/.dotfiles/hammerspoon/ ~/.hammerspoon
 ln -s ~/.dotfiles/mackup.cfg ~/.mackup.cfg
 ln -s ~/.dotfiles/prettierrc ~/.prettierrc
 ln -s ~/.dotfiles/screenrc ~/.screenrc
