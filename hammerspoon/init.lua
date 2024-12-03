@@ -1,41 +1,22 @@
-hs.application.enableSpotlightForNameSearches(true)
+-- -----------------------------------------------------------------------
+--           ** HammerSpoon Config File by imcoddy with ❤️ **           --
+-- -----------------------------------------------------------------------
 
-local function launchOrActivateApp(appName, bundleID)
-  local app = hs.application.find(appName)
+-- -----------------------------------------------------------------------
+--                         ** Something Global **                       --
+-- -----------------------------------------------------------------------
+-- Uncomment this following line if you don't wish to see animations
+-- hs.window.animationDuration = 0
 
-  if app then
-    app:activate()
-  else
-    hs.execute("open -b " .. bundleID)
-  end
-end
+-- -----------------------------------------------------------------------
+--                            ** Requires **                            --
+-- -----------------------------------------------------------------------
+-- require "vox-control"
+-- require "vim-binding"
+require("modules.launcher")
+require "modules.key-binding"
+require("modules.reload")
+require("modules.usb")
+-- require("modules.volume")
+require "modules.window-management"
 
-local appMappings = {
-  {"1", "1Password 7", "com.agilebits.onepassword7"},
-  {"a", "Cisco Secure Client", "com.cisco.anyconnect.gui"},
-  {"b", "Brave Browser", "com.brave.Browser"},
-  {"c", "Google Chrome", "com.google.Chrome"},
-  {"d", "TickTick", "com.ticktick.TickTickMac"},
-  {"e", "Visual Studio Code", "com.microsoft.VSCode"},
-  {"f", "Finder", "com.apple.finder"},
-  {"i", "iTerm2", "com.googlecode.iterm2"},
-  {"m", "Activity Monitor", "com.apple.ActivityMonitor"},
-  {"p", "Enpass", "com.sinew.Enpass"},
-  {"q", "Quiver", "com.happenapps.Quiver"},
-  {"r", "Reeder", "com.reederapp.rkit2.mac"},
-  {"s", "Safari", "com.apple.Safari"},
-  {"t", "Microsoft Teams", "com.microsoft.Teams"},
---  {"v", "Viber", "com.viber.osx"},
-  {"v", "Vivaldi", "com.vivaldi.Vivaldi"},
-  {"x", "Firefox", "org.mozilla.firefox"},
-  {"z", "Zoom", "us.zoom.xos"},
-}
-
-table.sort(appMappings, function(a, b) return a[1] < b[1] end)
-
-for _, mapping in ipairs(appMappings) do
-  local hotkey, appName, bundleID = table.unpack(mapping)
-  hs.hotkey.bind({"alt"}, hotkey, function()
-    launchOrActivateApp(appName, bundleID)
-  end)
-end
