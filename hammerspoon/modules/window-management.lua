@@ -38,14 +38,14 @@ end)
 for _index,screen in pairs(hs.screen.allScreens()) do
   if screen:frame().w / screen:frame().h > 2 then
     -- 10 * 4 for ultra wide screen
-    grid.setGrid('10 * 4', screen)
+    grid.setGrid('16 * 8', screen)
   else
     if screen:frame().w < screen:frame().h then
       -- 4 * 8 for vertically aligned screen
-      grid.setGrid('4 * 8', screen)
+      grid.setGrid('8 * 10', screen)
     else
       -- 8 * 4 for normal screen
-      grid.setGrid('8 * 4', screen)
+      grid.setGrid('10 * 8', screen)
     end
   end
 end
@@ -81,6 +81,15 @@ end
 module.maximizeWindow = function ()
   local this = windowMeta.new()
   hs.grid.maximizeWindow(this.window)
+end
+
+module.toggleFullScreen = function()
+  local win = hs.window.focusedWindow()
+  if win then
+    win:setFullScreen(not win:isFullScreen())
+  else
+    print("Error: No focused window found.")
+  end
 end
 
 module.centerOnScreen = function ()
