@@ -188,6 +188,7 @@ alias nis="npm install --save "
 alias nr="npx playwright codegen "
 alias nv="nvim"
 alias ping='ping -c 5'
+alias pc='pbcopy <'
 alias q="exit"
 alias rake="noglob rake"
 alias rm="rm -vi"
