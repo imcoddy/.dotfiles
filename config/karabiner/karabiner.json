@@ -15,6 +15,24 @@
                 },
                 "rules": [
                     {
+                        "description": "Map left_command+right_shift to left_command+grave_accent_and_tilde",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Hyper Key: Caps Lock → left control + left option + right command (⌃⌥⌘)",
                         "manipulators": [
                             {

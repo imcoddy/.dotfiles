@@ -64,7 +64,7 @@ export NVM_DIR="$HOME/.nvm"
 #bashcompinit
 source ~/.git-completion.bash
 source ~/.nvm/nvm.sh
-nvm use v18.17.1
+nvm use v20.18.1
 #zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 # allow approximate
